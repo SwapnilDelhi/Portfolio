@@ -1,0 +1,37 @@
+.yvi-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.yvi-card{
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  padding: 24px 22px;
+}
+
+.yvi-card h3{ font-size: 16px; margin-bottom: 8px; }
+.yvi-card p{ font-size: 13.5px; color: var(--grey-mid); margin: 0; }
+
+.yvi-cta-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--navy);
+  padding: 44px 48px;
+}
+
+.yvi-cta-row h2{ color: var(--white); font-size: 24px; margin-bottom: 6px; }
+.yvi-cta-row p{ color: rgba(255,255,255,0.7); margin: 0; }
+
+.yvi-cta-actions{ display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 980px){
+  .yvi-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .yvi-grid{ grid-template-columns: 1fr; }
+}

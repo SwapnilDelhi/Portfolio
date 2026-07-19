@@ -1,0 +1,12 @@
+.img-placeholder{
+  width: 100%;
+  background: repeating-linear-gradient(135deg, #e9e5d8, #e9e5d8 10px, #f1eee3 10px, #f1eee3 20px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-mid);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
