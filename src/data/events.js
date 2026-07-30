@@ -1,3 +1,6 @@
+import missionReliefImg from '../assets/images/missionrelief.png';
+import padDistributionImg from '../assets/images/paddistribution.png';
+
 // Add new events here — they'll automatically sort by date and render
 // on the Events page. `sortDate` must be ISO (YYYY-MM-DD) for correct
 // ordering; `date` is the display string shown to the user.
@@ -9,6 +12,8 @@ export const events = [
     title: 'Mission Relief — Flood Response (Amritsar & Himachal Pradesh)',
     description:
       'Distributed food packets, drinking water, clothing, hygiene kits, and essential relief materials to flood-affected families.',
+    image: missionReliefImg,
+    imageAlt: 'Mission Relief flood response activity',
   },
   {
     id: 'international-womens-day',
@@ -17,6 +22,8 @@ export const events = [
     title: "Sanitary Pads Distribution — International Women's Day",
     description:
       "Distributed sanitary pads and hygiene essentials while promoting menstrual health and women's well-being.",
+    image: padDistributionImg,
+    imageAlt: 'Sanitary pads distribution event',
   },
   {
     id: 'dental-oral-hygiene',

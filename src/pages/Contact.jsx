@@ -54,7 +54,7 @@ export default function Contact() {
             </div>
             <div className="contact-info-block">
               <div className="eyebrow">Instagram</div>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">@swapnilpandey</a>
+              <a href="https://www.instagram.com/youthvisionindia/" target="_blank" rel="noreferrer">@youthvisionindia</a>
             </div>
             <div className="contact-info-block">
               <div className="eyebrow">Location</div>

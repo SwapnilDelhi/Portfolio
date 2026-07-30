@@ -20,7 +20,11 @@ export default function Events() {
             {sortedEvents.map((event) => (
               <article className="event-card" key={event.id}>
                 <div className="event-image">
-                  <ImagePlaceholder label={event.title} ratio="4 / 3" />
+                  {event.image ? (
+                    <img src={event.image} alt={event.imageAlt || event.title} />
+                  ) : (
+                    <ImagePlaceholder label={event.title} ratio="4 / 3" />
+                  )}
                 </div>
                 <div className="event-body">
                   <div className="event-date">{event.date}</div>

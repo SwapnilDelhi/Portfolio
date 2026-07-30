@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="footer-heading">Connect</div>
           <a href="mailto:contact@swapnilpandey.in">contact@swapnilpandey.in</a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/youthvisionindia/" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
 

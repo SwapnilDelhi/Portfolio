@@ -125,6 +125,13 @@
   width: 100%;
 }
 
+.event-image img{
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
 .event-body{
   padding: 22px 24px 26px;
 }
