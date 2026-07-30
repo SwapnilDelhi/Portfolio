@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import homeImg from '../assets/images/swapnill.png';
 import youthVisionImg from '../assets/images/h.jpeg';
 import parliamentImg from '../assets/images/parliament1.jpeg';
-import varanasiImg from '../assets/images/vara.png';
+import varanasiImg from '../assets/images/Vara.png';
 import './Home.css';
 
 
