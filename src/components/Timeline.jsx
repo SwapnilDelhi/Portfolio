@@ -2,7 +2,7 @@ import ImagePlaceholder from './ImagePlaceholder';
 import './Timeline.css';
 
 /**
- * entries: [{ date, title, role, points: string[], document }]
+ * entries: [{ date, title, role, image, points: string[], document }]
  */
 export default function Timeline({ entries, className = '' }) {
   return (
@@ -15,7 +15,11 @@ export default function Timeline({ entries, className = '' }) {
           </div>
 
           <div className="timeline-media">
-            <ImagePlaceholder label={e.title} ratio="4 / 3" />
+            {e.image ? (
+              <img className="timeline-image" src={e.image} alt={e.title} />
+            ) : (
+              <ImagePlaceholder label={e.title} ratio="4 / 3" />
+            )}
           </div>
 
           <div className="timeline-content">

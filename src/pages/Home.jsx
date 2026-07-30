@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import ImagePlaceholder from '../components/ImagePlaceholder';
-import homeImg from '../assets/images/home.png';
+import homeImg from '../assets/images/swapnill.png';
+import youthVisionImg from '../assets/images/h.jpeg';
+import parliamentImg from '../assets/images/parliament1.jpeg';
+import varanasiImg from '../assets/images/vara.png';
 import './Home.css';
 
 
@@ -10,83 +12,86 @@ const COLUMNS = [
     label: 'Youth Vision India',
     kicker: '01 — Youth-Led Platform',
     text: 'A youth-led platform building a more educated, empowered, and compassionate India — through women\u2019s empowerment, sanitary pad distribution, education, and grassroots welfare drives across states.',
+    image: youthVisionImg,
   },
   {
     to: '/journey#government-engagement',
     label: 'Parliament of India',
     kicker: '02 — Government Engagement',
     text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
+    image: parliamentImg,
   },
   {
     to: '/journey#varanasi-development',
     label: 'Varanasi Development',
     kicker: '03 — Regional Initiative',
     text: 'A dedicated development initiative for Varanasi, working at the intersection of heritage, civic infrastructure, and community-driven progress.',
+    image: varanasiImg,
   },
 ];
+
+const HIGHLIGHTS = [
+  { icon: '◎', label: 'Youth Leader' },
+  { icon: '√x', label: 'Mathematical Researcher' },
+  { icon: '⚖', label: 'Public Policy Advocate' },
+];
+
 export default function Home() {
   return (
     <>
-      <section className="hero">
-  <div className="container hero-grid">
+      <section
+        className="hero"
+        style={{ backgroundImage: `url(${homeImg})` }}
+      >
+        <div className="hero-overlay"></div>
 
-    <div className="hero-copy">
+        <div className="container hero-content">
+          <div className="hero-copy">
 
-      <span className="hero-kicker">
-        Founder • Youth Vision India
-      </span>
+            <span className="hero-kicker">
+              Founder • Youth Vision India
+            </span>
 
-      <h1>
-        Swapnil
-        <br />
-        Pandey
-      </h1>
+            <h1>
+              Swapnil
+              <br />
+              Pandey
+            </h1>
 
-      <div className="hero-highlights">
+            <div className="rule"></div>
 
-        <div className="highlight">
-          <span className="highlight-icon">∑</span>
-          <span>Mathematical Researcher</span>
+            <div className="hero-highlights">
+              {HIGHLIGHTS.map((h) => (
+                <div className="highlight" key={h.label}>
+                  <span className="highlight-icon">{h.icon}</span>
+                  <span>{h.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="hero-quote">
+              <span className="hero-quote-mark">&#8220;</span>
+              <p className="hero-quote-text">
+                If I&rsquo;ve decided then,
+                <br />
+                I&rsquo;ll get it done anyhow.
+              </p>
+            </div>
+
+            <div className="hero-actions">
+              <Link to="/journey" className="btn hero-btn">
+                Explore Journey <span className="hero-btn-arrow">→</span>
+              </Link>
+            </div>
+
+          </div>
         </div>
 
-        <div className="highlight">
-          <span className="highlight-icon">◎</span>
-          <span>Youth Leader</span>
+        <div className="scroll-indicator" aria-hidden="true">
+          <span className="scroll-mouse"><span className="scroll-dot"></span></span>
+          <span className="scroll-chevron">⌄</span>
         </div>
-
-        <div className="highlight">
-          <span className="highlight-icon">⚖</span>
-          <span>Public Policy Advocate</span>
-        </div>
-
-      </div>
-
-      <div className="rule"></div>
-
-      <p className="hero-tagline">
-        Building solutions through research, innovation,
-        education and public leadership to create lasting
-        social impact across India.
-      </p>
-
-      <div className="hero-actions">
-        <Link to="/journey" className="btn btn-primary hero-btn">
-          Explore the Journey →
-        </Link>
-      </div>
-
-    </div>
-
-    <div className="hero-photo">
-      <img
-        src={homeImg}
-        alt="Swapnil Pandey"
-        className="hero-image"
-      />
-    </div>
-
-  </div>
-</section>
+      </section>
 
       <section className="section section-alt about-intro">
         <div className="container about-intro-grid">
@@ -115,7 +120,9 @@ export default function Home() {
           <div className="columns-grid">
             {COLUMNS.map((c) => (
               <Link to={c.to} key={c.to} className="pillar-card">
-                <ImagePlaceholder label={c.label} ratio="16 / 11" />
+                <div className="pillar-image">
+                  <img src={c.image} alt={c.label} />
+                </div>
                 <div className="pillar-body">
                   <div className="pillar-kicker">{c.kicker}</div>
                   <h3>{c.label}</h3>

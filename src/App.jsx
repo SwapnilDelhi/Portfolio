@@ -17,7 +17,7 @@ import Gallery from './pages/Gallery';
 import Publications from './pages/Publications';
 import Collaborate from './pages/Collaborate';
 import Contact from './pages/Contact';
-
+import Events from './pages/Events';
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
@@ -49,6 +49,7 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/collaborate" element={<Collaborate />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

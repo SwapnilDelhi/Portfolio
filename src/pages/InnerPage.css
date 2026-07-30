@@ -1,8 +1,22 @@
 .inner-split{
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 56px;
-  align-items: start;
+  display: block;
+  overflow: hidden;
+}
+
+.inner-media{
+  float: right;
+  width: 44%;
+  max-width: 480px;
+  margin: 0 0 28px 48px;
+}
+
+.inner-split-reverse .inner-media{
+  float: left;
+  margin: 0 48px 28px 0;
+}
+
+.inner-copy{
+  display: block;
 }
 
 .inner-copy p{
@@ -12,6 +26,27 @@
 }
 
 .inner-copy h2{ font-size: 28px; }
+
+.inner-subtitle{
+  font-style: italic;
+  color: var(--grey-mid);
+  margin-top: -6px;
+  margin-bottom: 14px;
+}
+
+.inner-points{
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inner-points li{
+  font-size: 16.5px;
+  color: var(--grey-dark);
+  line-height: 1.6;
+}
 
 .section-heading{
   max-width: 640px;
@@ -61,12 +96,78 @@
 .info-card h3{ font-size: 18px; margin-bottom: 10px; }
 .info-card p{ font-size: 14px; color: var(--grey-mid); margin: 0; }
 
+/* ============================================================
+   EVENTS PAGE
+============================================================ */
+
+.events-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: var(--space-4);
+}
+
+.event-card{
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.event-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(10,31,68,0.1);
+  border-color: var(--line-gold);
+}
+
+.event-image{
+  width: 100%;
+}
+
+.event-body{
+  padding: 22px 24px 26px;
+}
+
+.event-date{
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.event-title{
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+  color: var(--navy);
+}
+
+.event-desc{
+  font-size: 14.5px;
+  color: var(--grey-mid);
+  line-height: 1.6;
+  margin: 0;
+}
 @media (max-width: 860px){
-  .inner-split{ grid-template-columns: 1fr; }
+  .inner-media{
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 24px 0;
+  }
+
+  .inner-split-reverse .inner-media{
+    float: none;
+    margin: 0 0 24px 0;
+  }
 }
 
 .timeline-block{
   margin-top: 32px;
+  clear: both;
 }
 
 .media-category{ margin-bottom: var(--space-5); }

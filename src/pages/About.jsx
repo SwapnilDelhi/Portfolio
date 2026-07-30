@@ -14,7 +14,7 @@ export default function About() {
       <section className="section">
         <div className="container inner-split">
           <div className="inner-media">
-            <ImagePlaceholder label="Swapnil Pandey" ratio="4 / 5" />
+            <Image label="about.jpeg" ratio="4 / 5" />
           </div>
           <div className="inner-copy">
             <h2>Research, leadership, and public service</h2>

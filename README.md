@@ -1,117 +1,135 @@
-# Swapnil Pandey — Official Website
+# Swapnil Pandey — Portfolio Website
 
-A React + Vite site built to the structure and design brief provided: rotating
-"Anonymity · Austerity · Ability" loading emblem, an institutional navy/gold
-design language, and dedicated sections for Youth Vision India, Parliament of
-India / Government Engagement, and Varanasi Development.
+A personal portfolio and organizational site for **Swapnil Pandey** — Founder of *Youth Vision India* — covering his academic journey, mathematical research, government and policy engagement, community initiatives, and public events.
 
-## 1. Getting it running in VS Code
+Built with **React**, **React Router**, and plain CSS (no CSS framework), using a shared "inner page" layout system for consistent styling across content pages.
 
-You need [Node.js](https://nodejs.org) 18+ installed. Then, in the project folder:
+---
 
-```bash
-npm install
-npm run dev
-```
+## ✨ Features
 
-Open the URL it prints (usually `http://localhost:5173`). The page reloads
-automatically as you edit files.
+- **Home** — full-bleed photo hero, highlights row, personal quote, and a three-pillar focus-areas section.
+- **Journey** — long-form narrative sections (school years, mathematical research, Youth Vision India, Parliament engagements, Varanasi Development, current work) with alternating text/image layout.
+- **Achievements** — a chronological timeline of government and institutional engagements, each with supporting images and documents.
+- **Events** — a card grid of community initiatives and drives, sorted automatically by date.
+- **About / Research / Media / Gallery / Publications / Contact** — supporting content pages sharing the same design system.
+- Responsive navbar with a tap-to-swap tagline/quote on mobile and a full-screen slide-in menu, consistent across all breakpoints.
+- Devanagari quote (`शीलं परम भूषणम्` — *"Character is the highest ornament"*) used as a recurring motif across the site.
 
-Other commands:
+---
 
-```bash
-npm run build     # production build → outputs to /dist
-npm run preview   # serve the production build locally to double-check it
-npm run lint      # check the code for issues
-```
+## 🛠 Tech Stack
 
-## 2. Project structure
+| Layer       | Choice                          |
+|-------------|----------------------------------|
+| Framework   | React (Vite)                     |
+| Routing     | `react-router-dom`                |
+| Styling     | Plain CSS (component-scoped files)|
+| Data        | Local JS modules (`src/data/`)   |
+| Images      | Static imports from `src/assets/images/` |
+
+No backend — all content is static and lives in source-controlled data files, making it easy to update without touching component code.
+
+---
+
+## 📁 Project Structure
 
 ```
 src/
-  main.jsx                — app entry point, sets up the router
-  App.jsx                 — page routes + loading screen logic
-  index.css               — design tokens (colors/fonts), global styles
-
-  components/
-    LoadingScreen.jsx/css   — the rotating emblem intro
-    Navbar.jsx/css          — top navigation (all 13 sections)
-    Footer.jsx/css          — site footer
-    PageHeader.jsx/css      — the navy banner used at the top of every inner page
-    Timeline.jsx/css        — the "premium timeline" used for Achievements & Government Engagement
-    ImagePlaceholder.jsx/css — stand-in boxes wherever a real photo is needed
-
-  data/
-    engagements.js          — ALL delegation-meeting & government-dialogue text lives here
-
-  pages/
-    Home.jsx                — hero + the 3-column Youth Vision India / Parliament / Varanasi cards
-    About.jsx, Journey.jsx, Achievements.jsx, Research.jsx
-    YouthVisionIndia.jsx, Parliament.jsx, Varanasi.jsx
-    Media.jsx, Gallery.jsx, Publications.jsx, Collaborate.jsx, Contact.jsx
+├── assets/
+│   └── images/              # Photos used across the site
+├── components/
+│   ├── Navbar.jsx / .css    # Site-wide navigation
+│   ├── PageHeader.jsx       # Shared page title/eyebrow/subtitle banner
+│   ├── ImagePlaceholder.jsx # Fallback placeholder when no real image is set
+│   └── Timeline.jsx / .css  # Chronological entry list (Achievements, Journey)
+├── data/
+│   ├── engagements.js       # Government/institutional meeting records
+│   └── events.js            # Community events & initiatives
+├── pages/
+│   ├── Home.jsx / Home.css
+│   ├── Journey.jsx
+│   ├── About.jsx
+│   ├── Achievements.jsx
+│   ├── Research.jsx
+│   ├── Media.jsx
+│   ├── Gallery.jsx
+│   ├── Publications.jsx
+│   ├── Events.jsx
+│   ├── Contact.jsx
+│   └── InnerPage.css        # Shared layout styles for all inner/content pages
+├── App.jsx                  # Route definitions
+└── main.jsx                 # App entry point
 ```
 
-Every page is its own route (e.g. `/youth-vision-india`, `/parliament`,
-`/varanasi`), so the three homepage columns are real links, not just visual
-blocks — clicking one navigates to its full page.
+> Note: exact file names may differ slightly depending on your local setup — update this section if your structure has diverged.
 
-## 3. The things you'll most likely want to edit
+---
 
-### Replace the placeholder photos
-Every gray "IMAGE" box is a temporary `<ImagePlaceholder />`. To swap one in:
+## 🚀 Getting Started
 
-1. Drop your image file into `src/assets/images/` (e.g. `hero-portrait.jpg`).
-2. In the relevant page, replace:
-   ```jsx
-   <ImagePlaceholder label="Portrait — Swapnil Pandey" ratio="4 / 5" />
-   ```
-   with:
-   ```jsx
-   <img src="/src/assets/images/hero-portrait.jpg" alt="Swapnil Pandey" />
-   ```
-Do this per photo, wherever you have the real image ready — there's no need
-to do it all at once.
+### Prerequisites
+- [Node.js](https://nodejs.org/) 18+ and npm
 
-### Edit delegation meetings / government engagement text
-Open `src/data/engagements.js`. It's a plain list of entries — copy an
-existing block, change the text, done. `delegationMeetings` feeds the
-Achievements page; `governmentDialogues` feeds the Parliament / Government
-Engagement page. Move entries between the two arrays if you'd like a
-different split — nothing else needs to change.
+### Installation
 
-### Add real content to the Research page
-Open `src/pages/Research.jsx` and edit the `PAPERS` array at the top — add a
-new object to the array for each additional paper (same shape: `title`,
-`abstract`, `problem`, `solution`).
-
-### Add real content to Varanasi Development
-Nothing was provided for this section in the brief, so `src/pages/Varanasi.jsx`
-currently ships with a reasonable placeholder structure (heritage, civic
-infrastructure, education, community development). Replace the paragraph text
-and the `FOCUS_AREAS` array once you have the real material.
-
-### Colors, fonts, spacing
-Everything lives at the top of `src/index.css` under `:root`:
-```css
---navy, --gold, --gold-ink, --grey-dark, --parchment, --white
---font-display   /* Playfair Display — headings */
---font-body      /* Inter — body text */
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+npm install
 ```
-Changing a value here updates it site-wide. (`--gold-ink` is a darker gold
-used for small labels on light backgrounds, so they stay readable — `--gold`
-is the brighter accent reserved for dark backgrounds, buttons, and rules.)
 
-### The loading screen
-`src/components/LoadingScreen.jsx` controls timing — it currently starts
-fading at 3.4s and hands off to the site at 4.2s. Change the two numbers in
-the `setTimeout` calls to adjust. The rotating ring text and the center
-Sanskrit motto (`शीलं परम भूषणम्`) are in the same file if you need to edit
-the wording.
+### Development
 
-## 4. Deploying it
+```bash
+npm run dev
+```
 
-`npm run build` produces a static `dist/` folder that can be deployed to
-Vercel, Netlify, GitHub Pages, or any static host. If you deploy to a host
-that doesn't automatically redirect unknown paths to `index.html`, enable
-"SPA fallback" / "rewrite all routes to index.html" in that host's settings
-so that direct links like `yoursite.com/journey` work on refresh.
+Visit the URL shown in the terminal (typically `http://localhost:5173`).
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Output goes to the `dist/` folder. Preview it locally with:
+
+```bash
+npm run preview
+```
+
+---
+
+## ✏️ Editing Content
+
+Most content updates don't require touching component code:
+
+- **Add/edit a government engagement or dialogue** → `src/data/engagements.js`
+  - Add an `image` import at the top of the file and reference it in the entry's `image` field.
+- **Add/edit a community event** → `src/data/events.js`
+  - Include `date` (display string) and `sortDate` (ISO `YYYY-MM-DD`) so it sorts correctly.
+- **Swap a placeholder image for a real photo** → drop the file into `src/assets/images/`, import it at the top of the relevant page or data file, and pass it as the `image`/`src` prop instead of relying on `ImagePlaceholder`.
+- **Update navigation links** → `src/components/Navbar.jsx` (`LINKS` array).
+
+---
+
+## 📱 Responsive Behavior
+
+- Breakpoint at `980px` for most section layouts (hero, about-intro grid, pillar columns).
+- Breakpoint at `860px` for the alternating text/image "inner split" sections used across Journey and similar long-form pages.
+- Navbar switches to a compact single-row layout with a slide-in menu below `640px`, with the brand/quote area collapsing into a single tap-to-swap element.
+
+---
+
+## 📌 Known Considerations
+
+- `ImagePlaceholder` remains the fallback for any content entry that hasn't had a real photo added yet — safe to leave in place until images are ready.
+- The Devanagari quote uses a custom `--font-devanagari` CSS variable; ensure the referenced font supports Devanagari script if changing typefaces.
+- Long-form Journey sections use CSS floats (not grid) for the alternating text/image layout — image elements must come **before** the text block in the JSX for the wrap behavior to work correctly.
+
+---
+
+## 📄 License
+
+This project is private/proprietary to Swapnil Pandey and Youth Vision India unless otherwise stated. 

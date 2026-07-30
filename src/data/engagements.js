@@ -1,12 +1,22 @@
 // Edit this file to add, remove, or update government & institutional engagements.
 // Each entry appears as one card in the timeline on the Achievements and
 // Government Engagement pages.
+// Add an `image` (imported at the top) to show a photo on that entry's card.
+
+import omBirlaImg from '../assets/images/d.jpeg';
+import rakshaKhadseImg from '../assets/images/e.jpeg';
+import dharmendraPradhanImg from '../assets/images/f.jpeg';
+import manojSinhaImg from '../assets/images/k.jpeg';
+import environmentMinistryImg from '../assets/images/L.jpeg';
+import mansukhMandaviyaImg from '../assets/images/m.png';
+import prahladJoshiImg from '../assets/images/p.png';
 
 export const delegationMeetings = [
   {
     date: '2025',
     title: "Hon'ble Speaker of Lok Sabha",
     role: 'Shri Om Birla',
+    image: omBirlaImg,
     points: [
       'Had a discussion with the Hon\u2019ble Speaker of Lok Sabha, Shri Om Birla Ji, in recognition of a mathematical discovery of a new divisibility test for 8.',
       'Honoured and appreciated for contributions to mathematical research and innovation.',
@@ -18,6 +28,7 @@ export const delegationMeetings = [
     date: '2025',
     title: 'Hon\u2019ble Minister of State for Youth Affairs & Sports',
     role: 'Smt. Raksha Khadse',
+    image: rakshaKhadseImg,
     points: [
       'Had a discussion with the Hon\u2019ble Minister of State for Youth Affairs & Sports, Smt. Raksha Khadse.',
       'Received a formal Letter of Appreciation in recognition of contributions and youth-led initiatives.',
@@ -29,6 +40,7 @@ export const delegationMeetings = [
     date: '2025',
     title: 'Hon\u2019ble Union Cabinet Minister for Education',
     role: 'Shri Dharmendra Pradhan',
+    image: dharmendraPradhanImg,
     points: [
       'Had a discussion with the Hon\u2019ble Union Minister for Education, Shri Dharmendra Pradhan.',
       'Received honour for research, discoveries, and youth-led initiatives.',
@@ -42,6 +54,7 @@ export const delegationMeetings = [
     date: '2025',
     title: 'Hon\u2019ble Lieutenant Governor of Jammu & Kashmir',
     role: 'Shri Manoj Sinha',
+    image: manojSinhaImg,
     points: [
       'Had a discussion at Raj Bhawan, Srinagar, with the Hon\u2019ble Lieutenant Governor of Jammu & Kashmir, Shri Manoj Sinha.',
       'Held a meaningful interaction on youth leadership, engagement, innovation, and nation-building initiatives.',
@@ -55,6 +68,7 @@ export const governmentDialogues = [
   {
     date: '2025',
     title: 'Ministry of Environment, Forest and Climate Change',
+    image: environmentMinistryImg,
     points: [
       'Policy discussion with Ministry officials, presenting an Automatic Street Light System \u2014 an energy-efficient innovation aimed at reducing electricity consumption and promoting sustainable infrastructure.',
       'As Founder of Youth Vision India, presented youth-driven policy ideas and national initiatives before the Government of India.',
@@ -64,6 +78,7 @@ export const governmentDialogues = [
     date: '2025',
     title: 'Hon\u2019ble Union Cabinet Minister for Youth Affairs & Sports and Labour & Employment',
     role: 'Shri Mansukh Mandaviya',
+    image: mansukhMandaviyaImg,
     points: [
       'Received a personal call from the Hon\u2019ble Union Cabinet Minister regarding ongoing initiatives under Youth Vision India.',
     ],
@@ -72,6 +87,7 @@ export const governmentDialogues = [
     date: '2025',
     title: 'Hon\u2019ble Union Cabinet Minister',
     role: 'Shri Prahlad Joshi',
+    image: prahladJoshiImg,
     points: [
       'Held discussions sharing vision, research, and policy perspectives on youth development, innovation, and nation-building.',
     ],
