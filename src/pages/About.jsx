@@ -26,8 +26,8 @@ export default function About() {
             <div className="rule"></div>
 
             <p>
-              Swapnil Pandey is a mathematical researcher, youth leader, and
-              public policy advocate whose work sits at the intersection of
+              Swapnil Pandey is a scientific and mathematical researcher, youth leader, and
+              public policy adviser whose work sits at the intersection of
               scientific research, education reform, and youth-led national
               development. His engagements span Parliament, Union Ministries,
               Raj Bhawans, and international institutions including the United

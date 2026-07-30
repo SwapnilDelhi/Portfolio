@@ -6,7 +6,7 @@ const LINKS = [
   { to: '/', label: 'Home' },
   { to: '/journey', label: 'Journey' },
   { to: '/about', label: 'About' },
-  { to: '/achievements', label: 'Achievements' },
+  { to: '/government-collaboration', label: 'Government Collaboration' },
   { to: '/research', label: 'Research' },
   { to: '/media', label: 'Media' },
   { to: '/gallery', label: 'Gallery' },
@@ -38,11 +38,11 @@ export default function Navbar() {
         {/* Desktop: brand + quote both shown permanently */}
         <NavLink to="/" className="nav-brand nav-brand-desktop" onClick={() => setOpen(false)}>
           <span className="nav-brand-name">Swapnil Pandey</span>
-          <span className="nav-brand-tag">Founder • Youth Vision India</span>
+          <span className="nav-brand-tag">Anonymity &#8226; Austerity &#8226; Ability</span>
         </NavLink>
 
         <div className="nav-quote nav-quote-desktop">
-          <p className="nav-quote-devanagari">'शीलं परम भूषणम्</p>
+          <p className="nav-quote-devanagari">'शीलं परम भूषणम्'</p>
           <div className="nav-quote-rule"></div>
           <p className="nav-quote-sub">Character is the highest ornament.</p>
         </div>

@@ -33,10 +33,10 @@
 
 .hero-kicker{
   display: inline-block;
+  font-family: var(--font-devanagari);
   color: #d3a83f;
-  text-transform: uppercase;
-  letter-spacing: .18em;
-  font-size: 13px;
+  letter-spacing: 0.04em;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -60,27 +60,30 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 14px;
+  column-gap: 28px;
   margin-bottom: 28px;
 }
 
 .highlight{
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 0 28px;
-  border-left: 1px solid rgba(211,168,63,.3);
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-right: 28px;
+  border-right: 1px solid rgba(211,168,63,.3);
 }
 
-.highlight:first-child{
-  padding-left: 0;
-  border-left: none;
+.highlight:last-child{
+  padding-right: 0;
+  border-right: none;
 }
 
 .highlight-icon{
-  font-size: 22px;
+  font-size: 20px;
   color: #d3a83f;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .highlight span:last-child{
@@ -211,12 +214,13 @@
   .hero-highlights{
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    row-gap: 12px;
+    column-gap: 0;
   }
 
   .highlight{
-    border-left: none;
-    padding: 0;
+    border-right: none;
+    padding-right: 0;
   }
 
   .hero-quote-text{
@@ -375,7 +379,7 @@
   }
 
   .hero-highlights{
-    gap: 16px;
+    row-gap: 16px;
     margin-bottom: 24px;
   }
 

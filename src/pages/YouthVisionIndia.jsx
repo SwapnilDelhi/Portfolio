@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import youthVisionImg from '../assets/images/youth.png';
 import './InnerPage.css';
 import './YouthVisionIndia.css';
 
@@ -27,7 +28,11 @@ export default function YouthVisionIndia() {
       <section className="section">
         <div className="container inner-split">
           <div className="inner-media">
-            <ImagePlaceholder label="Youth Vision India — Field Work" ratio="4 / 3" />
+            <img
+              src={youthVisionImg}
+              alt="Youth Vision India"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
+            />
           </div>
           <div className="inner-copy">
             <h2>Grassroots impact, nationwide</h2>

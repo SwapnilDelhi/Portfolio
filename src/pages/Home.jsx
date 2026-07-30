@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import homeImg from '../assets/images/swapnill.png';
-import youthVisionImg from '../assets/images/h.jpeg';
-import parliamentImg from '../assets/images/parliament1.jpeg';
+import homeImg from '../assets/images/ipp.png';
+import youthVisionImg from '../assets/images/youth.png';
+import parliamentImg from '../assets/images/Collab.png';
 import varanasiImg from '../assets/images/Vara.png';
 import './Home.css';
 
@@ -15,9 +15,9 @@ const COLUMNS = [
     image: youthVisionImg,
   },
   {
-    to: '/journey#government-engagement',
-    label: 'Parliament of India',
-    kicker: '02 — Government Engagement',
+    to: '/government-collaboration',
+    label: 'Government Collaboration',
+    kicker: '02 — Raisina Hills',
     text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
     image: parliamentImg,
   },
@@ -32,8 +32,8 @@ const COLUMNS = [
 
 const HIGHLIGHTS = [
   { icon: '◎', label: 'Youth Leader' },
-  { icon: '√x', label: 'Mathematical Researcher' },
-  { icon: '⚖', label: 'Public Policy Advocate' },
+  { icon: '√x', label: 'Scientific and Mathematical Researcher' },
+  { icon: '⚖', label: 'Public Policy Adviser' },
 ];
 
 export default function Home() {
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="hero-copy">
 
             <span className="hero-kicker">
-              Founder • Youth Vision India
+             'शीलं परम भूषणम्'
             </span>
 
             <h1>
@@ -72,9 +72,9 @@ export default function Home() {
             <div className="hero-quote">
               <span className="hero-quote-mark">&#8220;</span>
               <p className="hero-quote-text">
-                If I&rsquo;ve decided then,
+                If Destiny does not reward intentions.
                 <br />
-                I&rsquo;ll get it done anyhow.
+                It rewards unwavering execution.
               </p>
             </div>
 
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="container about-intro-grid">
           <div>
             <div className="eyebrow">About</div>
-            <h2>Who Swapnil Pandey is,<br />and why Youth Vision India exists</h2>
+            <h2>Who Swapnil Pandey is?</h2>
             <div className="rule"></div>
           </div>
           <p>

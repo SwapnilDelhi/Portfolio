@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -25,12 +24,6 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-
-  if (loading) {
-    return <LoadingScreen onFinish={() => setLoading(false)} />;
-  }
-
   return (
     <>
       <ScrollToTop />
@@ -40,6 +33,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<Journey />} />
+          <Route path="/government-collaboration" element={<Achievements />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/research" element={<Research />} />
           <Route path="/youth-vision-india" element={<YouthVisionIndia />} />
