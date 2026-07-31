@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
 import schoolImg from '../assets/images/school.png';
@@ -8,7 +8,6 @@ import varanasiImg from '../assets/images/Varan.png';
 import parliamentImg from '../assets/images/parliament.png';
 import researchImg from '../assets/images/pur.png';
 import todayImg from '../assets/images/today.png';
-import { governmentDialogues } from '../data/engagements';
 import './InnerPage.css';
 
 let sectionIndex = -1;
@@ -62,8 +61,8 @@ export default function Journey() {
             <p>
               Long before research, public policy, or institution-building became a part of my
               journey, there was a classroom. It was there that I first discovered a simple truth:
-              leadership is not inherited — it is cultivated, one decision, one discipline, and one
-              responsibility at a time.
+              <strong> leadership is not inherited — it is cultivated</strong>, one decision, one
+              discipline, and one responsibility at a time.
             </p>
             <p>
               My school years were never defined by a single examination or a single competition.
@@ -71,10 +70,10 @@ export default function Journey() {
               compete, and serve was embraced with the same conviction. I participated in academic,
               scientific, historical, and leadership competitions across diverse disciplines, earning
               recognition in numerous national and international Olympiads and educational
-              initiatives — among them distinctions in programmes conducted by INTACH, the Science
-              Olympiad Foundation (SOF), CBSE's Heritage India Quiz, and several other academic
-              platforms that challenged not only knowledge, but curiosity, analytical thinking, and
-              perseverance.
+              initiatives — among them distinctions in programmes conducted by <strong>INTACH, the
+              Science Olympiad Foundation (SOF), CBSE's Heritage India Quiz</strong>, and several
+              other academic platforms that challenged not only knowledge, but curiosity, analytical
+              thinking, and perseverance.
             </p>
             <p>
               Equally formative were the opportunities to engage with institutions that represent
@@ -95,7 +94,8 @@ export default function Journey() {
               the foundation upon which every later achievement was built. The classrooms taught
               knowledge. Competition taught resilience. Discipline built character. Service gave
               purpose. Together, they laid the first stones of a journey that would eventually grow
-              into research, innovation, public service, and the creation of Youth Vision India.
+              into research, innovation, public service, and the <strong>creation of Youth Vision
+              India</strong>.
             </p>
             <p>
               Because every institution begins with an idea. And every enduring idea begins with a
@@ -126,23 +126,23 @@ export default function Journey() {
             </p>
             <p>
               Driven by curiosity rather than convention, I undertook independent research that led
-              to the formulation of an original divisibility check for 8. The work was subsequently
-              recognized through a Copyright Registration granted by Intellectual Property India
-              (Boudhik Sampada Bhawan) under the Ministry of Commerce and Industry, Government of
-              India — an acknowledgment that strengthened my belief in the value of independent
-              inquiry and innovation.
+              to the formulation of an <strong>original divisibility check for 8</strong>. The work
+              was subsequently recognized through a <strong>Copyright Registration granted by
+              Intellectual Property India</strong> (Boudhik Sampada Bhawan) under the Ministry of
+              Commerce and Industry, Government of India — an acknowledgment that strengthened my
+              belief in the value of independent inquiry and innovation.
             </p>
             <p>
               Rather than considering that milestone an end, I viewed it as the beginning of a deeper
-              intellectual pursuit. I continued my research and developed another original
-              mathematical work concerning the divisibility check for 3, further expanding my
-              exploration into number theory and mathematical reasoning.
+              intellectual pursuit. I continued my research and developed another
+              <strong> original mathematical work concerning the divisibility check for 3</strong>,
+              further expanding my exploration into number theory and mathematical reasoning.
             </p>
             <p>
               My curiosity eventually led me toward one of mathematics' most fascinating frontiers —
-              infinity. Inspired by the extraordinary legacy of Srinivasa Ramanujan, I explored the
-              symbolic interpretation of infinity through Ramanujan's series, seeking to examine one
-              of the discipline's most profound and enduring concepts.
+              infinity. Inspired by the extraordinary legacy of <strong>Srinivasa Ramanujan</strong>,
+              I explored the symbolic interpretation of infinity through Ramanujan's series, seeking
+              to examine one of the discipline's most profound and enduring concepts.
             </p>
             <p>
               Research, to me, is not the pursuit of answers alone. It is the discipline of asking
@@ -170,6 +170,10 @@ export default function Journey() {
               alt="Youth Vision India"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
+            <Link to="https://www.youthvisionindia.org/" className="inner-link">
+                  Visit the our website →
+                </Link>
+              
           </div>
           <div className="inner-copy">
             <h2>Youth Vision India — Where Purpose Became Action</h2>
@@ -183,12 +187,13 @@ export default function Journey() {
               dedicated to public service, youth leadership, innovation, and nation-building.
             </p>
             <p>
-              From that foundation, our team stepped into the flood-affected regions of Punjab,
-              Haryana, and Himachal Pradesh. For days, we worked relentlessly on the ground, assisting
-              local communities by identifying disrupted road connectivity, reporting communication
-              challenges, facilitating access to essential food supplies, and supporting
-              sanitation-related efforts wherever possible. Those experiences transformed Youth Vision
-              India from an idea into a movement driven by responsibility rather than recognition.
+              From that foundation, our team stepped into the <strong>flood-affected regions of
+              Punjab, Haryana, and Himachal Pradesh</strong>. For days, we worked relentlessly on the
+              ground, assisting local communities by identifying disrupted road connectivity,
+              reporting communication challenges, facilitating access to essential food supplies, and
+              supporting sanitation-related efforts wherever possible. Those experiences transformed
+              Youth Vision India from an idea into a movement driven by responsibility rather than
+              recognition.
             </p>
             <p>
               As our work expanded, so did our commitment to serving communities. Across the Delhi
@@ -198,28 +203,30 @@ export default function Journey() {
               healthy living among underserved communities.
             </p>
             <p>
-              During the peak of summer, we launched our "Beat the Heat" initiative, through which our
-              volunteers prepared and distributed traditional Chhabeel — a refreshing mixture of
-              chilled water, milk, and rose syrup — to more than a thousand people across Delhi NCR.
-              For us, service has never been measured by the scale of an event, but by the dignity
-              with which every individual is served.
+              During the peak of summer, we launched our <strong>"Beat the Heat" initiative</strong>,
+              through which our volunteers prepared and distributed traditional Chhabeel — a
+              refreshing mixture of chilled water, milk, and rose syrup — to
+              <strong> more than a thousand people across Delhi NCR</strong>. For us, service has
+              never been measured by the scale of an event, but by the dignity with which every
+              individual is served.
             </p>
             <p>
               Our commitment extends beyond community service to policy engagement. Youth Vision
               India has submitted ideas and recommendations on environmental sustainability and
-              climate action to the Ministry of Environment, Forest and Climate Change, including
-              meaningful discussions with senior officials of the Ministry — reflecting our belief
-              that informed youth participation can strengthen public policy and contribute
-              constructively to national development.
+              climate action to the <strong>Ministry of Environment, Forest and Climate
+              Change</strong>, including meaningful discussions with senior officials of the Ministry
+              — reflecting our belief that informed youth participation can strengthen public policy
+              and contribute constructively to national development.
             </p>
             <p>
               The journey of Youth Vision India also received encouragement from national leadership.
-              One of the defining moments came when I received a personal call from the Hon'ble Union
-              Minister for Youth Affairs & Sports and Labour & Employment, Shri Mansukh Mandaviya,
-              congratulating our youth-led initiative and acknowledging the spirit of service
-              demonstrated by our team. That moment was not merely a recognition of an organization —
-              it was an affirmation that young citizens, when guided by purpose, integrity, and
-              perseverance, can contribute meaningfully to the nation.
+              One of the defining moments came when I received a personal call from the
+              <strong> Hon'ble Union Minister for Youth Affairs & Sports and Labour & Employment,
+              Shri Mansukh Mandaviya</strong>, congratulating our youth-led initiative and
+              acknowledging the spirit of service demonstrated by our team. That moment was not
+              merely a recognition of an organization — it was an affirmation that young citizens,
+              when guided by purpose, integrity, and perseverance, can contribute meaningfully to the
+              nation.
             </p>
             <p>
               Every initiative undertaken by Youth Vision India is guided by one unwavering belief:
@@ -257,8 +264,8 @@ export default function Journey() {
                 <p>
                   As part of our national leadership and civic engagement initiative, I, Swapnil
                   Pandey, along with the members of Youth Vision India (YVI), had the privilege of
-                  visiting the Parliament of India, including both the historic Parliament House
-                  (Sansad Bhavan) and the old Parliament Building (Samvidhan Sadan).
+                  visiting the <strong>Parliament of India</strong>, including both the historic
+                  Parliament House (Sansad Bhavan) and the old Parliament Building (Samvidhan Sadan).
                 </p>
                 <p>
                   The visit provided us with an exceptional opportunity to witness the functioning,
@@ -283,16 +290,17 @@ export default function Journey() {
                   Among the highlights of our visit were:
                 </p>
                 <ul>
-                  <li>Sangeet Deergha, showcasing India's rich heritage of music, dance, folk
-                      traditions, and classical musical instruments.</li>
-                  <li>Shilp Deergha, presenting the country's renowned handicrafts, handloom
-                      traditions, and the artistic excellence of Indian artisans.</li>
-                  <li>Sthapatya Deergha, displaying India's architectural legacy through models and
-                      representations of iconic monuments and historic structures.</li>
-                  <li>The Constitution Hall, where we experienced the constitutional journey of India
-                      and observed the magnificent Foucault Pendulum, a scientific installation that
-                      visually demonstrates the Earth's rotation while symbolising the harmony
-                      between scientific inquiry and constitutional thought.</li>
+                  <li><strong>Sangeet Deergha</strong>, showcasing India's rich heritage of music,
+                      dance, folk traditions, and classical musical instruments.</li>
+                  <li><strong>Shilp Deergha</strong>, presenting the country's renowned handicrafts,
+                      handloom traditions, and the artistic excellence of Indian artisans.</li>
+                  <li><strong>Sthapatya Deergha</strong>, displaying India's architectural legacy
+                      through models and representations of iconic monuments and historic
+                      structures.</li>
+                  <li>The <strong>Constitution Hall</strong>, where we experienced the constitutional
+                      journey of India and observed the magnificent Foucault Pendulum, a scientific
+                      installation that visually demonstrates the Earth's rotation while symbolising
+                      the harmony between scientific inquiry and constitutional thought.</li>
                 </ul>
                 <p>
                   Every gallery reflected the spirit of "Unity in Diversity", presenting India's
@@ -309,18 +317,28 @@ export default function Journey() {
                   India's future through research, innovation, public policy, and youth leadership.
                 </p>
                 <p>
-                  Moreover, our delegation visited the Samvidhan Sadan (the historic Parliament House), one of the most significant landmarks in India's democratic journey. We had the privilege of visiting the Central Hall, the historic chamber where the Constituent Assembly convened to deliberate upon and adopt the Constitution of India, and where the historic transfer of power from British rule to independent India took place on 14–15 August 1947.
-</p>
-<p>
-Standing within this iconic hall offered a profound sense of history and responsibility. It was here that the vision of the Republic of India was shaped by the framers of the Constitution, laying the foundation of the democratic values, justice, liberty, equality, and fraternity that continue to guide the nation. For the members of Youth Vision India, this visit served as a powerful reminder of our constitutional duties and strengthened our commitment to responsible leadership, public service, and nation-building.
-              </p>
+                  Moreover, our delegation visited the <strong>Samvidhan Sadan</strong> (the historic
+                  Parliament House), one of the most significant landmarks in India's democratic
+                  journey. We had the privilege of visiting the <strong>Central Hall</strong>, the
+                  historic chamber where the Constituent Assembly convened to deliberate upon and
+                  adopt the Constitution of India, and where the historic transfer of power from
+                  British rule to independent India took place on
+                  <strong> 14–15 August 1947</strong>.
+                </p>
+                <p>
+                  Standing within this iconic hall offered a profound sense of history and
+                  responsibility. It was here that the vision of the Republic of India was shaped by
+                  the framers of the Constitution, laying the foundation of the democratic values,
+                  justice, liberty, equality, and fraternity that continue to guide the nation. For
+                  the members of Youth Vision India, this visit served as a powerful reminder of our
+                  constitutional duties and strengthened our commitment to responsible leadership,
+                  public service, and nation-building.
+                </p>
               </div>
             </div>
           </section>
         );
       })()}
-
-      
 
       {/* 5. VARANASI DEVELOPMENT */}
       {(() => {
@@ -334,51 +352,55 @@ Standing within this iconic hall offered a profound sense of history and respons
                   alt="Varanasi Development"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
                 />
+                <Link to="/varanasi" className="inner-link">
+                  Visit the Varanasi Project →
+                </Link>
               </div>
               <div className="inner-copy">
                 <h2>Varanasi Development &amp; Community Service</h2>
                 <div className="rule"></div>
                 <p>
-                  Varanasi is not merely the city where I work—it is a timeless symbol of India's
-                  civilizational heritage, spirituality, knowledge, and resilience. Through Youth
-                  Vision India (YVI), our team remains committed to contributing towards the holistic
-                  development and empowerment of the people of Varanasi through sustained community
-                  engagement and public service.
+                  Varanasi is not merely the city where I work—it is a <strong>timeless symbol of
+                  India's civilizational heritage</strong>, spirituality, knowledge, and resilience.
+                  Through Youth Vision India (YVI), our team remains committed to contributing
+                  towards the holistic development and empowerment of the people of Varanasi through
+                  sustained community engagement and public service.
                 </p>
                 <p>
-                  One of our ongoing initiatives is the support of an old age home, where our
-                  volunteers regularly provide fresh, nutritious, and hygienic meals to elderly
-                  residents. Beyond food distribution, we actively work to promote better sanitation
-                  and hygiene facilities while spending meaningful time with the residents through
-                  regular conversations and social engagement.
+                  One of our ongoing initiatives is the support of an <strong>old age home</strong>,
+                  where our volunteers regularly provide fresh, nutritious, and hygienic meals to
+                  elderly residents. Beyond food distribution, we actively work to promote better
+                  sanitation and hygiene facilities while spending meaningful time with the residents
+                  through regular conversations and social engagement.
                 </p>
                 <p>
-                  Our commitment also extends to women's empowerment, youth engagement, education,
-                  community awareness, and volunteer-driven social initiatives aimed at creating
-                  long-term, sustainable impact. By encouraging leadership, participation, and
-                  self-reliance, we strive to strengthen communities from within.
+                  Our commitment also extends to <strong>women's empowerment, youth engagement,
+                  education</strong>, community awareness, and volunteer-driven social initiatives
+                  aimed at creating long-term, sustainable impact. By encouraging leadership,
+                  participation, and self-reliance, we strive to strengthen communities from within.
                 </p>
                 <p>
                   As Varanasi welcomes visitors from across the world, our team has also had the
                   privilege of interacting with international visitors, particularly during occasions
-                  such as the International Day of Yoga and other public events. Through these
-                  interactions, we share the richness of India's cultural heritage, spiritual
-                  traditions, constitutional values, and the unique legacy of Varanasi as one of the
-                  world's oldest living cities.
+                  such as the <strong>International Day of Yoga</strong> and other public events.
+                  Through these interactions, we share the richness of India's cultural heritage,
+                  spiritual traditions, constitutional values, and the unique legacy of Varanasi as
+                  one of the world's oldest living cities.
                 </p>
                 <p>
                   Every initiative undertaken by Youth Vision India reflects a common purpose—to
                   preserve India's cultural identity while contributing to social welfare, civic
                   responsibility, and inclusive development. In recognition of these community
                   service initiatives and public contributions, I had the honour of being appreciated
-                  by Shri Himanshu Nagpal, IAS (Chief Development Officer, Varanasi), and the
-                  Additional District Magistrate, Varanasi. Their encouragement continues to inspire
-                  our team to work with greater dedication towards public service and nation-building.
+                  by <strong>Shri Himanshu Nagpal, IAS (Chief Development Officer,
+                  Varanasi)</strong>, and the Additional District Magistrate, Varanasi. Their
+                  encouragement continues to inspire our team to work with greater dedication towards
+                  public service and nation-building.
                 </p>
                 <p>
-                  For us, development is not measured solely by infrastructure, but by the dignity of
-                  every citizen, the strength of every community, and the opportunities created for
-                  future generations.
+                  For us, development is not measured solely by infrastructure, but by the
+                  <strong> dignity of every citizen</strong>, the strength of every community, and
+                  the opportunities created for future generations.
                 </p>
               </div>
             </div>
@@ -405,12 +427,12 @@ Standing within this iconic hall offered a profound sense of history and respons
                 <p>
                   Today, Swapnil Pandey continues to actively participate in discussions,
                   conferences, research initiatives, policy dialogues, and innovation platforms with
-                  leading national and international institutions &mdash; spanning the India
-                  International Centre (IIC), the Rajasthan International Centre (RIC), the United
-                  Nations, the World Bank, BRICS forums, NITI Aayog, the Ministry of Science &amp;
-                  Technology, DRDO, ISRO, NASA, Atal Innovation Mission, NCERT, CBSE, and numerous
-                  universities, research institutions, diplomatic forums, and educational
-                  organisations.
+                  leading national and international institutions &mdash; spanning the
+                  <strong> India International Centre (IIC), the Rajasthan International Centre
+                  (RIC), the United Nations, the World Bank, BRICS forums, NITI Aayog</strong>, the
+                  Ministry of Science &amp; Technology, DRDO, ISRO, NASA, Atal Innovation Mission,
+                  NCERT, CBSE, and numerous universities, research institutions, diplomatic forums,
+                  and educational organisations.
                 </p>
                 <p>
                   What began as the conviction of a single young mind has evolved into a growing
@@ -418,17 +440,19 @@ Standing within this iconic hall offered a profound sense of history and respons
                   nation-building.
                 </p>
                 <p>
-                  Today, Swapnil Pandey serves as a young innovator, mathematical researcher, public
-                  policy advisor and strategist, and Founder of Youth Vision India (YVI)—a youth-led
-                  national initiative committed to empowering the next generation through civic
-                  participation, scientific thinking, constitutional values, and community service.
+                  Today, Swapnil Pandey serves as a <strong>young innovator, mathematical researcher,
+                  public policy advisor and strategist, and Founder of Youth Vision India
+                  (YVI)</strong>—a youth-led national initiative committed to empowering the next
+                  generation through civic participation, scientific thinking, constitutional values,
+                  and community service.
                 </p>
                 <p>
                   His work spans multiple domains, including mathematical research, educational
                   reform, youth leadership, policy documentation, innovation, institutional
                   engagement, social development, and constitutional awareness. His mathematical
-                  research has received official copyright registration from Intellectual Property
-                  India, reflecting his commitment to original scientific inquiry from an early age.
+                  research has received <strong>official copyright registration from Intellectual
+                  Property India</strong>, reflecting his commitment to original scientific inquiry
+                  from an early age.
                 </p>
                 <p>
                   Through Youth Vision India, a nationwide network of young leaders, researchers,

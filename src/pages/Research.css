@@ -30,7 +30,13 @@
   font-size: 12px;
   color: var(--grey-mid);
 }
-
+.paper-image{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
 @media (max-width: 860px){
   .paper-card{ grid-template-columns: 1fr; padding: 28px; }
 }

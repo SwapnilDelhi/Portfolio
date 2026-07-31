@@ -22,7 +22,7 @@ const COLUMNS = [
     image: parliamentImg,
   },
   {
-    to: '/journey#varanasi-development',
+    to: '/varanasi',
     label: 'Varanasi Development',
     kicker: '03 — Regional Initiative',
     text: 'A dedicated development initiative for Varanasi, working at the intersection of heritage, civic infrastructure, and community-driven progress.',

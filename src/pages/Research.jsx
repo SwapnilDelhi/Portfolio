@@ -2,16 +2,33 @@ import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
 import './InnerPage.css';
 import './Research.css';
+import divisibility8Img from '../assets/images/8.png';
+import divisibility3Img from '../assets/images/3.png';
 
 const PAPERS = [
   {
     title: 'A New Divisibility Test for 8',
-    abstract: 'A novel, generalisable method for testing divisibility by 8, presented to and recognised by the Hon\u2019ble Speaker of Lok Sabha, Shri Om Birla Ji.',
-    problem: 'Existing divisibility tests for 8 rely on checking the last three digits, offering limited insight for mental or generalised computation.',
-    solution: 'A restructured test that simplifies the identification of divisibility using a more efficient digit-based approach.',
+    image: divisibility8Img,
+    pdf: divisibility8Img, // Change to actual PDF later
+    abstract:
+      'A novel, generalisable method for testing divisibility by 8, presented to and recognised by the Hon’ble Speaker of Lok Sabha, Shri Om Birla Ji.',
+    problem:
+      'Existing divisibility tests for 8 rely on checking the last three digits, offering limited insight for mental or generalised computation.',
+    solution:
+      'A restructured test that simplifies the identification of divisibility using a more efficient digit-based approach.',
+  },
+  {
+    title: 'A New Divisibility Test for 3',
+    image: divisibility3Img,
+    pdf: divisibility3Img, // Change to actual PDF later
+    abstract:
+      'A mathematical approach introducing an alternative divisibility test for 3, designed to simplify mental calculations and enhance number theory education.',
+    problem:
+      'Traditional divisibility tests for 3 are effective but limited in demonstrating broader mathematical patterns and alternative computational methods.',
+    solution:
+      'Developed a structured digit-based approach that provides an intuitive and efficient method for determining divisibility by 3.',
   },
 ];
-
 export default function Research() {
   return (
     <>
@@ -26,8 +43,12 @@ export default function Research() {
           {PAPERS.map((p) => (
             <div className="paper-card" key={p.title}>
               <div className="paper-media">
-                <ImagePlaceholder label={p.title} ratio="4 / 3" />
-              </div>
+  <img
+    src={p.image}
+    alt={p.title}
+    className="paper-image"
+  />
+</div>
               <div className="paper-body">
                 <h2>{p.title}</h2>
                 <div className="rule"></div>
@@ -45,10 +66,16 @@ export default function Research() {
                   <p>{p.solution}</p>
                 </div>
 
-                <div className="paper-actions">
-                  <a className="btn btn-outline-navy" href="#">Publication Details</a>
-                  <a className="btn btn-outline-navy" href="#">Download PDF</a>
-                </div>
+<div className="paper-actions">
+  <a
+    className="btn btn-outline-navy"
+    href={p.pdf}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download PDF
+  </a>
+</div>
                 <div className="paper-copyright">&copy; All rights reserved. Copyright details available on request.</div>
               </div>
             </div>

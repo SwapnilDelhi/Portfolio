@@ -1,6 +1,5 @@
 import PageHeader from '../components/PageHeader';
 import Timeline from '../components/Timeline';
-import { governmentDialogues, institutionalEngagements } from '../data/engagements';
 import './InnerPage.css';
 
 export default function Parliament() {
@@ -14,7 +13,6 @@ export default function Parliament() {
 
       <section className="section">
         <div className="container">
-          <Timeline entries={governmentDialogues} />
         </div>
       </section>
 

@@ -8,19 +8,17 @@ export default function Achievements() {
     <>
       <PageHeader
         eyebrow="Government collaboration and institutional engagement"
-        title="Government Collaboration "
+        title="Government Collaboration"
         subtitle="A timeline of policy engagement, public service partnerships, delegation meetings, and official recognition from government institutions."
       />
 
+      
+
       <section className="section">
         <div className="container">
-          <p>
-            This section highlights the work undertaken through institutional engagement, policy
-            dialogue, and public-sector collaboration. It reflects the role of Youth Vision India
-            in contributing ideas, research, and youth-led initiatives to national development and
-            civic participation.
-          </p>
-          <Timeline entries={delegationMeetings} />
+          
+
+<Timeline entries={delegationMeetings} />
         </div>
       </section>
     </>
