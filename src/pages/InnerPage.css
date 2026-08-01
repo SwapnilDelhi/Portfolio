@@ -62,14 +62,66 @@
 
 .section-heading h2{ font-size: 30px; }
 
-.text-block{
-  max-width: 760px;
+.publications-section .section-heading{
+  max-width: 900px;
+  margin-bottom: var(--space-5);
 }
 
-.text-block p{
+.publications-section .section-heading h2{
+  font-size: 38px;
+}
+
+.publications-section .eyebrow{
+  color: var(--gold);
+  letter-spacing: 0.18em;
+}
+
+.publications-section .text-block{
+  max-width: 900px;
+  margin-bottom: var(--space-4);
+}
+
+.publications-section .text-block p{
   font-size: 16px;
   color: var(--grey-dark);
   margin: 0 0 18px;
+}
+
+.publications-section .info-card{
+  border-color: rgba(201,162,39,0.25);
+  box-shadow: 0 10px 30px rgba(201,162,39,0.08);
+}
+
+.publications-section .info-card h3{
+  color: var(--navy);
+}
+
+.publications-section .info-card p{
+  color: var(--grey-dark);
+}
+
+.publications-section .btn-outline-navy{
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.publications-section .btn-outline-navy:hover{
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.publications-section .card-grid{
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.publications-section .section-heading{
+  padding-left: 0;
+}
+
+.publications-section .container{
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
 }
 
 .tag-cloud{
@@ -117,7 +169,7 @@
    EVENTS PAGE
 ============================================================ */
 
-.events-grid{
+.events-page-events-grid.events-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
@@ -138,15 +190,17 @@
   border-color: var(--line-gold);
 }
 
-.event-image{
+.events-page-events-grid .event-image{
   width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
-.event-image img{
+.events-page-events-grid .event-image img{
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 
 .event-body{

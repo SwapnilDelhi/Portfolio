@@ -1,4 +1,13 @@
-import { missionReliefImg, padDistributionImg } from '../assets/images/events';
+import {
+  missionReliefImg,
+  padDistributionImg,
+  dentalImg,
+  awarenessImg,
+  heatCampaignImg,
+  environmentImg,
+  sanskarImg,
+  yogaImg,
+} from '../assets/images/events';
 
 // Add new events here — they'll automatically sort by date and render
 // on the Events page. `sortDate` must be ISO (YYYY-MM-DD) for correct
@@ -31,6 +40,8 @@ export const events = [
     title: 'Dental / Oral Hygiene Camp',
     description:
       'Organized a free community dental check-up and oral hygiene awareness camp with healthcare professionals.',
+    image: dentalImg,
+    imageAlt: 'Dental oral hygiene awareness camp',
   },
   {
     id: 'earth-day-awareness',
@@ -39,6 +50,8 @@ export const events = [
     title: 'Earth Day Awareness Drive',
     description:
       'Promoted environmental responsibility through awareness campaigns and community engagement.',
+    image: awarenessImg,
+    imageAlt: 'Earth Day awareness drive',
   },
   {
     id: 'beat-the-heat',
@@ -47,6 +60,8 @@ export const events = [
     title: 'Beat the Heat Campaign',
     description:
       'Distributed drinking water, ORS, and refreshments while raising awareness about heatstroke prevention.',
+    image: heatCampaignImg,
+    imageAlt: 'Beat the Heat campaign hydration drive',
   },
   {
     id: 'yvi-sanskar-mahotsav',
@@ -55,6 +70,8 @@ export const events = [
     title: 'YVI संस्कार महोत्सव 2026',
     description:
       'Week-long nationwide volunteer initiative focusing on service, leadership, and community development.',
+    image: sanskarImg,
+    imageAlt: 'YVI sanskar mahotsav initiative',
   },
   {
     id: 'green-future-initiative',
@@ -63,6 +80,8 @@ export const events = [
     title: 'Green Future Initiative — World Environment Day',
     description:
       'Conducted a sapling plantation drive to encourage environmental conservation and community participation.',
+    image: environmentImg,
+    imageAlt: 'Green Future sapling plantation drive',
   },
   {
     id: 'international-yoga-day',
@@ -71,6 +90,8 @@ export const events = [
     title: 'International Yoga Day Celebration',
     description:
       'Organized a community yoga session to promote physical fitness, mental well-being, and healthy living.',
+    image: yogaImg,
+    imageAlt: 'International Yoga Day session',
   },
 ];
 

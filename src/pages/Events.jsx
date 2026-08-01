@@ -16,7 +16,7 @@ export default function Events() {
 
       <section className="section">
         <div className="container">
-          <div className="events-grid">
+          <div className="events-page-events-grid events-grid">
             {sortedEvents.map((event) => (
               <article className="event-card" key={event.id}>
                 <div className="event-image">

@@ -1,2 +1,9 @@
 export { default as missionReliefImg } from './missionrelief.png';
 export { default as padDistributionImg } from './paddistribution.png';
+export { default as dentalImg } from './dental.png';
+export { default as awarenessImg } from './awareness.png';
+export { default as heatCampaignImg } from './beattheheat.png';
+export { default as environmentImg } from './environment.png';
+export { default as sanskarImg } from './sanskar.png';
+export { default as yogaImg } from './yoga.png';
+export { default as warriorImg } from './warrior.png';
