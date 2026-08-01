@@ -2,7 +2,41 @@ import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
 import './InnerPage.css';
 
-const CATEGORIES = ['Newspapers', 'Interviews', 'Videos', 'Podcasts', 'Articles'];
+const CATEGORIES = [
+  {
+    name: 'Articles',
+    items: [
+      {
+        title: 'Swapnil Pandey: A brilliant young mind discovered a remarkable math trick that impressed NASA and beyond',
+        source: 'News18 हिंदी',
+        link: 'https://share.google/vHt317zw7ibA8ZO17',
+        embedLink: 'https://share.google/vHt317zw7ibA8ZO17',
+      },
+      {
+        title: 'Swapnil Pandey: ISRO and NASA recognized the science behind a smart streetlight innovation',
+        source: 'News18 हिंदी',
+        link: 'https://share.google/lG4A1nvQBKtNmpnJt',
+        embedLink: 'https://share.google/lG4A1nvQBKtNmpnJt',
+      },
+    ],
+  },
+  {
+    name: 'Newspapers',
+    items: [1, 2, 3],
+  },
+  {
+    name: 'Interviews',
+    items: [1, 2, 3],
+  },
+  {
+    name: 'Videos',
+    items: [1, 2, 3],
+  },
+  {
+    name: 'Podcasts',
+    items: [1, 2, 3],
+  },
+];
 
 export default function Media() {
   return (
@@ -16,19 +50,40 @@ export default function Media() {
       <section className="section">
         <div className="container">
           {CATEGORIES.map((cat) => (
-            <div className="media-category" key={cat}>
+            <div className="media-category" key={cat.name}>
               <div className="section-heading" style={{ marginBottom: '20px' }}>
-                <h2 style={{ fontSize: '22px' }}>{cat}</h2>
+                <h2 style={{ fontSize: '22px' }}>{cat.name}</h2>
                 <div className="rule"></div>
               </div>
               <div className="card-grid" style={{ marginTop: 0 }}>
-                {[1, 2, 3].map((n) => (
-                  <div className="info-card" key={n}>
-                    <ImagePlaceholder label={`${cat} ${n}`} ratio="16 / 10" className="media-thumb" />
-                    <h3 style={{ marginTop: '14px' }}>{cat.slice(0, -1)} title</h3>
-                    <p>Publication or source name &middot; Date</p>
-                  </div>
-                ))}
+                {cat.items.map((item, index) => {
+                  const isArticle = typeof item === 'object';
+
+                  return (
+                    <div className="info-card" key={`${cat.name}-${index}`}>
+                      {isArticle ? (
+                        <>
+                          <h3 style={{ marginTop: '14px' }}>{item.title}</h3>
+                          <p>{item.source} &middot; Article</p>
+                          <iframe
+                            src={item.embedLink}
+                            title={item.title}
+                            loading="lazy"
+                            style={{ width: '100%', height: '220px', border: '0', borderRadius: '8px', marginTop: '12px' }}
+                          />
+                          <a href={item.link} target="_blank" rel="noreferrer" style={{ color: '#1d4ed8', fontWeight: 600, display: 'inline-block', marginTop: '10px' }}>
+                            Open article
+                          </a>
+                        </>
+                      ) : (
+                        <>
+                          <h3 style={{ marginTop: '14px' }}>{cat.name.slice(0, -1)} title</h3>
+                          <p>Publication or source name &middot; Date</p>
+                        </>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

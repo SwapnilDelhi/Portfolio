@@ -1,5 +1,5 @@
 import PageHeader from '../components/PageHeader';
-import aboutImg from '../assets/images/about.jpeg';
+import { aboutImg } from '../assets/images/about';
 import './InnerPage.css';
 
 export default function About() {

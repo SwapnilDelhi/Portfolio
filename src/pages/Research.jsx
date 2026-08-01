@@ -2,8 +2,7 @@ import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
 import './InnerPage.css';
 import './Research.css';
-import divisibility8Img from '../assets/images/8.png';
-import divisibility3Img from '../assets/images/3.png';
+import { divisibility8Img, divisibility3Img } from '../assets/images/research';
 
 const PAPERS = [
   {

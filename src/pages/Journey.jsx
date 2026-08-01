@@ -2,12 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ImagePlaceholder from '../components/ImagePlaceholder';
-import schoolImg from '../assets/images/school.png';
-import youthVisionImg from '../assets/images/youth.png';
-import varanasiImg from '../assets/images/Varan.png';
-import parliamentImg from '../assets/images/parliament.png';
-import researchImg from '../assets/images/pur.png';
-import todayImg from '../assets/images/today.png';
+import { schoolImg, youthVisionImg, varanasiImg, parliamentImg, researchImg, todayImg } from '../assets/images/journey';
 import './InnerPage.css';
 
 let sectionIndex = -1;

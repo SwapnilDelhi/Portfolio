@@ -3,23 +3,26 @@
 // Government Engagement pages.
 // Add an `image` (imported at the top) to show a photo on that entry's card.
 
-import omBirlaImg from '../assets/images/d.jpeg';
-import rakshaKhadseImg from '../assets/images/e.jpeg';
-import dharmendraPradhanImg from '../assets/images/f.jpeg';
-import manojSinhaImg from '../assets/images/k.jpeg';
-import environmentMinistryImg from '../assets/images/L.jpeg';
-import mansukhMandaviyaImg from '../assets/images/m.png';
-import prahladJoshiImg from '../assets/images/p.png';
-import sambitPatraImg from '../assets/images/sambit.png';
-import ricImg from '../assets/images/sic.png';
-import bharatMandapamImg from '../assets/images/bharatmandap.png';
-import ipi1Img from '../assets/images/ipi11.png';
-import ipi2Img from '../assets/images/ipi2.png';
-import tribalImg from '../assets/images/tribal.png';
-import mpyouthImg from '../assets/images/mpyouth.png';
-import mpcommerceImg from '../assets/images/mpcommerce.png';
-import unicefImg from '../assets/images/unicef.png';
-import tajImg from '../assets/images/taj.png';
+import {
+  omBirlaImg,
+  rakshaKhadseImg,
+  dharmendraPradhanImg,
+  manojSinhaImg,
+  environmentMinistryImg,
+  mansukhMandaviyaImg,
+  prahladJoshiImg,
+  sambitPatraImg,
+  ricImg,
+  bharatMandapamImg,
+  ipi1Img,
+  ipi2Img,
+  tribalImg,
+  mpyouthImg,
+  mpcommerceImg,
+  unicefImg,
+  tajImg,
+  swapImg,
+} from '../assets/images/engagements';
 
 export const delegationMeetings = [
   
@@ -186,6 +189,19 @@ export const delegationMeetings = [
   'Interacted with <strong>international delegates</strong> from multiple countries, exchanging perspectives on <strong>technology</strong>, <strong>digital transformation</strong>, <strong>innovation</strong>, and <strong>global collaboration</strong>.',
   'Engaged with <strong>policymakers</strong>, <strong>industry leaders</strong>, and <strong>delegates</strong>, discussing the future of <strong>digital connectivity</strong>, <strong>youth participation</strong>, and India’s vision of becoming a <strong>global technology leader</strong>.'
 ],
+},
+{
+  date: '2025',
+  title: 'Ministry of Environment, Forest and Climate Change (MoEFCC)',
+  role: 'Special interaction with the Ministry of Environment, Forest and Climate Change',
+  image: swapImg,
+  points: [
+    'Held a comprehensive interaction with the <strong>Hon’ble Union Minister for Environment, Forest and Climate Change, Shri Bhupender Yadav</strong>, where I had the privilege of presenting my <strong>Smart Street Light Innovation</strong> and discussing its potential contribution towards <strong>sustainable urban development</strong> and <strong>environmental conservation</strong>.',
+    'Engaged in detailed deliberations with <strong>senior officials</strong>, <strong>Directors</strong>, and <strong>representatives of the Ministry of Environment, Forest and Climate Change</strong> on <strong>climate resilience</strong>, <strong>technological innovation</strong>, and the vital role of <strong>youth-led solutions</strong> in addressing India’s environmental priorities.',
+    'Discussed opportunities for meaningful engagement with the <strong>United Nations</strong> and other <strong>international climate initiatives</strong>, exploring how <strong>young innovators</strong> can actively contribute to <strong>global sustainability</strong>, <strong>climate action</strong>, and <strong>environmental diplomacy</strong>.',
+    'Exchanged perspectives on strengthening <strong>youth participation</strong> in <strong>climate governance</strong>, emphasizing that <strong>innovation</strong>, <strong>public policy</strong>, and <strong>leadership</strong> must work together to build a more sustainable and climate-resilient future.',
+    'Interacted with <strong>policymakers</strong>, <strong>environmental experts</strong>, and <strong>government representatives</strong>, discussing the importance of <strong>sustainable innovation</strong>, <strong>environmental stewardship</strong>, and empowering young leaders to contribute to India’s long-term climate goals.'
+  ],
 },
 ];
 

@@ -1,5 +1,4 @@
-import missionReliefImg from '../assets/images/missionrelief.png';
-import padDistributionImg from '../assets/images/paddistribution.png';
+import { missionReliefImg, padDistributionImg } from '../assets/images/events';
 
 // Add new events here — they'll automatically sort by date and render
 // on the Events page. `sortDate` must be ISO (YYYY-MM-DD) for correct

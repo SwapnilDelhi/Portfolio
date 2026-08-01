@@ -1,7 +1,5 @@
 import PageHeader from '../components/PageHeader';
-import varanasiImg from '../assets/images/Varan.png';
-import varadev2Img from '../assets/images/varadev2.jpeg';
-import varadev3Img from '../assets/images/varadev3.jpg';
+import { varanasiImg, varadev2Img, varadev3Img } from '../assets/images/varanasi';
 import './InnerPage.css';
 
 // NOTE: Add real Varanasi Development content and photographs here once available.

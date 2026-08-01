@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-import homeImg from '../assets/images/ipp.png';
-import youthVisionImg from '../assets/images/youth.png';
-import parliamentImg from '../assets/images/Collab.png';
-import varanasiImg from '../assets/images/Vara.png';
+import { homeImg, youthVisionImg, parliamentImg, varanasiImg } from '../assets/images/home';
 import './Home.css';
 
 
