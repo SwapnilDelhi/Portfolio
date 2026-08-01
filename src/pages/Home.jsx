@@ -4,19 +4,20 @@ import './Home.css';
 
 
 const COLUMNS = [
-  {
-    to: '/journey#youth-vision-india',
-    label: 'Youth Vision India',
-    kicker: '01 — Youth-Led Platform',
-    text: 'A youth-led platform building a more educated, empowered, and compassionate India — through women\u2019s empowerment, sanitary pad distribution, education, and grassroots welfare drives across states.',
-    image: youthVisionImg,
-  },
+  
   {
     to: '/government-collaboration',
     label: 'Government Collaboration',
-    kicker: '02 — Raisina Hills',
+    kicker: '01 — Raisina Hills',
     text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
     image: parliamentImg,
+  },
+  {
+    to: '/journey#youth-vision-india',
+    label: 'Youth Vision India',
+    kicker: '02 — Youth-Led Platform',
+    text: 'A youth-led platform building a more educated, empowered, and compassionate India — through women\u2019s empowerment, sanitary pad distribution, education, and grassroots welfare drives across states.',
+    image: youthVisionImg,
   },
   {
     to: '/varanasi',

@@ -24,7 +24,6 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-heading">Initiatives</div>
           <Link to="/youth-vision-india">Youth Vision India</Link>
-          <Link to="/parliament">Government Engagement</Link>
           <Link to="/varanasi">Varanasi Development</Link>
           <Link to="/collaborate">Collaborate</Link>
         </div>
@@ -32,7 +31,6 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-heading">Connect</div>
           <a href="mailto:Connect@swapnilpandey.com">Connect@swapnilpandey.com</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://www.instagram.com/swapnilpandeyofficial" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
