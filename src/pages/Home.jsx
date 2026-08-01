@@ -92,10 +92,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="scroll-indicator" aria-hidden="true">
+        {/* <div className="scroll-indicator" aria-hidden="true">
           <span className="scroll-mouse"><span className="scroll-dot"></span></span>
           <span className="scroll-chevron">⌄</span>
-        </div>
+        </div> */}
       </section>
 
       {/*
