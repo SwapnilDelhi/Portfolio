@@ -1,9 +1,15 @@
 import PageHeader from '../components/PageHeader';
 import './Gallery.css';
 
-// Collect any existing gallery images (optional). Site editor can reassign images later.
+// Collect any existing gallery images as general placeholders.
 const imageModules = import.meta.glob('../assets/images/gallery/*.{png,jpg,jpeg}', { eager: true });
 const galleryImages = Object.entries(imageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true, sensitivity: 'base' }))
+  .map(([, module]) => module.default);
+
+// Explicitly load the renamed YVIians at Parliament images.
+const parliamentModules = import.meta.glob('../assets/images/gallery/YVIiansAtParli/*.{png,jpg,jpeg}', { eager: true });
+const parliamentImages = Object.entries(parliamentModules)
   .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true, sensitivity: 'base' }))
   .map(([, module]) => module.default);
 
@@ -12,8 +18,7 @@ const SECTIONS = [
     id: 'parliament',
     title: 'YVIians at Parliament.',
     subtitle: 'Selected moments from parliamentary visits and policy engagements.',
-    // placeholder allocation — editors can replace these with curated images later
-    images: galleryImages.slice(0, 6),
+    images: parliamentImages,
   },
   {
     id: 'iic',
