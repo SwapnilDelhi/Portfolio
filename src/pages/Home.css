@@ -1,8 +1,12 @@
 /* ===== HERO REDESIGN (full-bleed photo background) ===== */
 
 .hero{
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   min-height: 100vh;
+  z-index: 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -10,6 +14,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* everything after the hero scrolls in front of it, covering it as the
+   page scrolls down. margin-top pushes this content below the fixed
+   hero's height, since a fixed element takes no space in normal flow */
+.scroll-content{
+  position: relative;
+  z-index: 1;
+  margin-top: 100vh;
+  background: var(--white, #fff);
 }
 
 .hero-overlay{
@@ -159,19 +173,21 @@
   align-items: center;
   gap: 14px;
   padding: 16px 34px;
-  background: transparent;
+  background: #d3a83f;
   border: 1.5px solid #d3a83f;
-  color: #d3a83f;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-size: 13px;
   font-weight: 700;
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
+  box-shadow: 0 8px 24px rgba(211,168,63,.35);
+  transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
 .hero-btn:hover{
-  background: #d3a83f;
-  color: #081d48;
+  background: transparent;
+  color: #d3a83f;
+  box-shadow: none;
 }
 
 .hero-btn-arrow{

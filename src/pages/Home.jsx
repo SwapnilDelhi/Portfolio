@@ -4,7 +4,7 @@ import './Home.css';
 
 
 const COLUMNS = [
-  
+
   {
     to: '/government-collaboration',
     label: 'Government Collaboration',
@@ -32,10 +32,8 @@ const HIGHLIGHTS = [
   { icon: '◎', label: 'Youth Leader' },
   { icon: '√x', label: 'Scientific & Mathematical Researcher' },
   { icon: '⚖', label: 'Societal Policy Advisor' },
-  { icon: '✈', label: 'International Public Speaker' },
   { icon: '⚙', label: 'Innovator and Strategist at NITI Aayog' },
   { icon: '★', label: 'Founder, Youth Vision India (YVI)' },
-  { icon: '©', label: 'Nation Builder' },
   { icon: '✔', label: 'Intellectual Property India Certified' },
 ];
 
@@ -77,7 +75,7 @@ export default function Home() {
                 <div className="hero-quote">
                   <span className="hero-quote-mark">&#8220;</span>
                   <p className="hero-quote-text">
-                    If Destiny does not reward intentions.
+                    Destiny does not reward intentions.
                     <br />
                     It rewards unwavering execution.
                   </p>
@@ -100,6 +98,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/*
       <section className="section section-alt about-intro">
         <div className="container about-intro-grid">
           <div>
@@ -149,6 +148,7 @@ export default function Home() {
           <p className="quote-sub">Character is the highest virtue.</p>
         </div>
       </section>
+      */}
     </>
   );
 }
