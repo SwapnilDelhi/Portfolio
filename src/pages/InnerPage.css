@@ -98,6 +98,12 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+@media (max-width: 760px) {
+  .card-grid.letter-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
 .info-card{
   background: var(--white);
   border: 1px solid var(--line);
