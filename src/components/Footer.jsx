@@ -31,9 +31,9 @@ export default function Footer() {
 
         <div className="footer-col">
           <div className="footer-heading">Connect</div>
-          <a href="mailto:contact@swapnilpandey.in">contact@swapnilpandey.in</a>
+          <a href="mailto:Connect@swapnilpandey.com">Connect@swapnilpandey.com</a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.instagram.com/youthvisionindia/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/swapnilpandeyofficial" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
 

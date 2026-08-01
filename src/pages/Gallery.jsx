@@ -1,9 +1,10 @@
 import PageHeader from '../components/PageHeader';
-import ImagePlaceholder from '../components/ImagePlaceholder';
-import './InnerPage.css';
 import './Gallery.css';
 
-const CATEGORIES = ['Parliament', 'Government Meetings', 'Events', 'Research', 'Schools', 'Projects', 'Awards'];
+const imageModules = import.meta.glob('../assets/images/gallery/*.{png,jpg,jpeg}', { eager: true });
+const galleryImages = Object.entries(imageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true, sensitivity: 'base' }))
+  .map(([, module]) => module.default);
 
 export default function Gallery() {
   return (
@@ -11,22 +12,18 @@ export default function Gallery() {
       <PageHeader
         eyebrow="Gallery"
         title="Photo Gallery"
-        subtitle="High-quality photographs categorised across Parliament, Government Meetings, Events, Research, Schools, Projects, and Awards."
+        subtitle="A curated visual gallery with responsive, natural-ratio image cards."
       />
 
       <section className="section">
         <div className="container">
-          {CATEGORIES.map((cat) => (
-            <div className="gallery-category" key={cat}>
-              <h2 className="gallery-cat-title">{cat}</h2>
-              <div className="rule"></div>
-              <div className="gallery-grid">
-                {[1, 2, 3, 4].map((n) => (
-                  <ImagePlaceholder key={n} label={`${cat} ${n}`} ratio="1 / 1" />
-                ))}
+          <div className="gallery-grid">
+            {galleryImages.map((src, index) => (
+              <div className="gallery-item" key={index}>
+                <img src={src} alt={`Gallery image ${index + 1}`} loading="lazy" />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </>

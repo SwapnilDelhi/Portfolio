@@ -1,5 +1,9 @@
 import PageHeader from '../components/PageHeader';
-import ImagePlaceholder from '../components/ImagePlaceholder';
+import newspaper1 from '../assets/images/media/newspaper1.png';
+import newspaper2 from '../assets/images/media/newspaper2.png';
+import newspaper3 from '../assets/images/media/newspaper3.png';
+import letter1 from '../assets/images/media/letter1.png';
+import letter2 from '../assets/images/media/letter2.png';
 import './InnerPage.css';
 
 const CATEGORIES = [
@@ -22,20 +26,31 @@ const CATEGORIES = [
   },
   {
     name: 'Newspapers',
-    items: [1, 2, 3],
+    items: [
+      { title: 'Newspaper 1', image: newspaper1, source: 'Newspaper', alt: 'Newspaper 1 cover' },
+      { title: 'Newspaper 2', image: newspaper2, source: 'Newspaper', alt: 'Newspaper 2 cover' },
+      { title: 'Newspaper 3', image: newspaper3, source: 'Newspaper', alt: 'Newspaper 3 cover' },
+    ],
   },
   {
-    name: 'Interviews',
-    items: [1, 2, 3],
+    name: 'Letter of Appetation',
+    items: [
+      { title: 'Letter 1', image: letter1, source: 'Appetation Letter', alt: 'Letter of Appetation 1' },
+      { title: 'Letter 2', image: letter2, source: 'Appetation Letter', alt: 'Letter of Appetation 2' },
+    ],
   },
-  {
-    name: 'Videos',
-    items: [1, 2, 3],
-  },
-  {
-    name: 'Podcasts',
-    items: [1, 2, 3],
-  },
+  // {
+  //   name: 'Interviews',
+  //   items: [1, 2, 3],
+  // },
+  // {
+  //   name: 'Videos',
+  //   items: [1, 2, 3],
+  // },
+  // {
+  //   name: 'Podcasts',
+  //   items: [1, 2, 3],
+  // },
 ];
 
 export default function Media() {
@@ -55,9 +70,10 @@ export default function Media() {
                 <h2 style={{ fontSize: '22px' }}>{cat.name}</h2>
                 <div className="rule"></div>
               </div>
-              <div className="card-grid" style={{ marginTop: 0 }}>
+              <div className={`card-grid${cat.name === 'Letter of Appetation' ? ' letter-grid' : ''}`} style={{ marginTop: 0 }}>
                 {cat.items.map((item, index) => {
-                  const isArticle = typeof item === 'object';
+                  const isArticle = item.source === 'News18 हिंदी';
+                  const isNewspaper = item.image != null;
 
                   return (
                     <div className="info-card" key={`${cat.name}-${index}`}>
@@ -74,6 +90,14 @@ export default function Media() {
                           <a href={item.link} target="_blank" rel="noreferrer" style={{ color: '#1d4ed8', fontWeight: 600, display: 'inline-block', marginTop: '10px' }}>
                             Open article
                           </a>
+                        </>
+                      ) : isNewspaper ? (
+                        <>
+                          <img
+                            src={item.image}
+                            alt={item.alt}
+                            style={{ width: '100%', borderRadius: '8px', marginTop: '12px' }}
+                          />
                         </>
                       ) : (
                         <>

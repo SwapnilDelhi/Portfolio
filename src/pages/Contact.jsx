@@ -8,7 +8,25 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Wire this up to your email service or backend endpoint of choice.
+
+    const formData = new FormData(e.target);
+    const name = (formData.get('name') || '').toString().trim();
+    const email = (formData.get('email') || '').toString().trim();
+    const organisation = (formData.get('organisation') || '').toString().trim();
+    const message = (formData.get('message') || '').toString().trim();
+
+    const subject = encodeURIComponent(`Contact request from ${name || 'website visitor'}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Connect@swapnilpandey.com&su=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:Connect@swapnilpandey.com?subject=${subject}&body=${body}`;
+
+    const opened = window.open(gmailUrl, '_blank');
+    if (!opened) {
+      window.location.href = mailtoUrl;
+    }
     setSubmitted(true);
   }
 
@@ -17,7 +35,7 @@ export default function Contact() {
       <PageHeader
         eyebrow="Contact"
         title="Get in Touch"
-        subtitle="A professional contact form, along with email, LinkedIn, Instagram, and location details."
+        subtitle="Use the form below, or connect directly via email and Instagram."
       />
 
       <section className="section">
@@ -46,19 +64,11 @@ export default function Contact() {
           <div className="contact-info">
             <div className="contact-info-block">
               <div className="eyebrow">Email</div>
-              <a href="mailto:contact@swapnilpandey.in">contact@swapnilpandey.in</a>
-            </div>
-            <div className="contact-info-block">
-              <div className="eyebrow">LinkedIn</div>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">linkedin.com/in/swapnilpandey</a>
+              <a href="mailto:Connect@swapnilpandey.com">Connect@swapnilpandey.com</a>
             </div>
             <div className="contact-info-block">
               <div className="eyebrow">Instagram</div>
-              <a href="https://www.instagram.com/youthvisionindia/" target="_blank" rel="noreferrer">@youthvisionindia</a>
-            </div>
-            <div className="contact-info-block">
-              <div className="eyebrow">Location</div>
-              <span>India</span>
+              <a href="https://www.instagram.com/swapnilpandeyofficial" target="_blank" rel="noreferrer">@swapnilpandeyofficial</a>
             </div>
           </div>
         </div>

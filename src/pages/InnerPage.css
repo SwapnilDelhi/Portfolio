@@ -94,6 +94,10 @@
   margin-top: var(--space-4);
 }
 
+.card-grid.letter-grid{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .info-card{
   background: var(--white);
   border: 1px solid var(--line);
