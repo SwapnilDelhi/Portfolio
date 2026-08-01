@@ -16,8 +16,9 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(4,12,32,.92) 0%, rgba(4,12,32,.75) 32%, rgba(4,12,32,.25) 60%, rgba(4,12,32,.05) 100%),
-    linear-gradient(180deg, rgba(4,12,32,.55) 0%, transparent 25%, transparent 75%, rgba(4,12,32,.65) 100%);
+    radial-gradient(ellipse 620px 520px at 100% 100%, rgba(26,13,4,.8) 0%, rgba(26,13,4,.55) 45%, rgba(26,13,4,0) 75%),
+    linear-gradient(90deg, rgba(26,13,4,.85) 0%, rgba(26,15,4,.68) 32%, rgba(26,15,4,.3) 60%, rgba(26,15,4,0) 100%),
+    linear-gradient(180deg, rgba(26,13,4,.3) 0%, transparent 30%, transparent 70%, rgba(26,13,4,.5) 100%);
   pointer-events: none;
 }
 
@@ -27,8 +28,11 @@
   width: 100%;
 }
 
+/* hero-copy now spans the full container width so the highlights column
+   and the quote/CTA callout can sit side by side, like the reference image */
 .hero-copy{
-  max-width: 640px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .hero-kicker{
@@ -55,23 +59,32 @@
   margin: 26px 0;
 }
 
+/* ---- Main row: highlights (left) + quote/CTA callout (right) ---- */
+.hero-main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+}
+
 /* ---- Highlights row ---- */
 .hero-highlights{
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   row-gap: 14px;
-  column-gap: 28px;
   margin-bottom: 28px;
+  flex-shrink: 0;
 }
 
 .highlight{
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 10px;
-  padding-right: 28px;
-  border-right: 1px solid rgba(211,168,63,.3);
+  padding-right: 0;
+  border-right: none;
 }
 
 .highlight:last-child{
@@ -91,52 +104,69 @@
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: #dce5f5;
+  color: #d3a83f;
   white-space: nowrap;
+}
+
+/* ---- Callout: quote + CTA, pinned to the right side ---- */
+.hero-callout{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-start; /* sit up near the top of the row, clear of the subject lower in the photo */
+  max-width: 340px;
+  margin-left: auto;
+  flex-shrink: 0;
+  text-align: right;
 }
 
 /* ---- Personal quote ---- */
 .hero-quote{
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 36px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .hero-quote-mark{
-  font-family: var(--font-display);
-  font-size: 46px;
-  line-height: 1;
+  font-family: Georgia, 'Times New Roman', var(--font-display), serif;
+  font-size: 52px;
+  line-height: .6;
   color: #d3a83f;
-  margin-top: -6px;
+  flex-shrink: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
 }
 
 .hero-quote-text{
   font-style: italic;
   font-size: 19px;
   line-height: 1.5;
-  color: rgba(255,255,255,.9);
+  color: #fff;
   margin: 0;
+  text-align: left;
+  text-shadow: 0 1px 6px rgba(0,0,0,.65), 0 1px 2px rgba(0,0,0,.8);
 }
 
 /* ---- CTA button ---- */
 .hero-actions{
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .hero-btn{
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 32px;
+  padding: 16px 34px;
   background: transparent;
-  border: 1px solid #d3a83f;
+  border: 1.5px solid #d3a83f;
   color: #d3a83f;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-size: 13px;
   font-weight: 700;
-  transition: background .3s ease, color .3s ease;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 
 .hero-btn:hover{
@@ -201,6 +231,7 @@
     min-height: 100vh;
     padding: 140px 0 80px;
     align-items: flex-end;
+    background-position: 60% center !important;
   }
 
   .hero-copy{
@@ -209,6 +240,13 @@
 
   .hero-copy h1{
     font-size: 3.4rem;
+  }
+
+  /* stack highlights + quote/CTA on smaller screens instead of side by side */
+  .hero-main{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
   }
 
   .hero-highlights{
@@ -223,8 +261,19 @@
     padding-right: 0;
   }
 
+  .hero-callout{
+    max-width: 100%;
+    margin-left: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .hero-quote-text{
     font-size: 17px;
+  }
+
+  .hero-actions{
+    justify-content: flex-start;
   }
 
   .scroll-indicator{
@@ -411,6 +460,7 @@
 
   .hero-actions{
     width: 100%;
+    justify-content: center;
   }
 }
 

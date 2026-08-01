@@ -29,8 +29,13 @@ const COLUMNS = [
 
 const HIGHLIGHTS = [
   { icon: '◎', label: 'Youth Leader' },
-  { icon: '√x', label: 'Scientific and Mathematical Researcher' },
-  { icon: '⚖', label: 'Public Policy Adviser' },
+  { icon: '√x', label: 'Scientific & Mathematical Researcher' },
+  { icon: '⚖', label: 'Societal Policy Advisor' },
+  { icon: '✈', label: 'International Public Speaker' },
+  { icon: '⚙', label: 'Innovator and Strategist at NITI Aayog' },
+  { icon: '★', label: 'Founder, Youth Vision India (YVI)' },
+  { icon: '©', label: 'Nation Builder' },
+  { icon: '✔', label: 'Intellectual Property India Certified' },
 ];
 
 export default function Home() {
@@ -57,28 +62,32 @@ export default function Home() {
 
             <div className="rule"></div>
 
-            <div className="hero-highlights">
-              {HIGHLIGHTS.map((h) => (
-                <div className="highlight" key={h.label}>
-                  <span className="highlight-icon">{h.icon}</span>
-                  <span>{h.label}</span>
+            <div className="hero-main">
+              <div className="hero-highlights">
+                {HIGHLIGHTS.map((h) => (
+                  <div className="highlight" key={h.label}>
+                    <span className="highlight-icon">{h.icon}</span>
+                    <span>{h.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="hero-callout">
+                <div className="hero-quote">
+                  <span className="hero-quote-mark">&#8220;</span>
+                  <p className="hero-quote-text">
+                    If Destiny does not reward intentions.
+                    <br />
+                    It rewards unwavering execution.
+                  </p>
                 </div>
-              ))}
-            </div>
 
-            <div className="hero-quote">
-              <span className="hero-quote-mark">&#8220;</span>
-              <p className="hero-quote-text">
-                If Destiny does not reward intentions.
-                <br />
-                It rewards unwavering execution.
-              </p>
-            </div>
-
-            <div className="hero-actions">
-              <Link to="/journey" className="btn hero-btn">
-                Explore Journey <span className="hero-btn-arrow">→</span>
-              </Link>
+                <div className="hero-actions">
+                  <Link to="/journey" className="btn hero-btn">
+                    Explore Journey <span className="hero-btn-arrow">→</span>
+                  </Link>
+                </div>
+              </div>
             </div>
 
           </div>
