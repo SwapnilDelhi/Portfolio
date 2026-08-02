@@ -111,12 +111,37 @@
 }
 
 .publications-section .card-grid{
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+  justify-items: stretch;
 }
 
 .publications-section .section-heading{
   padding-left: 0;
+}
+
+.publications-section .info-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.publications-section .info-card .btn-outline-navy{
+  margin-top: 24px;
+}
+
+@media (max-width: 760px) {
+  .publications-section .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publications-section .info-card {
+    padding: 20px;
+  }
+
+  .publications-section .info-card .btn-outline-navy {
+    width: 100%;
+  }
 }
 
 .publications-section .container{
