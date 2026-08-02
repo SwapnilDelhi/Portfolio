@@ -27,16 +27,15 @@ const CATEGORIES = [
   {
     name: 'Newspapers',
     items: [
-      { title: 'Newspaper 1', image: newspaper1, source: 'Newspaper', alt: 'Newspaper 1 cover' },
-      { title: 'Newspaper 2', image: newspaper2, source: 'Newspaper', alt: 'Newspaper 2 cover' },
-      { title: 'Newspaper 3', image: newspaper3, source: 'Newspaper', alt: 'Newspaper 3 cover' },
+      { title: 'Dainik Bhaskar', image: newspaper1, source: 'Dainik Bhaskar', alt: 'Dainik Bhaskar cover' },
+      { title: 'Dainik Jagran', image: newspaper2, source: 'Dainik Jagran', alt: 'Dainik Jagran cover' },
+      { title: 'Amar Ujala', image: newspaper3, source: 'Amar Ujala', alt: 'Amar Ujala cover' },
     ],
   },
   {
     name: 'Letter of Appetation',
     items: [
-      { title: 'Letter 1', image: letter1, source: 'Appetation Letter', alt: 'Letter of Appetation 1' },
-      { title: 'Letter 2', image: letter2, source: 'Appetation Letter', alt: 'Letter of Appetation 2' },
+      { title: 'Hon’ble Energy Minister of Rajasthan, Shri Hiralal Nagar', image: letter2, source: 'Energy Minister of Rajasthan', alt: 'Letter from Hon’ble Energy Minister of Rajasthan, Shri Hiralal Nagar' },
     ],
   },
   // {
@@ -93,11 +92,17 @@ export default function Media() {
                         </>
                       ) : isNewspaper ? (
                         <>
-                          <img
-                            src={item.image}
-                            alt={item.alt}
-                            style={{ width: '100%', borderRadius: '8px', marginTop: '12px' }}
-                          />
+                          <h3 style={{ marginTop: '14px' }}>{item.title}</h3>
+                          {item.source && item.source !== item.title ? (
+                            <p style={{ margin: '8px 0 0', color: '#6b7280' }}>{item.source}</p>
+                          ) : null}
+                          <a href={item.image} target="_blank" rel="noopener noreferrer" title="View full image">
+                            <img
+                              src={item.image}
+                              alt={item.alt}
+                              style={{ width: '100%', borderRadius: '8px', marginTop: '12px' }}
+                            />
+                          </a>
                         </>
                       ) : (
                         <>
