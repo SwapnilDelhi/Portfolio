@@ -66,7 +66,7 @@ export default function Journey() {
               scientific, historical, and leadership competitions across diverse disciplines, earning
               recognition in numerous national and international Olympiads and educational
               initiatives — among them distinctions in programmes conducted by <strong>INTACH</strong>, 
-              <strong>Science Olympiad Foundation (SOF)</strong>, <strong>Corps Command (Western Command) Indian Army</strong>, <strong>Mr. Adittya Nath Mubayi</strong> (India's most renowned quiz master and international author), and <strong>CBSE's Heritage India Quiz</strong>, as well as several
+              <strong>Science Olympiad Foundation (SOF)</strong>, <strong>Corps Commander (Western Command) Indian Army</strong>, <strong>Mr. Adittya Nath Mubayi</strong> (India's most renowned quiz master and international author), and <strong>CBSE's Heritage India Quiz</strong>, as well as several
               other academic platforms that challenged not only knowledge, but curiosity, analytical
               thinking, and perseverance.
             </p>
