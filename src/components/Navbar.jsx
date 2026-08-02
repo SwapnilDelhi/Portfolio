@@ -56,7 +56,7 @@ export default function Navbar() {
         >
           <span className={`nav-swap-face nav-swap-brand ${showQuote ? 'is-hidden' : ''}`}>
             <span className="nav-swap-brand-name">Swapnil Pandey</span>
-            <span className="nav-swap-brand-tag">Founder • Youth Vision India</span>
+            <span className="nav-swap-brand-tag">Anonymity &#8226; Austerity &#8226; Ability</span>
           </span>
           <span className={`nav-swap-face nav-swap-quote ${showQuote ? '' : 'is-hidden'}`}>
             <span className="nav-swap-devanagari">'शीलं परम भूषणम्</span>

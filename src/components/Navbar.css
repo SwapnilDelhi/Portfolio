@@ -39,6 +39,12 @@
   flex-direction: column;
   line-height: 1.1;
   flex-shrink: 0;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.nav-brand-desktop:hover{
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 16px rgba(211,168,63,.18));
 }
 
 .nav-brand-name{
@@ -174,11 +180,75 @@
   transition: transform 0.25s ease;
 }
 
-.nav-link:hover{ color: var(--white); }
-.nav-link:hover::after{ transform: scaleX(1); }
+..nav-link{
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  padding: 10px 0;
+  position: relative;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity .3s ease, transform .3s ease, color .25s ease;
+}
+
+.nav-links-open .nav-link{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-link::after{
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 4px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover{
+  color: var(--white);
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1);
+}
 
 .nav-link-active{ color: var(--gold); }
 .nav-link-active::after{ transform: scaleX(1); }
+
+.nav-link:hover,
+.nav-link-active{
+  text-shadow: 0 0 12px rgba(255,255,255,.18);
+}
+
+.nav-burger{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-shrink: 0;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.nav-burger:hover{
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+
+.nav-burger span{
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  transition: all 0.25s ease;
+}
 
 .nav-scrim{
   position: fixed;
