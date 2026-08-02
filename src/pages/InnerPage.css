@@ -309,3 +309,41 @@
   padding: 0 3px;
   border-radius: 3px;
 }
+
+.about-copy-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.about-cv-btn{
+  margin-top: 12px;
+  padding: 14px 22px;
+  border-radius: 0;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.about-cv-btn:hover{
+  background: var(--gold-dark, #a3801f);
+  border-color: var(--gold-dark, #a3801f);
+  color: var(--navy-deep);
+  transform: translateY(-1px);
+}
+@media (max-width: 860px){
+  .about-copy-wrap{
+    align-items: flex-start;
+  }
+
+  .about-cv-btn{
+    margin-top: 24px;
+    width: fit-content;
+  }
+}

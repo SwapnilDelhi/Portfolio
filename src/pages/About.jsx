@@ -79,23 +79,34 @@ export default function About() {
             <h2>Vision for the future</h2>
             <div className="rule"></div>
 
-            <p>
-              As the Founder of Youth Vision India, he continues to build
-              platforms that connect young citizens with public
-              institutions, promote informed leadership, and encourage
-              meaningful participation in India&apos;s developmental
-              journey. His long-term vision is to strengthen{' '}
-              <strong>governance, scientific innovation, institutional
-              excellence, and youth leadership</strong> in support of the national
-              aspiration of <strong><em>Viksit Bharat 2047</em></strong>.
-            </p>
+            <div className="about-copy-wrap">
+              <p>
+                As the Founder of Youth Vision India, he continues to build
+                platforms that connect young citizens with public
+                institutions, promote informed leadership, and encourage
+                meaningful participation in India&apos;s developmental
+                journey. His long-term vision is to strengthen{' '}
+                <strong>governance, scientific innovation, institutional
+                excellence, and youth leadership</strong> in support of the national
+                aspiration of <strong><em>Viksit Bharat 2047</em></strong>.
+              </p>
 
-            <p>
-              For Swapnil Pandey, <strong>leadership is not measured by
-              recognition, but by the ability to build institutions,
-              develop capable people, and create solutions that leave a
-              lasting impact on society</strong>.
-            </p>
+              <p>
+                For Swapnil Pandey, <strong>leadership is not measured by
+                recognition, but by the ability to build institutions,
+                develop capable people, and create solutions that leave a
+                lasting impact on society</strong>.
+              </p>
+
+              <a
+                className="about-cv-btn"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download CV
+              </a>
+            </div>
           </div>
         </div>
       </section>
