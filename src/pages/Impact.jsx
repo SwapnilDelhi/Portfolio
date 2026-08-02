@@ -59,7 +59,7 @@ export default function Impact() {
               shaped at the national level.
             </p>
             <div className="impact-hero-actions">
-              <Link className="btn btn-primary" to="/collaborate">Partner with us</Link>
+              <Link className="btn btn-primary" to="/contact">Partner with us</Link>
               <Link className="btn btn-outline-navy" to="/events">See our events</Link>
             </div>
           </div>
