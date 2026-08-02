@@ -37,7 +37,7 @@ export default function Journey() {
       <PageHeader
         eyebrow="Journey"
         title="The Journey of Swapnil Pandey"
-        subtitle="From Army Public School, Amritsar, to Parliament, Raj Bhawans, and International policy forums."
+        subtitle="From Army Public School, Amritsar, to Parliament, Raj Bhawans, and International policy Forums."
       />
 
       {/* 1. THE BEGINNING — image floats right */}
