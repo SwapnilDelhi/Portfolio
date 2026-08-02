@@ -249,8 +249,26 @@
   font-size: 14.5px;
   color: var(--grey-mid);
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 14px;
 }
+
+.event-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold-ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.event-link:hover{
+  color: var(--navy);
+  text-decoration: underline;
+}
+
 .inner-link{
   display: inline-block;
   margin-top: 20px;

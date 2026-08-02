@@ -30,6 +30,14 @@ export default function Events() {
                   <div className="event-date">{event.date}</div>
                   <h3 className="event-title">{event.title}</h3>
                   <p className="event-desc">{event.description}</p>
+                  <a
+                    className="event-link"
+                    href="https://www.instagram.com/youthvisionindia/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    More info →
+                  </a>
                 </div>
               </article>
             ))}
