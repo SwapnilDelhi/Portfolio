@@ -7,6 +7,7 @@ import {
   environmentImg,
   sanskarImg,
   yogaImg,
+  bookImg,
 } from '../assets/images/events';
 
 // Add new events here — they'll automatically sort by date and render
@@ -82,6 +83,16 @@ export const events = [
       'Conducted a sapling plantation drive to encourage environmental conservation and community participation.',
     image: environmentImg,
     imageAlt: 'Green Future sapling plantation drive',
+  },
+  {
+    id: 'books-distribution-bihar',
+    date: '02 August 2026',
+    sortDate: '2026-08-02',
+    title: 'Books Distribution & Free Education for Underprivileged Children in Bihar',
+    description:
+      'Distributed books and launched free education support for underprivileged children across Bihar, empowering access to learning and opportunity.',
+    image: bookImg,
+    imageAlt: 'Books distribution event in Bihar',
   },
   {
     id: 'international-yoga-day',

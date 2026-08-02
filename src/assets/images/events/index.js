@@ -7,3 +7,4 @@ export { default as environmentImg } from './environment.png';
 export { default as sanskarImg } from './sanskar.png';
 export { default as yogaImg } from './yoga.png';
 export { default as warriorImg } from './warrior.png';
+export { default as bookImg } from './book.png';
