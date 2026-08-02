@@ -37,7 +37,7 @@ export default function Journey() {
       <PageHeader
         eyebrow="Journey"
         title="The Journey of Swapnil Pandey"
-        subtitle="From Army Public School, Amritsar, to Parliament, Raj Bhawans, and international policy forums."
+        subtitle="From Army Public School, Amritsar, to Parliament, Raj Bhawans, and International policy forums."
       />
 
       {/* 1. THE BEGINNING — image floats right */}
@@ -65,8 +65,8 @@ export default function Journey() {
               compete, and serve was embraced with the same conviction. I participated in academic,
               scientific, historical, and leadership competitions across diverse disciplines, earning
               recognition in numerous national and international Olympiads and educational
-              initiatives — among them distinctions in programmes conducted by <strong>INTACH, the
-              Science Olympiad Foundation (SOF), CBSE's Heritage India Quiz</strong>, and several
+              initiatives — among them distinctions in programmes conducted by <strong>INTACH</strong>, 
+              <strong>Science Olympiad Foundation (SOF)</strong>, <strong>Corps Command (Western Command) Indian Army</strong>, <strong>Mr. Adittya Nath Mubayi</strong> (India's most renowned quiz master and international author), and <strong>CBSE's Heritage India Quiz</strong>, as well as several
               other academic platforms that challenged not only knowledge, but curiosity, analytical
               thinking, and perseverance.
             </p>

@@ -1,5 +1,5 @@
 import PageHeader from '../components/PageHeader';
-import { varanasiImg, varadev2Img, varadev3Img } from '../assets/images/varanasi';
+import { varanasiImg, varadev2Img } from '../assets/images/varanasi';
 import './InnerPage.css';
 
 // NOTE: Add real Varanasi Development content and photographs here once available.
@@ -74,10 +74,7 @@ export default function Varanasi() {
 
       {/* 3. CLOSING — image floats right */}
       <section className="section">
-        <div className="container inner-split">
-          <div className="inner-media">
-            <img src={varadev3Img} alt="Varanasi Development — community engagement" />
-          </div>
+        <div className="container">
           <div className="inner-copy">
             <p>
               Every initiative undertaken by Youth Vision India reflects a common purpose—to

@@ -1,5 +1,5 @@
 .inner-split{
-  display: block;
+   display: block;
   overflow: hidden;
 }
 
@@ -20,10 +20,7 @@
 .inner-split-reverse .inner-media{
   float: left;
   margin: 0 48px 28px 0;
-}
 
-.inner-copy{
-  display: block;
 }
 
 .inner-copy p{
