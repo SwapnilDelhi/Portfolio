@@ -26,7 +26,7 @@ const SECTIONS = [
   {
     id: 'parliament',
     title: 'YVIians at Parliament.',
-    subtitle: 'Selected moments from parliamentary visits and policy engagements.',
+    subtitle: 'Selected moments from Parliamentary visits and policy engagements.',
     images: parliamentImages,
   },
   {
