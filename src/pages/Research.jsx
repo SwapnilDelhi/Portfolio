@@ -4,6 +4,8 @@ import './InnerPage.css';
 import './Research.css';
 import { divisibility8Img, divisibility3Img } from '../assets/images/research';
 
+const rule3Pdf = new URL('../assets/pdf/rule3.pdf', import.meta.url).href;
+
 const PAPERS = [
   {
     title: 'A New Divisibility Test for 8',
@@ -19,7 +21,7 @@ const PAPERS = [
   {
     title: 'A New Divisibility Test for 3',
     image: divisibility3Img,
-    pdf: divisibility3Img, // Change to actual PDF later
+    pdf: rule3Pdf,
     abstract:
       'A mathematical approach introducing an alternative divisibility test for 3, designed to simplify mental calculations and enhance number theory education.',
     problem:
