@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="footer-col">
           <div className="footer-heading">Connect</div>
           <a href="mailto:Connect@swapnilpandey.com">Connect@swapnilpandey.com</a>
-          <a href="https://www.instagram.com/swapnilpandeyofficial" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/vidil.pandey" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
 

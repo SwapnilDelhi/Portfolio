@@ -14,6 +14,7 @@ import Parliament from './pages/Parliament';
 import Varanasi from './pages/Varanasi';
 import Media from './pages/Media';
 import Gallery from './pages/Gallery';
+import Impact from './pages/Impact';
 import Publications from './pages/Publications';
 import Collaborate from './pages/Collaborate';
 import Contact from './pages/Contact';
@@ -75,6 +76,11 @@ const routeMeta = {
     description: 'Browse the gallery of events, initiatives, and community work led by Swapnil Pandey and Youth Vision India.',
     keywords: 'gallery, Swapnil Pandey, Youth Vision India, events, community work, youth initiatives',
   },
+  '/impact': {
+    title: 'Impact | Swapnil Pandey',
+    description: 'Explore the measurable impact of Youth Vision India through community service, youth leadership, policy engagement, and national initiatives.',
+    keywords: 'impact, Youth Vision India, community service, youth leadership, policy engagement, social impact',
+  },
   '/publications': {
     title: 'Publications | Swapnil Pandey',
     description: 'Access publications and research work by Swapnil Pandey on gender equity, education, and leadership in India.',
@@ -125,6 +131,7 @@ export default function App() {
           <Route path="/varanasi" element={<Varanasi />} />
           <Route path="/media" element={<Media />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/impact" element={<Impact />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/events" element={<Events />} />

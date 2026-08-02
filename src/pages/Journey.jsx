@@ -165,7 +165,7 @@ export default function Journey() {
               alt="Youth Vision India"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
-            <Link to="https://www.youthvisionindia.org/" className="inner-link">
+            <Link to="https://www.instagram.com/vidil.pandey" className="inner-link">
                   Visit the our website →
                 </Link>
               

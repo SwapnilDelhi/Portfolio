@@ -11,6 +11,7 @@ const LINKS = [
   { to: '/research', label: 'Research' },
   { to: '/media', label: 'Media' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/impact', label: 'Impact' },
   { to: '/publications', label: 'Publications' },
   { to: '/events', label: 'Events' },
   { to: '/contact', label: 'Contact' },

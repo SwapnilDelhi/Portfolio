@@ -102,6 +102,10 @@
   display: none;
 }
 
+.nav-links-desktop{
+  display: none;
+}
+
 /* ---- Burger — identical everywhere ---- */
 .nav-burger{
   display: flex;
@@ -180,7 +184,7 @@
   transition: transform 0.25s ease;
 }
 
-..nav-link{
+.nav-link{
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.06em;

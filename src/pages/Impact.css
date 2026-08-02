@@ -1,0 +1,116 @@
+.impact-hero{
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.impact-hero-copy h2{
+  font-size: clamp(28px, 3.3vw, 40px);
+  margin-bottom: 10px;
+}
+
+.impact-hero-copy p{
+  color: var(--grey-mid);
+  max-width: 640px;
+}
+
+.impact-hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.impact-dashboard{
+  background: linear-gradient(135deg, var(--navy) 0%, #112955 100%);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 24px 70px rgba(6, 21, 48, 0.2);
+}
+
+.impact-dashboard-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.impact-card{
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px;
+  min-height: 118px;
+}
+
+.impact-card-value{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.impact-card-label{
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.impact-pillars{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.impact-pillar{
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(10, 31, 68, 0.04);
+}
+
+.impact-pillar h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.impact-pillar p{
+  color: var(--grey-mid);
+  margin: 0;
+}
+
+.impact-cta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--navy);
+  border-radius: 24px;
+  padding: 36px 40px;
+}
+
+.impact-cta h2{
+  color: var(--white);
+  font-size: clamp(24px, 2.4vw, 30px);
+  margin-bottom: 8px;
+}
+
+.impact-cta p{
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  max-width: 700px;
+}
+
+@media (max-width: 980px){
+  .impact-hero{ grid-template-columns: 1fr; }
+  .impact-pillars{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px){
+  .impact-dashboard-grid{ grid-template-columns: 1fr; }
+  .impact-cta{ padding: 28px 24px; }
+}

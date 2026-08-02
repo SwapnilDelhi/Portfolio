@@ -33,7 +33,7 @@ const CATEGORIES = [
     ],
   },
   {
-    name: 'Letter of Appetation',
+    name: 'Letter of Appreciation',
     items: [
       { title: 'Hon’ble Energy Minister of Rajasthan, Shri Hiralal Nagar', image: letter2, source: 'Energy Minister of Rajasthan', alt: 'Letter from Hon’ble Energy Minister of Rajasthan, Shri Hiralal Nagar' },
     ],
@@ -69,7 +69,7 @@ export default function Media() {
                 <h2 style={{ fontSize: '22px' }}>{cat.name}</h2>
                 <div className="rule"></div>
               </div>
-              <div className={`card-grid${cat.name === 'Letter of Appetation' ? ' letter-grid' : ''}`} style={{ marginTop: 0 }}>
+              <div className={`card-grid${cat.name === 'Letter of Appreciation' ? ' letter-grid' : ''}`} style={{ marginTop: 0 }}>
                 {cat.items.map((item, index) => {
                   const isArticle = item.source === 'News18 हिंदी';
                   const isNewspaper = item.image != null;
