@@ -37,6 +37,12 @@ const HIGHLIGHTS = [
   { icon: '✔', label: 'Intellectual Property India Certified' },
 ];
 
+const STATS = [
+  { value: '16,000+', label: 'Digital community' },
+  { value: '1,200+', label: 'Lives impacted' },
+  { value: '28+', label: 'Policy & research engagements' },
+];
+
 export default function Home() {
   return (
     <>
@@ -89,6 +95,16 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+          <div className="hero-stats-wrap">
+          <div className="container hero-stats">
+            {STATS.map((s) => (
+              <div className="stat" key={s.label}>
+                <span className="stat-value">{s.value}</span>
+                <span className="stat-label">{s.label}</span>
+              </div>
+            ))}
           </div>
         </div>
 
