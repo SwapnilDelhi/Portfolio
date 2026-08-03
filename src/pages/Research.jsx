@@ -11,7 +11,7 @@ const PAPERS = [
   {
     title: 'A New Divisibility Test for 8',
     image: divisibility8Img,
-    pdf: divisibility8Img, // Change to actual PDF later
+    pdf: 'https://share.google/vHt317zw7ibA8ZO17',
     abstract:
       'A novel, generalisable method for testing divisibility by 8, presented to and recognised by the Hon’ble Speaker of Lok Sabha, Shri Om Birla Ji.',
     problem:
