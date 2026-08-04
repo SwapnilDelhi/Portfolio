@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const LINKS = [
   { to: '/', label: 'Home' },
+  { to: '/mission', label: 'Mission' },
   { to: '/journey', label: 'Journey' },
   { to: '/about', label: 'About' },
   { to: '/government-collaboration', label: 'Government Collaboration' },

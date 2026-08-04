@@ -19,6 +19,7 @@ import Publications from './pages/Publications';
 import Collaborate from './pages/Collaborate';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
+import Mission from './pages/Mission';
 
 const routeMeta = {
   '/': {
@@ -26,6 +27,11 @@ const routeMeta = {
     description: 'Explore the work of Swapnil Pandey — youth leader, researcher, and founder of Youth Vision India driving education, policy, and community development.',
     keywords: 'Swapnil Pandey, Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India',
   },
+  '/mission': {
+  title: 'Mission | Swapnil Pandey',
+  description: "Explore Swapnil Pandey's mission — youth leadership, public policy, and institution-building for a stronger, more inclusive India.",
+  keywords: 'mission, Swapnil Pandey, youth leadership, public policy, nation building',
+},
   '/about': {
     title: 'About Swapnil Pandey | Youth Leadership & Research',
     description: 'Learn about Swapnil Pandey’s journey in research, youth leadership, and public policy across education, civic engagement, and national development.',
@@ -121,6 +127,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/mission" element={<Mission />} />
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/government-collaboration" element={<Achievements />} />
