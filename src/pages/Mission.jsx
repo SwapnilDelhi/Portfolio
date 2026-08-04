@@ -82,7 +82,7 @@ export default function Mission() {
 
         <div className="container mission-hero-grid">
           <div className="mission-hero-copy">
-            <div className="eyebrow eyebrow-invert">Mission</div>
+            <div className="eyebrow eyebrow-invert">The Mission</div>
             <h2>
               Innovator. Researcher.
               <br />
