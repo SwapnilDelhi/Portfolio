@@ -2,7 +2,7 @@
 .mission-hero{
   background: var(--navy);
   background-image: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
-  padding: 64px 0 56px;
+  padding: 95px 0 56px;
   border-bottom: 3px solid var(--gold);
   overflow: hidden; /* safety net: nothing inside should ever force page-level horizontal scroll */
 }
@@ -165,7 +165,7 @@
 
 @media (max-width: 640px){
   .mission-hero{
-    padding: 40px 0 40px;
+    padding: 43px 0 40px;
   }
 
   .mission-hero-top h1{
@@ -383,6 +383,9 @@
 }
 
 @media (max-width: 760px){
+    .mission-hero{
+        padding: 60px 0 40px;
+    }
   .recognition-grid{
     grid-template-columns: minmax(0, 1fr);
   }

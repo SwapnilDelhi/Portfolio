@@ -70,9 +70,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   min-width: 0;
+  max-width: 60%;
   padding: 0 16px;
+  pointer-events: none; /* row sits above it in source order; re-enable below if you want the quote clickable */
 }
 
 .nav-quote-devanagari{
