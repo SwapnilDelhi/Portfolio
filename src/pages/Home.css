@@ -6,6 +6,7 @@
   left: 0;
   right: 0;
   min-height: 100vh;
+  min-height: 100dvh; /* dvh accounts for the mobile browser address bar; vh alone leaves a gap that can jam scroll math on phones */
   z-index: 0;
   display: flex;
   align-items: center;
@@ -23,6 +24,7 @@
   position: relative;
   z-index: 1;
   margin-top: 100vh;
+  margin-top: 100dvh;
   background: var(--white, #fff);
 }
 
@@ -352,6 +354,7 @@
 
   .hero{
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 140px 0 80px;
     align-items: flex-end;
     background-position: 60% center !important;
