@@ -1,3 +1,3 @@
-import aboutImg from './about.jpeg';
+import aboutImg from './swapnil-pandey-profile.jpg';
 
 export { aboutImg };

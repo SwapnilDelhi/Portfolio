@@ -1,4 +1,4 @@
-import missionImg from '../assets/images/about/about.jpeg';
+import missionImg from '../assets/images/about/swapnil-pandey-profile.jpg';
 import './Mission.css';
 import {
   Users,
@@ -96,10 +96,10 @@ export default function Mission() {
             </p>
 
             <div className="mission-hero-actions">
-              <a className="mission-btn mission-btn-gold" href="#" target="_blank" rel="noreferrer">
+              <a className="mission-btn mission-btn-gold" href="" onClick={(e) => e.preventDefault()}>
                 <Download size={16} /> Download CV
               </a>
-              <a className="mission-btn mission-btn-outline" href="#/Contact">
+              <a className="mission-btn mission-btn-outline" href="/contact">
                 <Mail size={16} /> Get in Touch
               </a>
             </div>
@@ -195,10 +195,10 @@ export default function Mission() {
           </div>
 
           <div className="mission-hero-actions mission-cta-actions">
-            <a className="mission-btn mission-btn-gold" href="#" target="_blank" rel="noreferrer">
+            <a className="mission-btn mission-btn-gold" href="" onClick={(e) => e.preventDefault()}>
               <Download size={16} /> Download CV
             </a>
-            <a className="mission-btn mission-btn-navy" href="#/Contact">
+            <a className="mission-btn mission-btn-navy" href="/contact">
               <Mail size={16} /> Get in Touch
             </a>
           </div>

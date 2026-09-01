@@ -12,13 +12,9 @@ export default function Achievements() {
         subtitle="A timeline of policy engagement, public service partnerships, delegation meetings, and official recognition from government institutions."
       />
 
-      
-
       <section className="section">
         <div className="container">
-          
-
-<Timeline entries={delegationMeetings} />
+          <Timeline entries={delegationMeetings} />
         </div>
       </section>
     </>

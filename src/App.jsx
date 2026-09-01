@@ -23,8 +23,8 @@ import Mission from './pages/Mission';
 
 const routeMeta = {
   '/': {
-    title: 'Swapnil Pandey | Youth Leadership, Public Policy & Research',
-    description: 'Explore the work of Swapnil Pandey — youth leader, researcher, and founder of Youth Vision India driving education, policy, and community development.',
+    title: 'Swapnil Pandey | Youth Leader, Researcher & Policy Advocate',
+    description: 'Discover Swapnil Pandey, a youth leader, researcher, and policy advocate working on education reform, civic engagement, and inclusive development in India.',
     keywords: 'Swapnil Pandey, Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India',
   },
   '/mission': {

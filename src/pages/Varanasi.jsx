@@ -23,7 +23,10 @@ export default function Varanasi() {
       <section className="section">
         <div className="container inner-split">
           <div className="inner-media">
-            <img src={varanasiImg} alt="Varanasi Development" />
+            <img src={varanasiImg} alt="Varanasi development and community service initiative led by Swapnil Pandey" />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Varanasi development work focused on heritage, community welfare, and civic upliftment.
+            </p>
           </div>
           <div className="inner-copy">
             <h2>Varanasi Development &amp; Community Service</h2>
@@ -50,7 +53,10 @@ export default function Varanasi() {
       <section className="section section-alt">
         <div className="container inner-split inner-split-reverse">
           <div className="inner-media">
-            <img src={varadev2Img} alt="Varanasi Development — field visit" />
+            <img src={varadev2Img} alt="Swapnil Pandey during a Varanasi field visit supporting community development and welfare" />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Community engagement and field-based service work in Varanasi and nearby areas.
+            </p>
           </div>
           <div className="inner-copy">
             <p>

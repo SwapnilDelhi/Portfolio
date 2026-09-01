@@ -1,1 +1,1 @@
-export { default as youthVisionImg } from './youth.png';
+export { default as youthVisionImg } from './youth-vision-india-program.png';

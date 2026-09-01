@@ -1,9 +1,9 @@
 import PageHeader from '../components/PageHeader';
-import newspaper1 from '../assets/images/media/newspaper1.png';
-import newspaper2 from '../assets/images/media/newspaper2.png';
-import newspaper3 from '../assets/images/media/newspaper3.png';
+import newspaper1 from '../assets/images/media/dainik-bhaskar-cover.png';
+import newspaper2 from '../assets/images/media/dainik-jagran-cover.png';
+import newspaper3 from '../assets/images/media/amar-ujala-cover.png';
 import letter1 from '../assets/images/media/letter1.png';
-import letter2 from '../assets/images/media/letter2.png';
+import letter2 from '../assets/images/media/energy-minister-letter.png';
 import './InnerPage.css';
 
 const CATEGORIES = [

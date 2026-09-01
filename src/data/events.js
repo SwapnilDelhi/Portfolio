@@ -22,7 +22,7 @@ export const events = [
     description:
       'Distributed food packets, drinking water, clothing, hygiene kits, and essential relief materials to flood-affected families.',
     image: missionReliefImg,
-    imageAlt: 'Mission Relief flood response activity',
+    imageAlt: 'Swapnil Pandey leading Mission Relief flood response and community support in affected regions',
   },
   {
     id: 'international-womens-day',
@@ -32,7 +32,7 @@ export const events = [
     description:
       "Distributed sanitary pads and hygiene essentials while promoting menstrual health and women's well-being.",
     image: padDistributionImg,
-    imageAlt: 'Sanitary pads distribution event',
+    imageAlt: 'Sanitary pads distribution drive promoting women’s hygiene and awareness',
   },
   {
     id: 'dental-oral-hygiene',
@@ -42,7 +42,7 @@ export const events = [
     description:
       'Organized a free community dental check-up and oral hygiene awareness camp with healthcare professionals.',
     image: dentalImg,
-    imageAlt: 'Dental oral hygiene awareness camp',
+    imageAlt: 'Dental and oral hygiene awareness camp for underserved communities',
   },
   {
     id: 'earth-day-awareness',
@@ -52,7 +52,7 @@ export const events = [
     description:
       'Promoted environmental responsibility through awareness campaigns and community engagement.',
     image: awarenessImg,
-    imageAlt: 'Earth Day awareness drive',
+    imageAlt: 'Earth Day awareness drive focused on environmental responsibility and public engagement',
   },
   {
     id: 'beat-the-heat',
@@ -62,7 +62,7 @@ export const events = [
     description:
       'Distributed drinking water, ORS, and refreshments while raising awareness about heatstroke prevention.',
     image: heatCampaignImg,
-    imageAlt: 'Beat the Heat campaign hydration drive',
+    imageAlt: 'Beat the Heat campaign distributing water and ORS during summer relief efforts',
   },
   {
     id: 'yvi-sanskar-mahotsav',
@@ -72,7 +72,7 @@ export const events = [
     description:
       'Week-long nationwide volunteer initiative focusing on service, leadership, and community development.',
     image: sanskarImg,
-    imageAlt: 'YVI sanskar mahotsav initiative',
+    imageAlt: 'YVI Sanskar Mahotsav initiative promoting service, leadership, and community development',
   },
   {
     id: 'green-future-initiative',
@@ -82,7 +82,7 @@ export const events = [
     description:
       'Conducted a sapling plantation drive to encourage environmental conservation and community participation.',
     image: environmentImg,
-    imageAlt: 'Green Future sapling plantation drive',
+    imageAlt: 'Green Future tree plantation drive under World Environment Day awareness campaign',
   },
   {
     id: 'books-distribution-bihar',
@@ -92,7 +92,7 @@ export const events = [
     description:
       'Distributed books and launched free education support for underprivileged children across Bihar, empowering access to learning and opportunity.',
     image: bookImg,
-    imageAlt: 'Books distribution event in Bihar',
+    imageAlt: 'Books distribution and free education support for underprivileged children in Bihar',
   },
   {
     id: 'international-yoga-day',
@@ -102,7 +102,7 @@ export const events = [
     description:
       'Organized a community yoga session to promote physical fitness, mental well-being, and healthy living.',
     image: yogaImg,
-    imageAlt: 'International Yoga Day session',
+    imageAlt: 'International Yoga Day community session promoting health, mindfulness, and well-being',
   },
 ];
 

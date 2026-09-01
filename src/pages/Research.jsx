@@ -58,9 +58,12 @@ export default function Research() {
               <div className="paper-media">
   <img
     src={p.image}
-    alt={p.title}
+    alt={`${p.title} by Swapnil Pandey`}
     className="paper-image"
   />
+  <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+    {p.title} — research and mathematical innovation by Swapnil Pandey.
+  </p>
 </div>
               <div className="paper-body">
                 <h2>{p.title}</h2>

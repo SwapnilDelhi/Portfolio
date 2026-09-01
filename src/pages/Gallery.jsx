@@ -28,26 +28,34 @@ const SECTIONS = [
     title: 'YVIians at Parliament.',
     subtitle: 'Selected moments from Parliamentary visits and policy engagements.',
     images: parliamentImages,
+    altPrefix: 'Swapnil Pandey with YVI youth delegation at Parliament',
   },
   {
     id: 'iih',
     title: 'India International Centre.',
     subtitle: 'Talks, roundtables and collaborations hosted at IIC.',
     images: iihImages,
+    altPrefix: 'Swapnil Pandey at a youth leadership and policy engagement at India International Centre',
   },
   {
     id: 'raisina',
     title: 'Raisina Hills.',
     subtitle: 'Policy dialogues and Raisina-focused engagements.',
     images: raisinaImages,
+    altPrefix: 'Swapnil Pandey during a policy dialogue at Raisina Hills',
   },
   {
     id: 'school',
     title: 'Early Journey.',
     subtitle: 'Moments from the early journey schooldays, competitions, and early leadership.',
     images: schoolImages,
+    altPrefix: 'Swapnil Pandey during the early school years and leadership journey',
   }
 ];
+
+function getGalleryAltText(section, index) {
+  return `${section.altPrefix || section.title}, photo ${index + 1}`;
+}
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -88,7 +96,7 @@ export default function Gallery() {
             <div className="gallery-subgrid">
               {section.images && section.images.length > 0 ? (
                 section.images.map((src, i) => {
-                  const alt = `${section.title} ${i + 1}`;
+                  const alt = getGalleryAltText(section, i);
                   return (
                     <div
                       className="gallery-item"
@@ -103,7 +111,7 @@ export default function Gallery() {
                         }
                       }}
                     >
-                      <img src={src} alt={alt} loading="lazy" />
+                      <img src={src} alt={alt} title={alt} loading="lazy" />
                     </div>
                   );
                 })

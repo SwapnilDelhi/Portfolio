@@ -30,9 +30,12 @@ export default function YouthVisionIndia() {
           <div className="inner-media">
             <img
               src={youthVisionImg}
-              alt="Youth Vision India"
+              alt="Youth Vision India youth empowerment and community welfare initiative"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Youth Vision India works across education, women’s empowerment, sanitation, and grassroots service.
+            </p>
           </div>
           <div className="inner-copy">
             <h2>Grassroots impact, nationwide</h2>

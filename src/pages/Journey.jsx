@@ -46,9 +46,12 @@ export default function Journey() {
           <div className="inner-media">
             <img
               src={schoolImg}
-              alt="School Years — Army Public School, Amritsar"
+              alt="Swapnil Pandey during his school years at Army Public School, Amritsar"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Early academic years shaped the discipline, curiosity, and leadership that later defined his public work.
+            </p>
           </div>
           <div className="inner-copy">
             <h2>The Beginning</h2>
@@ -106,9 +109,12 @@ export default function Journey() {
           <div className="inner-media">
             <img
               src={researchImg}
-              alt="The Pursuit of Discovery"
+              alt="Swapnil Pandey's mathematical research and original divisibility findings"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Research and original mathematical thinking that led to recognitions in number theory and innovation.
+            </p>
           </div>
           <div className="inner-copy">
             <h2>The Pursuit of Discovery</h2>
@@ -162,9 +168,12 @@ export default function Journey() {
           <div className="inner-media">
             <img
               src={youthVisionImg}
-              alt="Youth Vision India"
+              alt="Youth Vision India volunteer initiative and youth-led community development program"
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
             />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Youth Vision India: youth-led action in education, sanitation, welfare, and community service.
+            </p>
             <Link to="https://www.instagram.com/vidil.pandey" className="inner-link">
                   Visit the our website →
                 </Link>

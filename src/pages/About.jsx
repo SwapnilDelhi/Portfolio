@@ -16,9 +16,12 @@ export default function About() {
           <div className="inner-media">
             <img
               src={aboutImg}
-              alt="Swapnil Pandey"
+              alt="Swapnil Pandey, youth leader, researcher, and founder of Youth Vision India"
               className="inner-image"
             />
+            <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
+              Swapnil Pandey with a focus on youth leadership, research, and public service.
+            </p>
           </div>
 
           <div className="inner-copy">
