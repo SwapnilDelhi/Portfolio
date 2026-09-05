@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader';
 import newspaper1 from '../assets/images/media/dainik-bhaskar-cover.png';
 import newspaper2 from '../assets/images/media/dainik-jagran-cover.png';
 import newspaper3 from '../assets/images/media/amar-ujala-cover.png';
+import newspaper4 from '../assets/images/media/newspaper4.jpeg';
 import letter1 from '../assets/images/media/letter1.png';
 import letter2 from '../assets/images/media/energy-minister-letter.png';
 import './InnerPage.css';
@@ -30,6 +31,7 @@ const CATEGORIES = [
       { title: 'Dainik Bhaskar', image: newspaper1, source: 'Dainik Bhaskar', alt: 'Dainik Bhaskar cover' },
       { title: 'Dainik Jagran', image: newspaper2, source: 'Dainik Jagran', alt: 'Dainik Jagran cover' },
       { title: 'Amar Ujala', image: newspaper3, source: 'Amar Ujala', alt: 'Amar Ujala cover' },
+      { title: 'Dainik Jagran', image: newspaper4, source: 'Dainik Jagran', alt: 'Dainik Jagran newspaper coverage featuring Swapnil Pandey' },
     ],
   },
   {
@@ -69,7 +71,7 @@ export default function Media() {
                 <h2 style={{ fontSize: '22px' }}>{cat.name}</h2>
                 <div className="rule"></div>
               </div>
-              <div className={`card-grid${cat.name === 'Letter of Appreciation' ? ' letter-grid' : ''}`} style={{ marginTop: 0 }}>
+              <div className={`card-grid${cat.name === 'Newspapers' ? ' newspaper-grid' : ''}${cat.name === 'Letter of Appreciation' ? ' letter-grid' : ''}`} style={{ marginTop: 0 }}>
                 {cat.items.map((item, index) => {
                   const isArticle = item.source === 'News18 हिंदी';
                   const isNewspaper = item.image != null;
