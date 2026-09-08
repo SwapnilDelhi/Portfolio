@@ -10,7 +10,6 @@ import Journey from './pages/Journey';
 import Achievements from './pages/Achievements';
 import Research from './pages/Research';
 import YouthVisionIndia from './pages/YouthVisionIndia';
-import Parliament from './pages/Parliament';
 import Varanasi from './pages/Varanasi';
 import Media from './pages/Media';
 import Gallery from './pages/Gallery';
@@ -20,6 +19,8 @@ import Collaborate from './pages/Collaborate';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
 import Mission from './pages/Mission';
+import GovernmentCollaboration from './pages/GovernmentCollaboration';
+import NotFound from './pages/NotFound';
 
 const siteUrl = 'https://swapnilpandey.com';
 
@@ -59,13 +60,6 @@ const routeMeta = {
     url: `${siteUrl}/government-collaboration`,
     image: `${siteUrl}/ogimg.webp`,
   },
-  '/achievements': {
-    title: 'Achievements | Swapnil Pandey',
-    description: 'Review the achievements and impact of Swapnil Pandey across research, youth empowerment, education, and public policy innovation.',
-    keywords: 'achievements, Swapnil Pandey, youth impact, research accolades, public policy, education initiatives',
-    url: `${siteUrl}/achievements`,
-    image: `${siteUrl}/ogimg.webp`,
-  },
   '/research': {
     title: 'Research | Swapnil Pandey',
     description: 'Explore Swapnil Pandey’s research work in mathematics, education policy, and social innovation for sustainable youth development.',
@@ -78,13 +72,6 @@ const routeMeta = {
     description: 'Discover Youth Vision India, a youth-led platform founded by Swapnil Pandey for women’s empowerment, education reform, and community welfare.',
     keywords: 'Youth Vision India, YVI, Swapnil Pandey, youth platform, empowerment, education, social welfare',
     url: `${siteUrl}/youth-vision-india`,
-    image: `${siteUrl}/ogimg.webp`,
-  },
-  '/parliament': {
-    title: 'Parliament Engagement | Swapnil Pandey',
-    description: 'Learn about Swapnil Pandey’s engagement with Parliament of India, policy dialogue, and research-backed initiatives for national progress.',
-    keywords: 'Parliament engagement, Swapnil Pandey, policy dialogue, national development, research initiatives',
-    url: `${siteUrl}/parliament`,
     image: `${siteUrl}/ogimg.webp`,
   },
   '/varanasi': {
@@ -153,7 +140,15 @@ function ScrollToTop() {
 
 export default function App() {
   const location = useLocation();
-  const meta = routeMeta[location.pathname] || routeMeta['/'];
+  const isKnownRoute = Boolean(routeMeta[location.pathname]);
+  const meta = isKnownRoute
+    ? routeMeta[location.pathname]
+    : {
+        title: 'Page Not Found | Swapnil Pandey',
+        description: 'The requested page could not be found on the Swapnil Pandey website.',
+        url: `${siteUrl}${location.pathname}`,
+        robots: 'noindex,follow',
+      };
 
   return (
     <>
@@ -166,11 +161,9 @@ export default function App() {
           <Route path="/mission" element={<Mission />} />
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<Journey />} />
-          <Route path="/government-collaboration" element={<Achievements />} />
-          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/government-collaboration" element={<GovernmentCollaboration />} />
           <Route path="/research" element={<Research />} />
           <Route path="/youth-vision-india" element={<YouthVisionIndia />} />
-          <Route path="/parliament" element={<Parliament />} />
           <Route path="/varanasi" element={<Varanasi />} />
           <Route path="/media" element={<Media />} />
           <Route path="/gallery" element={<Gallery />} />
@@ -179,6 +172,7 @@ export default function App() {
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       {location.pathname !== '/' && <Footer />}

@@ -78,6 +78,15 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectedPath = params.get('p');
+        if (redirectedPath) {
+          window.history.replaceState(null, '', redirectedPath);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

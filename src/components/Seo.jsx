@@ -92,7 +92,7 @@ function getSchema(title, description, canonicalUrl) {
   };
 }
 
-export default function Seo({ title, description, keywords, url, image, schema }) {
+export default function Seo({ title, description, keywords, url, image, schema, robots }) {
   useEffect(() => {
     const canonicalUrl = getCanonicalUrl(url);
     const finalImageUrl = getImageUrl(image);
@@ -104,7 +104,7 @@ export default function Seo({ title, description, keywords, url, image, schema }
     setMeta('description', pageDescription);
     setMeta('keywords', pageKeywords);
     setMeta('author', 'Swapnil Pandey');
-    setMeta('robots', 'index,follow,max-image-preview:large,max-snippet:-1');
+    setMeta('robots', robots || 'index,follow,max-image-preview:large,max-snippet:-1');
 
     setMeta('og:title', pageTitle, 'property');
     setMeta('og:description', pageDescription, 'property');
@@ -138,7 +138,7 @@ export default function Seo({ title, description, keywords, url, image, schema }
     }
 
     script.textContent = JSON.stringify(schemaData);
-  }, [title, description, keywords, url, image, schema]);
+  }, [title, description, keywords, url, image, schema, robots]);
 
   return null;
 }

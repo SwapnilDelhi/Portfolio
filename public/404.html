@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading page | Swapnil Pandey</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var query = window.location.search;
+        var hash = window.location.hash;
+        var redirect = path + query + hash;
+        window.location.replace('/?p=' + encodeURIComponent(redirect));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
