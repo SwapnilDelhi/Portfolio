@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://swapnilpandey.com';
+const DEFAULT_TITLE = 'Swapnil Pandey | Founder of Youth Vision India | Youth Leader, Researcher & Policy Advocate';
+const DEFAULT_DESCRIPTION =
+  'Swapnil Pandey is the Founder of Youth Vision India, a youth leader, researcher, and policy advocate working on education reform, policy engagement, and community development in India.';
+const DEFAULT_KEYWORDS =
+  'Swapnil Pandey, Founder of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/ogimg.webp`;
 
 function setMeta(name, content, attr = 'name') {
@@ -40,35 +45,50 @@ function getImageUrl(image) {
 }
 
 function getSchema(title, description, canonicalUrl) {
+  const organizationId = `${SITE_URL}/#youth-vision-india`;
+
   return {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Swapnil Pandey',
-    jobTitle: 'Youth Leader, Researcher and Policy Advocate',
-    description:
-      description ||
-      'Swapnil Pandey is a youth leader, researcher, and policy advocate working on education reform, civic engagement, and inclusive development in India.',
-    url: canonicalUrl,
-    image: DEFAULT_OG_IMAGE,
-    sameAs: [],
-    knowsAbout: [
-      'Youth leadership',
-      'Public policy',
-      'Education reform',
-      'Research',
-      'Civic engagement',
-      'National development',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': `${SITE_URL}/#swapnil-pandey`,
+        name: 'Swapnil Pandey',
+        jobTitle: 'Youth Leader, Researcher and Policy Advocate',
+        description:
+          description ||
+          'Swapnil Pandey is a youth leader, researcher, and policy advocate working on education reform, civic engagement, and inclusive development in India.',
+        url: canonicalUrl,
+        image: DEFAULT_OG_IMAGE,
+        sameAs: ['https://www.instagram.com/swapnilpandeyofficial'],
+        knowsAbout: [
+          'Youth leadership',
+          'Public policy',
+          'Education reform',
+          'Research',
+          'Civic engagement',
+          'National development',
+        ],
+        affiliation: { '@id': organizationId },
+        worksFor: { '@id': organizationId },
+        mainEntityOfPage: canonicalUrl,
+        headline: title || 'Swapnil Pandey',
+      },
+      {
+        '@type': 'Organization',
+        '@id': organizationId,
+        name: 'Youth Vision India',
+        url: 'https://www.youthvisionindia.org/',
+        sameAs: [
+          'https://www.instagram.com/youthvisionindia',
+          'https://x.com/YouthVisionIN',
+          'https://www.facebook.com/youthvisionIN/',
+          'https://www.linkedin.com/company/youth-vision-india',
+          'https://wa.link/4aroac',
+          'https://youtube.com/@youthvisionindia-official/',
+        ],
+      },
     ],
-    affiliation: {
-      '@type': 'Organization',
-      name: 'Youth Vision India',
-    },
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Youth Vision India',
-    },
-    mainEntityOfPage: canonicalUrl,
-    headline: title || 'Swapnil Pandey',
   };
 }
 
@@ -76,31 +96,39 @@ export default function Seo({ title, description, keywords, url, image, schema }
   useEffect(() => {
     const canonicalUrl = getCanonicalUrl(url);
     const finalImageUrl = getImageUrl(image);
+    const pageTitle = title || DEFAULT_TITLE;
+    const pageDescription = description || DEFAULT_DESCRIPTION;
+    const pageKeywords = keywords || DEFAULT_KEYWORDS;
 
-    if (title) document.title = title;
-    setMeta('description', description);
-    setMeta('keywords', keywords);
-    setMeta('robots', 'index,follow,max-image-preview:large');
+    document.title = pageTitle;
+    setMeta('description', pageDescription);
+    setMeta('keywords', pageKeywords);
+    setMeta('author', 'Swapnil Pandey');
+    setMeta('robots', 'index,follow,max-image-preview:large,max-snippet:-1');
 
-    setMeta('og:title', title, 'property');
-    setMeta('og:description', description, 'property');
+    setMeta('og:title', pageTitle, 'property');
+    setMeta('og:description', pageDescription, 'property');
     setMeta('og:type', 'website', 'property');
     setMeta('og:locale', 'en_US', 'property');
     setMeta('og:url', canonicalUrl, 'property');
     setMeta('og:image', finalImageUrl, 'property');
-    setMeta('og:image:alt', title || 'Swapnil Pandey', 'property');
+    setMeta('og:image:secure_url', finalImageUrl, 'property');
+    setMeta('og:image:width', '1200', 'property');
+    setMeta('og:image:height', '630', 'property');
+    setMeta('og:image:type', 'image/webp', 'property');
+    setMeta('og:image:alt', pageTitle, 'property');
     setMeta('og:site_name', 'Swapnil Pandey', 'property');
 
     setMeta('twitter:card', 'summary_large_image');
-    setMeta('twitter:title', title);
-    setMeta('twitter:description', description);
+    setMeta('twitter:title', pageTitle);
+    setMeta('twitter:description', pageDescription);
     setMeta('twitter:image', finalImageUrl);
-    setMeta('twitter:image:alt', title || 'Swapnil Pandey');
+    setMeta('twitter:image:alt', pageTitle);
 
     setLink('canonical', canonicalUrl);
 
     let script = document.head.querySelector('script[data-seo-schema="true"]');
-    const schemaData = schema || getSchema(title, description, canonicalUrl);
+    const schemaData = schema || getSchema(pageTitle, pageDescription, canonicalUrl);
 
     if (!script) {
       script = document.createElement('script');
