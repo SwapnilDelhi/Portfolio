@@ -8,3 +8,4 @@ export { default as sanskarImg } from './sanskar-mahotsav.png';
 export { default as yogaImg } from './international-yoga-day.png';
 export { default as warriorImg } from './youth-warrior-program.png';
 export { default as bookImg } from './book-distribution-drive.png';
+export { default as unicefEventImg } from './unicef-youth-program.png';

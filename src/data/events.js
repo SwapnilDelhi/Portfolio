@@ -8,12 +8,23 @@ import {
   sanskarImg,
   yogaImg,
   bookImg,
+  unicefEventImg,
 } from '../assets/images/events';
 
 // Add new events here — they'll automatically sort by date and render
 // on the Events page. `sortDate` must be ISO (YYYY-MM-DD) for correct
 // ordering; `date` is the display string shown to the user.
 export const events = [
+  {
+    id: 'unicef-maternal-healthcare-labour-room',
+    date: '21 August 2026',
+    sortDate: '2026-08-21',
+    title: 'UNICEF-linked Maternal Healthcare Initiative',
+    description:
+      'Youth Vision India began work on a UNICEF-linked initiative focused on labour-room facilities and maternal healthcare in government hospitals, identifying gaps in service delivery and practical measures to strengthen maternal care, accessibility, and quality of public service.',
+    image: unicefEventImg,
+    imageAlt: 'Youth Vision India initiative focused on maternal healthcare, public-service delivery, and women’s welfare with UNICEF collaboration',
+  },
   {
     id: 'mission-relief-flood-response',
     date: '15 September 2025',
@@ -107,5 +118,5 @@ export const events = [
 ];
 
 export function getSortedEvents() {
-  return [...events].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+  return [...events].sort((a, b) => b.sortDate.localeCompare(a.sortDate));
 }

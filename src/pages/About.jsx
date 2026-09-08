@@ -79,6 +79,27 @@ export default function About() {
               toward research, public service, and nation-building.
             </p>
 
+            <p>
+              Alongside his leadership of <strong>Youth Vision India</strong>, Swapnil Pandey is
+              associated with <strong>Team Azad Parliament</strong>, working with 
+              <strong> Naman Shrivastava</strong>, a Harvard graduate with experience at the United
+              Nations and in international advisory work. This collaboration reflects his broader
+              commitment to youth leadership, public institutions, and informed participation in
+              national and global conversations on governance and development.
+            </p>
+
+            <p>
+              His independent mathematical work has also received encouraging academic attention.
+              He received communication from the <strong>Mathematical Association of America</strong>
+              (MAA) regarding the submission of his research for consideration by an appropriate
+              MAA journal. On <strong>24 August 2026</strong>, his mathematical work and the Youth
+              Initiative were discussed with <strong>Prof. R. Ramanujam</strong> of the
+              <strong>Institute of Mathematical Sciences (IMSc), Chennai</strong>. Prof. Ramanujam
+              appreciated the work, invited him to share selected theorems for further consideration,
+              and encouraged him to connect with mathematics educators within the academic
+              community there.
+            </p>
+
             <h2>Vision for the future</h2>
             <div className="rule"></div>
 

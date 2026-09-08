@@ -223,6 +223,25 @@ export default function Journey() {
               and contribute constructively to national development.
             </p>
             <p>
+              Alongside his leadership of <strong>Youth Vision India</strong>, Swapnil Pandey is
+              currently associated with <strong>Team Azad Parliament</strong>, working alongside
+              <strong>Naman Shrivastava</strong>, a Harvard graduate with experience at the United
+              Nations and in international advisory work. This collaboration reflects a broader
+              vision of youth leadership rooted in institutional knowledge, strategic thinking, and
+              public engagement beyond immediate community action.
+            </p>
+            <p>
+              His independent mathematical work has also received encouraging academic attention.
+              He received communication from the <strong>Mathematical Association of America</strong>
+              (MAA) regarding the submission of his mathematical research for consideration by an
+              appropriate MAA journal. On <strong>24 August 2026</strong>, his mathematical work and
+              the Youth Initiative were discussed with <strong>Prof. R. Ramanujam</strong> of the
+              <strong>Institute of Mathematical Sciences (IMSc), Chennai</strong>. Prof. Ramanujam
+              expressed appreciation for the work, invited Pandey to share selected theorems for
+              further consideration, and encouraged him to connect with mathematics educators
+              associated with the academic community there.
+            </p>
+            <p>
               The journey of Youth Vision India also received encouragement from national leadership.
               One of the defining moments came when I received a personal call from the
               <strong> Hon'ble Union Minister for Youth Affairs & Sports and Labour & Employment,

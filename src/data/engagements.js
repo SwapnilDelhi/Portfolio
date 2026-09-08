@@ -148,9 +148,9 @@ export const delegationMeetings = [
     points: [
   'Received a personal telephone call from the <strong>Union Cabinet Minister for Youth Affairs & Sports and Labour & Employment, Shri Mansukh Mandaviya</strong>, acknowledging the initiatives and impact created by <strong>Youth Vision India (YVI)</strong>.',
   'The Minister appreciated the <strong>vision</strong>, <strong>dedication</strong>, and contributions of <strong>Youth Vision India</strong>, recognizing the organisation’s efforts towards <strong>youth leadership</strong>, <strong>innovation</strong>, and <strong>nation-building</strong>.',
-  'Extended his congratulations not only to me but to the entire team of <strong>Youth Vision India</strong>, appreciating the collective commitment behind the organisation’s growing impact.',
-  'Encouraged us to continue expanding our initiatives with greater determination, inspiring us to work for larger national outcomes and create meaningful opportunities for <strong>young people across India</strong>.',
-  'The conversation reinforced our commitment to building <strong>Youth Vision India</strong> as a platform dedicated to <strong>leadership</strong>, <strong>innovation</strong>, and <strong>public service</strong>.'
+  'Under the leadership of <strong>Swapnil Pandey</strong>, YVI also engaged in an on-call discussion with the <strong>Hon’ble Union Minister</strong>, focusing on <strong>emerging youth-led projects</strong>, <strong>future-ready skills</strong>, and the national vision of <strong>Viksit Bharat @2047</strong>.',
+  'The conversation centred on <strong>youth participation in nation-building</strong>, <strong>women’s welfare</strong>, <strong>public-service delivery</strong>, <strong>grassroots leadership</strong>, and meaningful institutional engagement for young Indians.',
+  'YVI’s objective was to move beyond discussion and present <strong>implementable, measurable, and scalable solutions</strong> that help India’s youth transition from <strong>beneficiaries of development</strong> to <strong>active architects of it</strong>.'
 ],
   },
   {
