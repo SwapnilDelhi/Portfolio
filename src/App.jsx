@@ -26,8 +26,8 @@ const siteUrl = 'https://swapnilpandey.com';
 
 const routeMeta = {
   '/': {
-    title: 'Swapnil Pandey | Founder of Youth Vision India | Youth Leader, Researcher & Policy Advocate',
-    description: 'Swapnil Pandey is the Founder of Youth Vision India, a youth leader, researcher, and policy advocate working on education reform, public policy, and community development in India.',
+    title: 'Swapnil Pandey | Youth Vision India Founder',
+    description: 'Swapnil Pandey, founder of Youth Vision India, works on youth leadership, education reform, public policy, and community development in India.',
     keywords: 'Swapnil Pandey, Founder of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India',
     url: `${siteUrl}/`,
     image: `${siteUrl}/ogimg.webp`,

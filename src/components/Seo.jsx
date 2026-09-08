@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://swapnilpandey.com';
-const DEFAULT_TITLE = 'Swapnil Pandey | Founder of Youth Vision India | Youth Leader, Researcher & Policy Advocate';
+const DEFAULT_TITLE = 'Swapnil Pandey | Youth Vision India Founder';
 const DEFAULT_DESCRIPTION =
-  'Swapnil Pandey is the Founder of Youth Vision India, a youth leader, researcher, and policy advocate working on education reform, policy engagement, and community development in India.';
+  'Swapnil Pandey, founder of Youth Vision India, works on youth leadership, education reform, public policy, and community development in India.';
 const DEFAULT_KEYWORDS =
   'Swapnil Pandey, Founder of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/ogimg.webp`;
