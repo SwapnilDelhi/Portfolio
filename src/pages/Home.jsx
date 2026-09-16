@@ -29,13 +29,14 @@ const COLUMNS = [
 ];
 
 const HIGHLIGHTS = [
-  { icon: '◎', label: 'Youth Leader' },
-  { icon: '√x', label: 'Scientific & Mathematical Researcher' },
-  { icon: '⚖', label: 'Societal Policy Advisor' },
-  { icon: '⚙', label: 'Innovator and Strategist at NITI Aayog' },
-  { icon: '★', label: 'Founder, Youth Vision India (YVI)' },
-  { icon: '✔', label: 'Intellectual Property India Certified' },
+  { icon: '⌂', label: 'Indian Institute of Technology' },
+  { icon: '∑', label: 'Researcher & Innovator, NITI Aayog' },
+  { icon: '⚖', label: 'NEP Board, Ministry of Education' },
+  { icon: '◎', label: 'World Economic Forum & UNICEF' },
+  { icon: '◆', label: 'Founder & Director, Youth Vision India' },
+  { icon: '✓', label: 'Intellectual Property India Certified' },
 ];
+
 
 const STATS = [
   { value: '16,000+', label: 'Digital community' },
