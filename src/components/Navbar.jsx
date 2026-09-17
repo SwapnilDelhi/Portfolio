@@ -7,7 +7,7 @@ const LINKS = [
   { to: '/mission', label: 'Mission' },
   { to: '/journey', label: 'Journey' },
   { to: '/about', label: 'About' },
-  { to: '/government-collaboration', label: 'Government Collaboration' },
+  { to: '/government-collaboration', label: 'Raisina Engagement' },
   { to: '/varanasi', label: 'Varanasi Development' },
   { to: '/research', label: 'Research' },
   { to: '/media', label: 'Media' },

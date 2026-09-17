@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="footer-heading">Explore</div>
           <Link to="/about">About</Link>
           <Link to="/journey">Journey</Link>
-          <Link to="/government-collaboration">Government Collaboration</Link>
+          <Link to="/government-collaboration">Raisina Engagement</Link>
           <Link to="/research">Mathematical Research</Link>
         </div>
 

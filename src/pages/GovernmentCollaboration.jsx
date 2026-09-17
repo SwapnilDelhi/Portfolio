@@ -7,9 +7,9 @@ export default function GovernmentCollaboration() {
   return (
     <>
       <PageHeader
-        eyebrow="Government & Institutional Engagement"
-        title="Government Collaboration"
-        subtitle="A timeline of policy engagement, public service partnerships, delegation meetings, and official recognition from government institutions."
+        eyebrow="Raisina Hills & Institutional Engagement"
+        title="Raisina Engagement"
+        subtitle="A timeline of policy dialogues, delegation meetings, public service partnerships, and institutional engagement shaping India’s future."
       />
 
       <section className="section">

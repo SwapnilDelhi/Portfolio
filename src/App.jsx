@@ -54,9 +54,9 @@ const routeMeta = {
     image: `${siteUrl}/ogimg.webp`,
   },
   '/government-collaboration': {
-    title: 'Government Collaboration | Swapnil Pandey',
-    description: 'See how Swapnil Pandey partners with government institutions, policy leaders, and stakeholders to drive youth-led research and civic solutions.',
-    keywords: 'government collaboration, policy advocacy, youth leadership, Swapnil Pandey, civic engagement',
+    title: 'Raisina Engagement | Swapnil Pandey',
+    description: 'Explore Swapnil Pandey’s Raisina engagement through policy dialogues, institutional partnerships, delegation meetings, and youth-led civic solutions.',
+    keywords: 'Raisina engagement, policy advocacy, youth leadership, Swapnil Pandey, civic engagement',
     url: `${siteUrl}/government-collaboration`,
     image: `${siteUrl}/ogimg.webp`,
   },

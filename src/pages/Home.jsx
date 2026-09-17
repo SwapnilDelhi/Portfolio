@@ -7,7 +7,7 @@ const COLUMNS = [
 
   {
     to: '/government-collaboration',
-    label: 'Government Collaboration',
+    label: 'Raisina Engagement',
     kicker: '01 — Raisina Hills',
     text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
     image: parliamentImg,
