@@ -22,8 +22,7 @@
 .nav-row{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: clamp(18px, 2.5vw, 42px);
   padding: 16px 24px;
   min-height: 64px;
   transition: padding 0.3s ease;
@@ -62,6 +61,7 @@
   color: var(--gold);
   margin-top: 4px;
   white-space: nowrap;
+  transition: opacity .3s ease, transform .3s ease;
 }
 
 /* ---- Desktop quote ---- */
@@ -102,9 +102,158 @@
   white-space: nowrap;
 }
 
-/* ---- Mobile swap block: hidden on desktop ---- */
+/* ---- Shared brand/quote swap ---- */
 .nav-swap{
-  display: none;
+  display: block;
+  position: relative;
+  width: 220px;
+  height: 40px;
+  flex: 0 0 220px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.nav-swap-face{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  transition: opacity .35s ease, transform .35s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-swap-face.is-hidden{
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+.nav-swap-brand-name{
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.nav-swap-brand-tag{
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.nav-swap-devanagari{
+  font-family: var(--font-devanagari);
+  font-size: 17px;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.nav-swap-sub{
+  font-size: 10.5px;
+  color: rgba(255,255,255,.75);
+  margin-top: 3px;
+}
+
+.desktop-nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(18px, 2.5vw, 42px);
+  flex: 1;
+  min-width: 0;
+}
+
+.desktop-nav-link,
+.desktop-nav-trigger{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: rgba(255,255,255,.82);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color .25s ease, text-shadow .25s ease;
+}
+
+.desktop-nav-link:hover,
+.desktop-nav-link.active,
+.desktop-nav-trigger:hover,
+.desktop-nav-trigger.is-open{
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(211,168,63,.25);
+}
+
+.desktop-nav-group{
+  position: relative;
+}
+
+.desktop-nav-chevron{
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  color: var(--gold);
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .25s ease;
+}
+
+.desktop-nav-trigger.is-open .desktop-nav-chevron{
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.desktop-dropdown{
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 50%;
+  min-width: 210px;
+  padding: 10px;
+  background: #081d48;
+  border: 1px solid rgba(211,168,63,.25);
+  box-shadow: 0 18px 40px rgba(0,0,0,.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 20;
+}
+
+.desktop-dropdown.is-open{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.desktop-dropdown-link{
+  display: block;
+  padding: 11px 13px;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  transition: color .2s ease, background .2s ease;
+}
+
+.desktop-dropdown-link:hover,
+.desktop-dropdown-link.active{
+  color: var(--gold);
+  background: rgba(211,168,63,.08);
 }
 
 .nav-links-desktop{
@@ -113,7 +262,7 @@
 
 /* ---- Burger — identical everywhere ---- */
 .nav-burger{
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -145,7 +294,7 @@
   background: #081d48;
   border-left: 1px solid rgba(201,162,39,0.2);
   box-shadow: -20px 0 60px rgba(0,0,0,.35);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; /* was center — combined with overflow-y:auto, centered flex content can't be scrolled to past the top edge in some browsers */
@@ -240,7 +389,7 @@
 }
 
 .nav-burger{
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -270,6 +419,22 @@
   z-index: 12;
 }
 
+/* Use the full menu when the desktop row cannot breathe. */
+@media (min-width: 641px) and (max-width: 1100px){
+  .nav-row{ justify-content: space-between; }
+
+  .desktop-nav{ display: none; }
+
+  .nav-burger{ display: flex; }
+
+  .nav-links{ display: flex; }
+
+  .nav-menu-open .nav-burger{
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 /* ================= MOBILE ================= */
 @media (max-width: 640px){
   .nav-row{ padding: 12px 18px; min-height: 54px; gap: 12px; justify-content: space-between; }
@@ -277,6 +442,9 @@
   /* hide the desktop pieces entirely */
   .nav-brand-desktop{ display: none; }
   .nav-quote-desktop{ display: none; }
+  .desktop-nav{ display: none; }
+
+  .nav-burger{ display: flex; }
 
   .nav-swap{
     display: block;
@@ -339,5 +507,5 @@
     margin-top: 2px;
   }
 
-  .nav-links{ width: 100%; padding: 90px 28px 32px; }
+  .nav-links{ display: flex; width: 100%; padding: 90px 28px 32px; }
 }

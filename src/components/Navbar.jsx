@@ -18,8 +18,40 @@ const LINKS = [
   { to: '/contact', label: 'Contact' },
 ];
 
+const DESKTOP_LINKS = [
+  { to: '/', label: 'Home' },
+  {
+    label: 'About',
+    items: [
+      { to: '/mission', label: 'Mission' },
+      { to: '/journey', label: 'Journey' },
+      { to: '/about', label: 'About' },
+    ],
+  },
+  {
+    label: 'Engagements',
+    items: [
+      { to: '/government-collaboration', label: 'Raisina Engagement' },
+      { to: '/varanasi', label: 'Varanasi Development' },
+      { to: '/impact', label: 'Impact' },
+    ],
+  },
+  { to: '/research', label: 'Research' },
+  {
+    label: 'Media',
+    items: [
+      { to: '/media', label: 'Media' },
+      { to: '/gallery', label: 'Gallery' },
+      { to: '/events', label: 'Events' },
+    ],
+  },
+  { to: '/publications', label: 'Publications' },
+  { to: '/contact', label: 'Contact' },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [desktopOpen, setDesktopOpen] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [showQuote, setShowQuote] = useState(false);
 
@@ -35,22 +67,10 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className={`nav ${scrolled ? 'nav-scrolled' : ''} ${open ? 'nav-menu-open' : ''}`}>
+    <header className={`nav ${scrolled ? 'nav-scrolled' : ''} ${open ? 'nav-menu-open' : ''} ${desktopOpen ? 'nav-desktop-open' : ''}`}>
       <div className="container nav-row">
 
-        {/* Desktop: brand + quote both shown permanently */}
-        <NavLink to="/" className="nav-brand nav-brand-desktop" onClick={() => setOpen(false)}>
-          <span className="nav-brand-name">Swapnil Pandey</span>
-          <span className="nav-brand-tag">Anonymity &#8226; Austerity &#8226; Ability</span>
-        </NavLink>
-
-        <div className="nav-quote nav-quote-desktop">
-          <p className="nav-quote-devanagari">'शीलं परम भूषणम्'</p>
-          <div className="nav-quote-rule"></div>
-          <p className="nav-quote-sub">Character is the highest ornament.</p>
-        </div>
-
-        {/* Mobile: single swap area — whole brand block <-> whole quote block */}
+        {/* Desktop and mobile: the brand swaps with the quote on click */}
         <button
           className="nav-swap"
           onClick={() => setShowQuote((v) => !v)}
@@ -74,6 +94,45 @@ export default function Navbar() {
         >
           <span></span><span></span><span></span>
         </button>
+
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          {DESKTOP_LINKS.map((link) => (
+            link.items ? (
+              <div className="desktop-nav-group" key={link.label}>
+                <button
+                  className={`desktop-nav-trigger ${desktopOpen === link.label ? 'is-open' : ''}`}
+                  type="button"
+                  aria-expanded={desktopOpen === link.label}
+                  onClick={() => setDesktopOpen((current) => current === link.label ? null : link.label)}
+                >
+                  {link.label}<span className="desktop-nav-chevron" aria-hidden="true"></span>
+                </button>
+                <div className={`desktop-dropdown ${desktopOpen === link.label ? 'is-open' : ''}`}>
+                  {link.items.map((item) => (
+                    <NavLink
+                      key={item.to}
+                      to={item.to}
+                      className="desktop-dropdown-link"
+                      onClick={() => setDesktopOpen(null)}
+                    >
+                      {item.label}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
+                className="desktop-nav-link"
+                onClick={() => setDesktopOpen(null)}
+              >
+                {link.label}
+              </NavLink>
+            )
+          ))}
+        </nav>
       </div>
 
       <nav className={`nav-links ${open ? 'nav-links-open' : ''}`}>
