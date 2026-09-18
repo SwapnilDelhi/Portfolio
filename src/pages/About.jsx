@@ -8,7 +8,7 @@ export default function About() {
       <PageHeader
         eyebrow="About"
         title="Swapnil Pandey"
-        subtitle="Innovator, mathematical researcher, and Founder of Youth Vision India — building institutions for leadership, policy, and nation-building."
+        subtitle="Innovator, mathematical researcher, and Founder and Director of Youth Vision India — building institutions for leadership, policy, and nation-building."
       />
 
       <section className="section">
@@ -16,7 +16,7 @@ export default function About() {
           <div className="inner-media">
             <img
               src={aboutImg}
-              alt="Swapnil Pandey, youth leader, researcher, and founder of Youth Vision India"
+              alt="Swapnil Pandey, youth leader, researcher, and founder and director of Youth Vision India"
               className="inner-image"
             />
             <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
@@ -30,7 +30,7 @@ export default function About() {
 
             <p>
               Swapnil Pandey is a young Indian innovator, <strong>mathematical
-              researcher</strong>, and <strong>Founder of Youth Vision India (YVI)</strong>—a
+              researcher</strong>, and <strong>Founder and Director of Youth Vision India (YVI)</strong>—a
               youth-led institution committed to leadership, public policy,
               innovation, education, scientific research, and
               nation-building.
@@ -105,7 +105,7 @@ export default function About() {
 
             <div className="about-copy-wrap">
               <p>
-                As the Founder of Youth Vision India, he continues to build
+                As the Founder and Director of Youth Vision India, he continues to build
                 platforms that connect young citizens with public
                 institutions, promote informed leadership, and encourage
                 meaningful participation in India&apos;s developmental

@@ -27,29 +27,29 @@ const siteUrl = 'https://swapnilpandey.com';
 const routeMeta = {
   '/': {
     title: 'Swapnil Pandey | Youth Vision India Founder',
-    description: 'Swapnil Pandey, founder of Youth Vision India, works on youth leadership, education reform, public policy, and community development in India.',
-    keywords: 'Swapnil Pandey, Founder of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India',
+    description: 'Swapnil Pandey, founder and director of Youth Vision India, works on youth leadership, education reform, public policy, and community development in India.',
+    keywords: 'Swapnil Pandey, Founder and Director of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India',
     url: `${siteUrl}/`,
     image: `${siteUrl}/ogimg.webp`,
   },
   '/mission': {
-    title: 'Mission | Swapnil Pandey | Founder of Youth Vision India',
-    description: "Explore Swapnil Pandey's mission as Founder of Youth Vision India — youth leadership, public policy, and institution-building for a stronger, more inclusive India.",
-    keywords: 'mission, Swapnil Pandey, Founder of Youth Vision India, youth leadership, public policy, nation building',
+    title: 'Mission | Swapnil Pandey | Founder and Director of Youth Vision India',
+    description: "Explore Swapnil Pandey's mission as Founder and Director of Youth Vision India — youth leadership, public policy, and institution-building for a stronger, more inclusive India.",
+    keywords: 'mission, Swapnil Pandey, Founder and Director of Youth Vision India, youth leadership, public policy, nation building',
     url: `${siteUrl}/mission`,
     image: `${siteUrl}/ogimg.webp`,
   },
   '/about': {
-    title: 'About Swapnil Pandey | Founder of Youth Vision India',
-    description: 'Learn about Swapnil Pandey’s journey as Founder of Youth Vision India, spanning research, youth leadership, public policy, and national development.',
-    keywords: 'About Swapnil Pandey, Founder of Youth Vision India, youth leader, public policy advisor, researcher, education reform, India',
+    title: 'About Swapnil Pandey | Founder and Director of Youth Vision India',
+    description: 'Learn about Swapnil Pandey’s journey as Founder and Director of Youth Vision India, spanning research, youth leadership, public policy, and national development.',
+    keywords: 'About Swapnil Pandey, Founder and Director of Youth Vision India, youth leader, public policy advisor, researcher, education reform, India',
     url: `${siteUrl}/about`,
     image: `${siteUrl}/ogimg.webp`,
   },
   '/journey': {
-    title: 'Journey of Swapnil Pandey | Founder of Youth Vision India',
-    description: 'Discover Swapnil Pandey’s education, research, and leadership journey as Founder of Youth Vision India, from academic excellence to youth-driven civic initiatives.',
-    keywords: 'Swapnil Pandey journey, Founder of Youth Vision India, youth leadership, research history, education story, civic initiative',
+    title: 'Journey of Swapnil Pandey | Founder and Director of Youth Vision India',
+    description: 'Discover Swapnil Pandey’s education, research, and leadership journey as Founder and Director of Youth Vision India, from academic excellence to youth-driven civic initiatives.',
+    keywords: 'Swapnil Pandey journey, Founder and Director of Youth Vision India, youth leadership, research history, education story, civic initiative',
     url: `${siteUrl}/journey`,
     image: `${siteUrl}/ogimg.webp`,
   },
@@ -175,7 +175,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      {location.pathname !== '/' && <Footer />}
+      <Footer />
     </>
   );
 }

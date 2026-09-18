@@ -89,7 +89,7 @@ export default function Mission() {
               Nation Builder.
             </h2>
             <p>
-              Mathematical researcher and Founder of Youth Vision India (YVI)
+              Mathematical researcher and Founder and Director of Youth Vision India (YVI)
               dedicated to leadership, public policy, innovation, and building
               institutions that empower young citizens and strengthen
               national progress.

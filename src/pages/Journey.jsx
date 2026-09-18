@@ -464,7 +464,7 @@ export default function Journey() {
                 </p>
                 <p>
                   Today, Swapnil Pandey serves as a <strong>young innovator, mathematical researcher,
-                  public policy advisor and strategist, and Founder of Youth Vision India
+                  public policy advisor and strategist, and Founder and Director of Youth Vision India
                   (YVI)</strong>—a youth-led national initiative committed to empowering the next
                   generation through civic participation, scientific thinking, constitutional values,
                   and community service.

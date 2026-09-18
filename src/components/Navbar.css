@@ -184,7 +184,7 @@
   color: rgba(255,255,255,.82);
   cursor: pointer;
   font: inherit;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -244,7 +244,7 @@
   display: block;
   padding: 11px 13px;
   color: rgba(255,255,255,.78);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: .04em;
   white-space: nowrap;
   transition: color .2s ease, background .2s ease;
