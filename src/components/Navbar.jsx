@@ -2,22 +2,6 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-const LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/mission', label: 'Mission' },
-  { to: '/journey', label: 'Journey' },
-  { to: '/about', label: 'About' },
-  { to: '/government-collaboration', label: 'Raisina Engagement' },
-  { to: '/varanasi', label: 'Varanasi Development' },
-  { to: '/research', label: 'Research' },
-  { to: '/media', label: 'Media' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/impact', label: 'Impact' },
-  { to: '/publications', label: 'Publications' },
-  { to: '/events', label: 'Events' },
-  { to: '/contact', label: 'Contact' },
-];
-
 const DESKTOP_LINKS = [
   { to: '/', label: 'Home' },
   {
@@ -136,17 +120,39 @@ export default function Navbar() {
       </div>
 
       <nav className={`nav-links ${open ? 'nav-links-open' : ''}`}>
-        {LINKS.map((l, i) => (
-          <NavLink
-            key={l.to}
-            to={l.to}
-            end={l.to === '/'}
-            className={({ isActive }) => 'nav-link' + (isActive ? ' nav-link-active' : '')}
-            style={{ transitionDelay: open ? `${i * 0.04}s` : '0s' }}
-            onClick={() => setOpen(false)}
-          >
-            {l.label}
-          </NavLink>
+        {DESKTOP_LINKS.map((link, i) => (
+          link.items ? (
+            <div
+              className="nav-link-group"
+              key={link.label}
+              style={{ transitionDelay: open ? `${i * 0.04}s` : '0s' }}
+            >
+              <span className="nav-link-heading">{link.label}</span>
+              <div className="nav-link-sublist">
+                {link.items.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    className={({ isActive }) => 'nav-sublink' + (isActive ? ' nav-link-active' : '')}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) => 'nav-link' + (isActive ? ' nav-link-active' : '')}
+              style={{ transitionDelay: open ? `${i * 0.04}s` : '0s' }}
+              onClick={() => setOpen(false)}
+            >
+              {link.label}
+            </NavLink>
+          )
         ))}
       </nav>
 
