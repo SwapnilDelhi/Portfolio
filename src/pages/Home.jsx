@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { homeImg, youthVisionImg, parliamentImg, varanasiImg } from '../assets/images/home';
 import { schoolImg, youthVisionImg as journeyYouthImg, varanasiImg as journeyVaranasiImg, parliamentImg as journeyParliamentImg, researchImg, todayImg } from '../assets/images/journey';
-import { divisibility8Img } from '../assets/images/research';
+import { apImg } from '../assets/images/research';
 import { getSortedEvents } from '../data/events';
 import { delegationMeetings } from '../data/engagements';
 import './Home.css';
@@ -229,7 +229,6 @@ export default function Home() {
           <div className="engagement-preview-list" aria-label="Raisina collaborations">
             {engagements.map((item) => (
               <Link to="/government-collaboration" className="engagement-preview" key={item.title}>
-                <div className="ep-date">{item.date}</div>
                 <div className="ep-title">{item.title}</div>
                 <div className="ep-role">{item.role}</div>
               </Link>
@@ -263,13 +262,13 @@ export default function Home() {
 
       <section className="section">
         <div className="container feature-split">
-          <Link to="/research" className="research-image"><img src={divisibility8Img} alt="Mathematical research on a divisibility test for 8" loading="lazy" /></Link>
+          <Link to="/research" className="research-image"><img src={apImg} alt="Ramanujan summation research paper by Swapnil Pandey" loading="lazy" /></Link>
           <div className="feature-copy">
             <div className="eyebrow">Research &amp; publications</div>
             <Link to="/research" className="section-title-link"><h2>Applying rigour to public policy</h2></Link>
             <div className="rule"></div>
-            <h3>A new divisibility test for 8</h3>
-            <p>Presented to and recognised by the Hon'ble Speaker of Lok Sabha, Shri Om Birla Ji.</p>
+            <h3>Reading Ramanujan through arithmetic</h3>
+            <p>A symbolic interpretation of Ramanujan's famous divergent series, developed through the arithmetic progression formula.</p>
             <Link to="/research" className="about-link">Explore research →</Link>
           </div>
         </div>

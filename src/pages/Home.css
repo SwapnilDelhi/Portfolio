@@ -51,15 +51,6 @@
   width: 100%;
 }
 
-.hero-kicker{
-  display: inline-block;
-  font-family: var(--font-devanagari);
-  color: #d3a83f;
-  letter-spacing: 0.04em;
-  font-size: 18px;
-  font-weight: 600;
-}
-
 .hero-copy h1{
   color: #fff;
   font-size: clamp(3.2rem, 6.5vw, 5.6rem);
@@ -156,12 +147,6 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 24px;
-  transform: translateY(-200px);
-}
-
-.hero-quote:hover{
-  transform: translateY(-2px);
-   transform: translateY(-200px);
 }
 
 @keyframes floatIn{
@@ -232,17 +217,6 @@
 }
 
 /* ---- Callout: quote + CTA, pinned to the right side ---- */
-.hero-callout{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  align-self: flex-start; /* sit up near the top of the row, clear of the subject lower in the photo */
-  max-width: 340px;
-  margin-left: auto;
-  flex-shrink: 0;
-  text-align: right;
-}
-
 /* ---- Personal quote ---- */
 .hero-quote{
   display: flex;
@@ -696,14 +670,13 @@
 .engagement-preview-list::-webkit-scrollbar-thumb{ background: var(--gold); }
 .engagement-preview{
   display: grid;
-  grid-template-columns: 110px 1fr 260px;
+  grid-template-columns: 1fr 260px;
   gap: 24px;
   padding: 22px 0 22px 16px;
   border-bottom: 1px solid var(--line);
   border-left: 2px solid var(--gold);
   align-items: baseline;
 }
-.ep-date{ font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-ink); font-weight: 600; }
 .ep-title{ font-family: var(--font-display); font-size: 18px; color: var(--navy); font-weight: 700; }
 .ep-role{ padding-right: 8px; font-size: 13px; color: var(--grey-mid); font-style: italic; text-align: right; }
 
@@ -723,8 +696,19 @@
 .info-card{ padding: 26px 24px; }
 .info-card h3{ font-size: 17px; margin: 0; }
 
-.feature-split{ display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: center; }
-.research-image{ aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--line); }
+.feature-split{ display: grid; grid-template-columns: .95fr 1.05fr; gap: 64px; align-items: center; }
+.research-image{
+  display: flex;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: #f2eee5;
+}
+.research-image img{ object-fit: contain; transition: transform .45s ease; }
+.research-image:hover img{ transform: scale(1.025); }
 .feature-copy h3{ font-size: 26px; margin: 10px 0 14px; }
 .feature-copy p{ font-size: 15.5px; color: var(--grey-dark); margin: 0 0 10px; }
 
