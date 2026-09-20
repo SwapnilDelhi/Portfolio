@@ -8,6 +8,17 @@ const rule3Pdf = new URL('../assets/pdf/rule3.pdf', import.meta.url).href;
 const apPdf = new URL('../assets/pdf/ap.pdf', import.meta.url).href;
 
 const PAPERS = [
+   {
+    title: 'Symbolic Interpretation of Ramanujan’s Summation Using the Arithmetic Progression Formula',
+    image: apImg,
+    pdf: apPdf,
+    abstract:
+      'A symbolic mathematical derivation that connects Ramanujan’s famous divergent series (1 + 2 + 3 + 4 + ··· = -1/12) with the arithmetic progression formula. By introducing a symbolic representation of infinity and applying classical algebraic methods, the paper derives symbolic roots that offer an abstract interpretation of divergent series rather than a literal numerical result.',
+    problem:
+      'Ramanujan’s summation of divergent series remains one of the most intriguing concepts in mathematics, yet it is often difficult to interpret using elementary mathematical tools. The challenge is to provide a symbolic and intuitive framework that bridges finite arithmetic progression formulas with Ramanujan’s infinite summation.',
+    solution:
+      'The paper models the number of terms symbolically, applies the arithmetic progression formula to the divergent series, equates the result with Ramanujan’s summation value of -1/12, and solves the resulting quadratic equation. The obtained symbolic roots are interpreted as abstract representations of infinity, offering a creative mathematical perspective that connects algebraic reasoning with divergent series.',
+  },
   {
     title: 'A New Divisibility Test for 8',
     image: divisibility8Img,
@@ -30,17 +41,7 @@ const PAPERS = [
     solution:
       'Developed a structured digit-based approach that provides an intuitive and efficient method for determining divisibility by 3.',
   },
-  {
-    title: 'Symbolic Interpretation of Ramanujan’s Summation Using the Arithmetic Progression Formula',
-    image: apImg,
-    pdf: apPdf,
-    abstract:
-      'A symbolic mathematical derivation that connects Ramanujan’s famous divergent series (1 + 2 + 3 + 4 + ··· = -1/12) with the arithmetic progression formula. By introducing a symbolic representation of infinity and applying classical algebraic methods, the paper derives symbolic roots that offer an abstract interpretation of divergent series rather than a literal numerical result.',
-    problem:
-      'Ramanujan’s summation of divergent series remains one of the most intriguing concepts in mathematics, yet it is often difficult to interpret using elementary mathematical tools. The challenge is to provide a symbolic and intuitive framework that bridges finite arithmetic progression formulas with Ramanujan’s infinite summation.',
-    solution:
-      'The paper models the number of terms symbolically, applies the arithmetic progression formula to the divergent series, equates the result with Ramanujan’s summation value of -1/12, and solves the resulting quadratic equation. The obtained symbolic roots are interpreted as abstract representations of infinity, offering a creative mathematical perspective that connects algebraic reasoning with divergent series.',
-  },
+  
 ];
 export default function Research() {
   return (
