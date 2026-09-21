@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { homeImg, youthVisionImg, parliamentImg, varanasiImg } from '../assets/images/home';
+import { homeImg, youthVisionImg, varanasiImg } from '../assets/images/home';
+import raisinaPreviewImg from '../assets/images/about/image.png';
 import { schoolImg, youthVisionImg as journeyYouthImg, varanasiImg as journeyVaranasiImg, parliamentImg as journeyParliamentImg, researchImg, todayImg } from '../assets/images/journey';
 import { apImg } from '../assets/images/research';
 import { getSortedEvents } from '../data/events';
@@ -15,7 +16,7 @@ const COLUMNS = [
     label: 'Raisina Engagement',
     kicker: '01 — Raisina Hills',
     text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
-    image: parliamentImg,
+    image: raisinaPreviewImg,
   },
   {
     to: '/journey#youth-vision-india',
@@ -26,7 +27,7 @@ const COLUMNS = [
   },
   {
     to: '/varanasi',
-    label: 'Varanasi Development',
+    label: 'Kashi Rising',
     kicker: '03 — Regional Initiative',
     text: 'A dedicated development initiative for Varanasi, working at the intersection of heritage, civic infrastructure, and community-driven progress.',
     image: varanasiImg,
@@ -50,7 +51,7 @@ const STATS = [
 ];
 
 const JOURNEY = [
-  { date: 'School years', title: 'Early years in Varanasi', text: 'First exposure to the civic and cultural life of the city.', image: schoolImg },
+  { date: 'School years', title: 'Early years in Amritsar', text: 'First exposure to the civic and cultural life of the city.', image: schoolImg },
   { date: 'Research', title: 'Mathematical discoveries', text: 'New divisibility tests, recognised by the Speaker of Lok Sabha.', image: researchImg },
   { date: '2019 — ongoing', title: 'Founding Youth Vision India', text: 'A structured route into policy discussion and civic training.', image: journeyYouthImg },
   { date: 'National engagement', title: 'Parliament and public policy', text: 'Continued national engagement alongside local development.', image: journeyParliamentImg },
@@ -61,7 +62,7 @@ const JOURNEY = [
 const GALLERY = [
   { label: 'YVIians at Parliament', folder: 'YVIiansAtParli' },
   { label: 'India International Centre', folder: 'iih' },
-  { label: 'Raisina Hills', folder: 'raisina' },
+  { label: 'Raisina Hills', folder: 'raisina', image: raisinaPreviewImg },
   { label: 'Early Journey', folder: 'school' },
 ];
 
@@ -158,6 +159,10 @@ export default function Home() {
             <div className="eyebrow">About</div>
             <Link to="/about" className="section-title-link"><h2 id="about-preview-title">About Swapnil Pandey</h2></Link>
             <div className="rule"></div>
+            <blockquote className="about-quote">
+              <p>If an egg is broken by an outside force, life ends. If broken by an inside force, life begins.</p>
+              <cite>Great things always begin from the inside.</cite>
+            </blockquote>
           </div>
           <p>
             Swapnil Pandey is a mathematical researcher, youth leader, and Founder and Director of
@@ -171,6 +176,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/*
       <section className="section columns-section">
         <div className="container">
           <div className="eyebrow">Focus Areas</div>
@@ -194,6 +200,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="section section-alt journey-section">
         <div className="container">
@@ -203,7 +210,7 @@ export default function Home() {
           <div className="journey-scroll" ref={journeyRef}>
             {JOURNEY.map((item) => (
               <Link to="/journey" className="journey-card" key={item.title}>
-                <div className="journey-card-media"><img src={item.image} alt="" loading="lazy" /></div>
+                <div className={`journey-card-media${item.date === 'Today' ? ' journey-card-media-today' : ''}`}><img src={item.image} alt="" loading="lazy" /></div>
                 <div className="journey-card-body">
                   <div className="journey-card-date">{item.date}</div>
                   <h3>{item.title}</h3>
@@ -264,12 +271,13 @@ export default function Home() {
         <div className="container feature-split">
           <Link to="/research" className="research-image"><img src={apImg} alt="Ramanujan summation research paper by Swapnil Pandey" loading="lazy" /></Link>
           <div className="feature-copy">
-            <div className="eyebrow">Research &amp; publications</div>
-            <Link to="/research" className="section-title-link"><h2>Applying rigour to public policy</h2></Link>
+            <div className="eyebrow">Research &amp; policy</div>
+            <Link to="/research" className="section-title-link"><h2>From mathematical discovery to public policy</h2></Link>
             <div className="rule"></div>
-            <h3>Reading Ramanujan through arithmetic</h3>
-            <p>A symbolic interpretation of Ramanujan's famous divergent series, developed through the arithmetic progression formula.</p>
-            <Link to="/research" className="about-link">Explore research →</Link>
+            <h3>Two strands of work, one purpose</h3>
+            <p>Explore original mathematical research in number theory, recognised by IMSc Chennai and IMU, alongside Youth Vision India&apos;s research and policy engagement with NITI Aayog.</p>
+            <div className="feature-meta">Mathematical Research · NITI Aayog</div>
+            <Link to="/research" className="about-link">Explore both areas →</Link>
           </div>
         </div>
       </section>
@@ -296,7 +304,7 @@ export default function Home() {
           <div className="gallery-preview-grid">
             {GALLERY.map((item) => (
               <Link to="/gallery" className="gallery-preview-item" key={item.folder}>
-                {getGalleryImage(item.folder) ? <img src={getGalleryImage(item.folder)} alt={item.label} loading="lazy" /> : <span className="gallery-fallback" />}
+                {(item.image || getGalleryImage(item.folder)) ? <img src={item.image || getGalleryImage(item.folder)} alt={item.label} loading="lazy" /> : <span className="gallery-fallback" />}
                 <span className="gallery-preview-label">{item.label}</span>
               </Link>
             ))}

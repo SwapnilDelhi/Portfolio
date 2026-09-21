@@ -1,4 +1,4 @@
-export { default as omBirlaImg } from './om-birla.jpg';
+export { default as omBirlaImg } from './speaker.png';
 export { default as rakshaKhadseImg } from './raksha-khadse.jpg';
 export { default as dharmendraPradhanImg } from './dharmendra-pradhan.jpg';
 export { default as manojSinhaImg } from './manoj-sinha.jpg';
@@ -13,6 +13,6 @@ export { default as ipi2Img } from './intellectual-property-india-meeting-2.png'
 export { default as tribalImg } from './tribal-development-initiative.png';
 export { default as mpyouthImg } from './mp-youth-leadership.png';
 export { default as mpcommerceImg } from './mp-commerce-engagement.png';
-export { default as unicefImg } from './unicef-youth-program.png';
+export { default as unicefImg } from '../journey/unicef.png';
 export { default as tajImg } from './taj-mahal-visit.png';
 export { default as swapImg } from './swapnil-pandey-portrait.png';

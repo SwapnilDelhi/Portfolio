@@ -2,7 +2,7 @@ import PageHeader from '../components/PageHeader';
 import { varanasiImg, varadev2Img } from '../assets/images/varanasi';
 import './InnerPage.css';
 
-// NOTE: Add real Varanasi Development content and photographs here once available.
+// NOTE: Add real Kashi Rising content and photographs here once available.
 const FOCUS_AREAS = [
   { title: 'Heritage & Ghats', text: 'Initiatives supporting the preservation and civic upkeep of Varanasi\u2019s heritage sites and riverfront ghats.' },
   { title: 'Civic Infrastructure', text: 'Community-driven proposals for sanitation, street lighting, and public infrastructure improvements.' },
@@ -15,7 +15,7 @@ export default function Varanasi() {
     <>
       <PageHeader
         eyebrow="Regional Initiative"
-        title="Varanasi Development"
+        title="Kashi Rising"
         subtitle="A dedicated initiative working at the intersection of heritage, civic infrastructure, and community-driven progress in Varanasi."
       />
 
@@ -23,13 +23,13 @@ export default function Varanasi() {
       <section className="section">
         <div className="container inner-split">
           <div className="inner-media">
-            <img src={varanasiImg} alt="Varanasi development and community service initiative led by Swapnil Pandey" />
+            <img src={varanasiImg} alt="Kashi Rising community service initiative led by Swapnil Pandey" />
             <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
-              Varanasi development work focused on heritage, community welfare, and civic upliftment.
+              Kashi Rising work focused on heritage, community welfare, and civic upliftment in Varanasi.
             </p>
           </div>
           <div className="inner-copy">
-            <h2>Varanasi Development &amp; Community Service</h2>
+            <h2>Kashi Rising &amp; Community Service</h2>
             <div className="rule"></div>
             <p>
               Varanasi is not merely the city where I work—it is a <strong>timeless

@@ -9,6 +9,8 @@ import About from './pages/About';
 import Journey from './pages/Journey';
 import Achievements from './pages/Achievements';
 import Research from './pages/Research';
+import MathematicalResearch from './pages/MathematicalResearch';
+import NitiAayog from './pages/NitiAayog';
 import YouthVisionIndia from './pages/YouthVisionIndia';
 import Varanasi from './pages/Varanasi';
 import Media from './pages/Media';
@@ -62,9 +64,22 @@ const routeMeta = {
   },
   '/research': {
     title: 'Research | Swapnil Pandey',
-    description: 'Explore Swapnil Pandey’s research work in mathematics, education policy, and social innovation for sustainable youth development.',
-    keywords: 'research, Swapnil Pandey, mathematics, education policy, social innovation, youth development',
+    description: 'Explore Swapnil Pandey’s mathematical research and NITI Aayog work in public policy and innovation.',
     url: `${siteUrl}/research`,
+    image: `${siteUrl}/ogimg.webp`,
+  },
+  '/research/mathematical': {
+    title: 'Mathematical Research | Swapnil Pandey',
+    description: 'Explore mathematical research by Swapnil Pandey, including work on Ramanujan’s summation and divisibility tests.',
+    keywords: 'mathematical research, Swapnil Pandey, Ramanujan, divisibility tests, number theory',
+    url: `${siteUrl}/research/mathematical`,
+    image: `${siteUrl}/ogimg.webp`,
+  },
+  '/research/niti-aayog': {
+    title: 'NITI Aayog | Swapnil Pandey',
+    description: 'Explore Swapnil Pandey’s research, innovation, and public policy work associated with NITI Aayog.',
+    keywords: 'NITI Aayog, Swapnil Pandey, public policy, research, innovation, youth leadership',
+    url: `${siteUrl}/research/niti-aayog`,
     image: `${siteUrl}/ogimg.webp`,
   },
   '/youth-vision-india': {
@@ -75,9 +90,9 @@ const routeMeta = {
     image: `${siteUrl}/ogimg.webp`,
   },
   '/varanasi': {
-    title: 'Varanasi Development | Swapnil Pandey',
+    title: 'Kashi Rising | Swapnil Pandey',
     description: 'Explore regional development work led by Swapnil Pandey in Varanasi, focused on heritage, infrastructure, and civic empowerment.',
-    keywords: 'Varanasi development, Swapnil Pandey, regional initiative, civic empowerment, heritage preservation',
+    keywords: 'Kashi Rising, Swapnil Pandey, regional initiative, civic empowerment, heritage preservation',
     url: `${siteUrl}/varanasi`,
     image: `${siteUrl}/ogimg.webp`,
   },
@@ -163,6 +178,8 @@ export default function App() {
           <Route path="/journey" element={<Journey />} />
           <Route path="/government-collaboration" element={<GovernmentCollaboration />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/research/mathematical" element={<MathematicalResearch />} />
+          <Route path="/research/niti-aayog" element={<NitiAayog />} />
           <Route path="/youth-vision-india" element={<YouthVisionIndia />} />
           <Route path="/varanasi" element={<Varanasi />} />
           <Route path="/media" element={<Media />} />

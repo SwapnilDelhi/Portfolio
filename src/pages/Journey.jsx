@@ -174,9 +174,9 @@ export default function Journey() {
             <p style={{ marginTop: '12px', fontSize: '14px', color: '#4b5563' }}>
               Youth Vision India: youth-led action in education, sanitation, welfare, and community service.
             </p>
-            <Link to="https://www.instagram.com/vidil.pandey" className="inner-link">
-                  Visit the our website →
-                </Link>
+            <a href="https://www.youthvisionindia.org/" className="inner-link" target="_blank" rel="noopener noreferrer">
+              Visit the Youth Vision India website →
+            </a>
               
           </div>
           <div className="inner-copy">
@@ -363,7 +363,7 @@ export default function Journey() {
         );
       })()}
 
-      {/* 5. VARANASI DEVELOPMENT */}
+      {/* 5. KASHI RISING */}
       {(() => {
         const s = nextSectionClasses();
         return (
@@ -372,7 +372,7 @@ export default function Journey() {
               <div className="inner-media">
                 <img
                   src={varanasiImg}
-                  alt="Varanasi Development"
+                  alt="Kashi Rising"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }}
                 />
                 <Link to="/varanasi" className="inner-link">
@@ -380,7 +380,7 @@ export default function Journey() {
                 </Link>
               </div>
               <div className="inner-copy">
-                <h2>Varanasi Development &amp; Community Service</h2>
+                <h2>Kashi Rising &amp; Community Service</h2>
                 <div className="rule"></div>
                 <p>
                   Varanasi is not merely the city where I work—it is a <strong>timeless symbol of

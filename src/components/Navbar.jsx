@@ -16,11 +16,18 @@ const DESKTOP_LINKS = [
     label: 'Engagements',
     items: [
       { to: '/government-collaboration', label: 'Raisina Engagement' },
-      { to: '/varanasi', label: 'Varanasi Development' },
+      { to: '/varanasi', label: 'Kashi Rising' },
       { to: '/impact', label: 'Impact' },
     ],
   },
-  { to: '/research', label: 'Research' },
+  {
+    label: 'Research',
+    items: [
+      { to: '/research', label: 'Research Overview' },
+      { to: '/research/mathematical', label: 'Mathematical Research' },
+      { to: '/research/niti-aayog', label: 'NITI Aayog' },
+    ],
+  },
   {
     label: 'Media',
     items: [
