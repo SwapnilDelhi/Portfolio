@@ -1,6 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import nitiAayogImage from '../assets/images/niti aayog/niti aayog.png';
-import nitiAayogImageTwo from '../assets/images/niti aayog/niti aayog2.png';
+import nitiAayogImageTwo from '../assets/images/niti aayog/image.png';
 import personOneImage from '../assets/images/niti aayog/person1.png';
 import personTwoImage from '../assets/images/niti aayog/person2.png';
 import './InnerPage.css';
