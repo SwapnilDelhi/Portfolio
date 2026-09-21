@@ -70,6 +70,12 @@ export default function Contact() {
               <div className="eyebrow">Instagram</div>
               <a href="https://www.instagram.com/swapnilpandeyofficial" target="_blank" rel="noreferrer">@swapnilpandeyofficial</a>
             </div>
+            <div className="contact-info-block">
+              <div className="eyebrow">Youth Vision India</div>
+              <a href="https://www.youthvisionindia.org/" target="_blank" rel="noreferrer">Website</a>
+              <a href="https://www.instagram.com/youthvisionindia" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/company/youth-vision-india" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
           </div>
         </div>
       </section>
