@@ -29,6 +29,53 @@
   margin: 0 0 16px;
 }
 
+.journey-copy-collapsed {
+  overflow: visible;
+}
+
+.journey-copy-body {
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.journey-copy-collapsed .journey-copy-body {
+  max-height: 430px;
+  position: relative;
+}
+
+.journey-copy-beginning { }
+.journey-copy-research { }
+.journey-copy-yvi { }
+.journey-copy-government { }
+.journey-copy-varanasi { }
+.journey-copy-today { }
+
+.journey-copy-expanded .journey-copy-body {
+  max-height: none;
+  overflow: visible;
+}
+
+.journey-read-toggle {
+  margin-top: 14px;
+  padding: 10px 26px;
+  border: 1px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.journey-read-toggle:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
 .inner-copy h2{ font-size: 28px; }
 
 .inner-subtitle{
