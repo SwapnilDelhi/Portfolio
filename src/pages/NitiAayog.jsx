@@ -6,6 +6,38 @@ import personTwoImage from '../assets/images/niti aayog/person2.png';
 import './InnerPage.css';
 import './Research.css';
 
+const girlsEducationPaper = new URL('../assets/pdf/Girls_Education_in_India_Research_Paper_Jagriti_Sharma_revised.docx', import.meta.url).href;
+const womenEntrepreneursPaper = new URL('../assets/pdf/Women Entrepreneurs in India Research Paper.docx', import.meta.url).href;
+const youthMentalHealthPaper = new URL('../assets/pdf/Youth Mental Health India Research Paper Edited.docx', import.meta.url).href;
+const womenLeadershipPaper = new URL("../assets/pdf/Strengthening Women's Leadership in Rural India.pdf", import.meta.url).href;
+
+const RESEARCH_PAPERS = [
+  {
+    title: 'Girls\u2019 Education in India',
+    description: 'Research paper examining access, retention, and outcomes in girls\u2019 education across India.',
+    href: girlsEducationPaper,
+    label: 'Download DOCX',
+  },
+  {
+    title: 'Women Entrepreneurs in India',
+    description: 'Research paper on the opportunities and barriers shaping women\u2019s entrepreneurship in India.',
+    href: womenEntrepreneursPaper,
+    label: 'Download DOCX',
+  },
+  {
+    title: 'Youth Mental Health in India',
+    description: 'Research paper on youth mental health challenges and policy responses in India.',
+    href: youthMentalHealthPaper,
+    label: 'Download DOCX',
+  },
+  {
+    title: 'Strengthening Women\u2019s Leadership in Rural India',
+    description: 'Policy research paper proposing the LEAD Framework for rural women\u2019s leadership.',
+    href: womenLeadershipPaper,
+    label: 'Download PDF',
+  },
+];
+
 const OFFICERS = [
   {
     credential: 'IFoS',
@@ -83,6 +115,30 @@ export default function NitiAayog() {
                   <p>{officer.role}</p>
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section publications-section niti-papers-section">
+        <div className="container">
+          <div className="section-heading publications-heading">
+            <p className="eyebrow">Research Papers</p>
+            <h2>Research behind the recommendations.</h2>
+            <p className="inner-subtitle">
+              Download the research papers prepared by Youth Vision India that inform this policy engagement.
+            </p>
+          </div>
+
+          <div className="card-grid publications-card-grid">
+            {RESEARCH_PAPERS.map((paper) => (
+              <div className="info-card" key={paper.title}>
+                <h3>{paper.title}</h3>
+                <p>{paper.description}</p>
+                <a className="btn btn-outline-navy" href={paper.href} target="_blank" rel="noreferrer" style={{ marginTop: '14px' }}>
+                  {paper.label}
+                </a>
+              </div>
             ))}
           </div>
         </div>
