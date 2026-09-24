@@ -115,13 +115,6 @@ export default function Publications() {
                 <h3>{doc.label}</h3>
                 <p>{doc.description}</p>
                 <div className="publications-card-actions">
-                  <button
-                    type="button"
-                    className="btn btn-outline-navy"
-                    onClick={() => setActiveDocId(doc.id)}
-                  >
-                    Preview
-                  </button>
                   <a className="btn btn-outline-navy" href={doc.file} target="_blank" rel="noreferrer">
                     {doc.downloadLabel}
                   </a>

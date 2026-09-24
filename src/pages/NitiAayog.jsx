@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+import { renderAsync } from 'docx-preview';
 import PageHeader from '../components/PageHeader';
 import nitiAayogImage from '../assets/images/niti aayog/niti aayog.png';
 import nitiAayogImageTwo from '../assets/images/niti aayog/image.png';
@@ -13,28 +15,44 @@ const womenLeadershipPaper = new URL("../assets/pdf/Strengthening Women's Leader
 
 const RESEARCH_PAPERS = [
   {
+    id: 'girls-education',
     title: 'Girls\u2019 Education in India',
     description: 'Research paper examining access, retention, and outcomes in girls\u2019 education across India.',
     href: girlsEducationPaper,
+    previewFile: girlsEducationPaper,
+    kind: 'docx',
     label: 'Download DOCX',
+    downloadLabel: 'Download DOCX',
   },
   {
+    id: 'women-entrepreneurs',
     title: 'Women Entrepreneurs in India',
     description: 'Research paper on the opportunities and barriers shaping women\u2019s entrepreneurship in India.',
     href: womenEntrepreneursPaper,
+    previewFile: womenEntrepreneursPaper,
+    kind: 'docx',
     label: 'Download DOCX',
+    downloadLabel: 'Download DOCX',
   },
   {
+    id: 'youth-mental-health',
     title: 'Youth Mental Health in India',
     description: 'Research paper on youth mental health challenges and policy responses in India.',
     href: youthMentalHealthPaper,
+    previewFile: youthMentalHealthPaper,
+    kind: 'docx',
     label: 'Download DOCX',
+    downloadLabel: 'Download DOCX',
   },
   {
+    id: 'women-leadership',
     title: 'Strengthening Women\u2019s Leadership in Rural India',
     description: 'Policy research paper proposing the LEAD Framework for rural women\u2019s leadership.',
     href: womenLeadershipPaper,
+    previewFile: womenLeadershipPaper,
+    kind: 'pdf',
     label: 'Download PDF',
+    downloadLabel: 'Download PDF',
   },
 ];
 
@@ -54,6 +72,37 @@ const OFFICERS = [
 ];
 
 export default function NitiAayog() {
+  const [activePaperId, setActivePaperId] = useState(RESEARCH_PAPERS[0].id);
+  const activePaper = RESEARCH_PAPERS.find((paper) => paper.id === activePaperId) ?? RESEARCH_PAPERS[0];
+  const docxContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (activePaper.kind !== 'docx' || !docxContainerRef.current) return;
+
+    let cancelled = false;
+    const container = docxContainerRef.current;
+    container.innerHTML = '';
+
+    fetch(activePaper.previewFile)
+      .then((res) => res.blob())
+      .then((blob) => {
+        if (cancelled) return;
+        return renderAsync(blob, container, undefined, {
+          className: 'docx-preview',
+          inWrapper: false,
+        });
+      })
+      .catch(() => {
+        if (!cancelled) {
+          container.innerHTML = '<p class="publications-frame-error">The preview could not be loaded. Please use the download button below.</p>';
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activePaper]);
+
   return (
     <>
       <PageHeader
@@ -132,14 +181,54 @@ export default function NitiAayog() {
 
           <div className="card-grid publications-card-grid">
             {RESEARCH_PAPERS.map((paper) => (
-              <div className="info-card" key={paper.title}>
+              <div className="info-card" key={paper.id}>
                 <h3>{paper.title}</h3>
                 <p>{paper.description}</p>
-                <a className="btn btn-outline-navy" href={paper.href} target="_blank" rel="noreferrer" style={{ marginTop: '14px' }}>
-                  {paper.label}
-                </a>
+                <div className="publications-card-actions">
+                  <a className="btn btn-outline-navy" href={paper.href} target="_blank" rel="noreferrer">
+                    {paper.downloadLabel}
+                  </a>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="publications-viewer">
+            <div className="publications-tabs" role="tablist">
+              {RESEARCH_PAPERS.map((paper) => (
+                <button
+                  key={paper.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={activePaperId === paper.id}
+                  className={`publications-tab${activePaperId === paper.id ? ' is-active' : ''}`}
+                  onClick={() => setActivePaperId(paper.id)}
+                >
+                  {paper.title}
+                </button>
+              ))}
+            </div>
+
+            <div className={`publications-frame-wrap${activePaper.kind === 'docx' ? ' publications-frame-wrap-scroll' : ''}`}>
+              {activePaper.kind === 'pdf' ? (
+                <iframe
+                  key={activePaper.id}
+                  src={activePaper.previewFile}
+                  title={`${activePaper.title} preview`}
+                  className="publications-frame"
+                  loading="lazy"
+                />
+              ) : (
+                <div key={activePaper.id} ref={docxContainerRef} className="publications-docx-container" />
+              )}
+            </div>
+
+            <div className="publications-frame-actions">
+              <p>{activePaper.description}</p>
+              <a className="btn btn-outline-navy" href={activePaper.href} target="_blank" rel="noreferrer">
+                {activePaper.downloadLabel}
+              </a>
+            </div>
           </div>
         </div>
       </section>

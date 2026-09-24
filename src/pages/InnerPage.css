@@ -181,8 +181,16 @@
   margin-top: 24px;
 }
 
+.publications-card-actions > *{
+  flex: 1 1 140px;
+  min-width: 0;
+}
+
 .publications-card-actions .btn-outline-navy{
   margin-top: 0;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 760px) {

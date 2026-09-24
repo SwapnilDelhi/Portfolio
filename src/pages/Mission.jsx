@@ -11,6 +11,8 @@ import {
   ShieldCheck,
   Mountain,
   Award,
+  Trophy,
+  BriefcaseBusiness,
 } from 'lucide-react';
 
 const FEATURES = [
@@ -54,6 +56,26 @@ const RECOGNITION = [
     title: "Hon'ble Union Minister of Education",
     desc: "Policy discussions on CBSE reforms and strengthening India's education ecosystem.",
     Icon: ShieldCheck,
+  },
+  {
+    title: "Hon'ble Minister of Youth Affairs & Sports",
+    desc: 'Engagement on youth leadership, sports development, and national youth participation.',
+    Icon: Trophy,
+  },
+  {
+    title: "Hon'ble Minister of Labour & Employment",
+    desc: 'Collaborative dialogue on workforce development, dignity, and welfare-oriented policy design.',
+    Icon: BriefcaseBusiness,
+  },
+  {
+    title: 'NITI Aayog',
+    desc: 'Research and policy engagement connecting grassroots insight with institutional development planning.',
+    Icon: Landmark,
+  },
+  {
+    title: 'UNICEF',
+    desc: 'Partnership-focused engagement on education, child welfare, and inclusive community development.',
+    Icon: Users,
   },
   {
     title: "Hon'ble Lieutenant Governor, Jammu & Kashmir",
