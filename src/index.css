@@ -1,36 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
-
-:root{
-  /* ---- Design tokens ---- */
-  --navy: #0A1F44;
-  --navy-deep: #061530;
-  --navy-mid: #14295c;
-  --gold: #C9A227;
-  --gold-soft: #E4C766;
-  --gold-ink: #7F6419;
-  --grey-dark: #2B2B2B;
-  --grey-mid: #6b6f76;
-  --parchment: #F7F5EF;
-  --white: #FFFFFF;
-  --line: rgba(10,31,68,0.14);
-  --line-gold: rgba(201,162,39,0.45);
-
-  --font-display: 'Playfair Display', 'Georgia', serif;
-  --font-body: 'Inter', 'Source Sans Pro', -apple-system, sans-serif;
-  --font-devanagari: 'Noto Sans Devanagari', serif;
-
-  --container: 1180px;
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 40px;
-  --space-5: 64px;
-  --space-6: 96px;
-}
+@import './styles/tokens.css';
 
 *{ box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: auto; }
+
+html.lenis,
+html.lenis body{ height: auto; }
+
+.lenis.lenis-smooth{ scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent]{ overscroll-behavior: contain; }
+.lenis.lenis-stopped{ overflow: hidden; }
 
 body{
   margin: 0;

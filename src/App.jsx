@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
+import SmoothScroll from './components/SmoothScroll';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -147,12 +147,6 @@ const routeMeta = {
   },
 };
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
-  return null;
-}
-
 export default function App() {
   const location = useLocation();
   const isKnownRoute = Boolean(routeMeta[location.pathname]);
@@ -168,7 +162,7 @@ export default function App() {
   return (
     <>
       <Seo {...meta} />
-      <ScrollToTop />
+      <SmoothScroll />
       <Navbar />
       <main>
         <Routes>

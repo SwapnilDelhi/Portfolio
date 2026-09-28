@@ -14,7 +14,7 @@ export default function GovernmentCollaboration() {
 
       <section className="section">
         <div className="container">
-          <Timeline entries={delegationMeetings} />
+          <Timeline entries={delegationMeetings} className="achievements-timeline" />
         </div>
       </section>
     </>
