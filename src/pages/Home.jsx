@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { homeImg, youthVisionImg, varanasiImg } from '../assets/images/home';
+import { homeImg } from '../assets/images/home';
 import raisinaPreviewImg from '../assets/images/about/image.png';
 import { schoolImg, youthVisionImg as journeyYouthImg, varanasiImg as journeyVaranasiImg, parliamentImg as journeyParliamentImg, researchImg, todayImg } from '../assets/images/journey';
 import { apImg } from '../assets/images/research';
@@ -8,31 +8,6 @@ import { getSortedEvents } from '../data/events';
 import { delegationMeetings } from '../data/engagements';
 import './Home.css';
 
-
-const COLUMNS = [
-
-  {
-    to: '/government-collaboration',
-    label: 'Raisina Engagement',
-    kicker: '01 — Raisina Hills',
-    text: 'Meetings and policy dialogues with the Speaker of Lok Sabha, Union Cabinet Ministers, and senior officials on research, education reform, youth leadership, and nation-building.',
-    image: raisinaPreviewImg,
-  },
-  {
-    to: '/journey#youth-vision-india',
-    label: 'Youth Vision India',
-    kicker: '02 — Youth-Led Platform',
-    text: 'A youth-led platform building a more educated, empowered, and compassionate India — through women\u2019s empowerment, sanitary pad distribution, education, and grassroots welfare drives across states.',
-    image: youthVisionImg,
-  },
-  {
-    to: '/varanasi',
-    label: 'Kashi Rising',
-    kicker: '03 — Regional Initiative',
-    text: 'A dedicated development initiative for Varanasi, working at the intersection of heritage, civic infrastructure, and community-driven progress.',
-    image: varanasiImg,
-  },
-];
 
 const HIGHLIGHTS = [
   { icon: '⌂', label: 'Indian Institute of Technology' },
@@ -88,6 +63,7 @@ export default function Home() {
         className="hero"
         style={{ backgroundImage: `url(${homeImg})` }}
       >
+        <div className="hero-glow" aria-hidden="true"></div>
         <div className="hero-overlay"></div>
 
         <div className="container hero-content">
@@ -175,32 +151,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      {/*
-      <section className="section columns-section">
-        <div className="container">
-          <div className="eyebrow">Focus Areas</div>
-          <h2>Three pillars of the work</h2>
-          <div className="rule"></div>
-
-          <div className="columns-grid">
-            {COLUMNS.map((c) => (
-              <Link to={c.to} key={c.to} className="pillar-card">
-                <div className="pillar-image">
-                  <img src={c.image} alt={c.label} />
-                </div>
-                <div className="pillar-body">
-                  <div className="pillar-kicker">{c.kicker}</div>
-                  <h3>{c.label}</h3>
-                  <p>{c.text}</p>
-                  <span className="pillar-link">Explore &rarr;</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
 
       <section className="section section-alt journey-section">
         <div className="container">

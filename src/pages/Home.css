@@ -28,6 +28,35 @@
   background: var(--white, #fff);
 }
 
+/* low-contrast navy/gold glow drifting slowly behind the hero art; sits
+   below .hero-overlay so the overlay's dark gradients keep the text legible */
+.hero-glow{
+  position: absolute;
+  inset: -12%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 46% 40% at 78% 28%, rgba(201,162,39,0.20) 0%, rgba(201,162,39,0) 70%),
+    radial-gradient(ellipse 50% 46% at 22% 72%, rgba(10,31,68,0.5) 0%, rgba(10,31,68,0) 70%);
+  filter: blur(60px);
+  animation: heroGlowDrift 26s var(--ease-gentle, ease-in-out) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes heroGlowDrift{
+  0%   { transform: translate3d(0, 0, 0) scale(1); opacity: .65; }
+  50%  { transform: translate3d(-2.5%, 2%, 0) scale(1.08); opacity: .85; }
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: .65; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-glow{
+    animation: none;
+    transform: none;
+    opacity: .7;
+  }
+}
+
 .hero-overlay{
   position: absolute;
   inset: 0;
@@ -441,54 +470,6 @@
   }
 }
 
-.columns-section h2{ font-size: 30px; max-width: 560px; }
-
-.columns-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: var(--space-4);
-}
-
-.pillar-card{
-  display: block;
-  background: var(--white);
-  border: 1px solid var(--line);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.pillar-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(10,31,68,0.1);
-  border-color: var(--line-gold);
-}
-
-.pillar-body{ padding: 24px 26px 28px; }
-
-.pillar-kicker{
-  font-size: 11.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-ink);
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.pillar-body h3{ font-size: 21px; margin-bottom: 10px; }
-
-.pillar-body p{
-  font-size: 14.5px;
-  color: var(--grey-mid);
-  margin: 0 0 16px;
-}
-
-.pillar-link{
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--navy);
-  letter-spacing: 0.02em;
-}
-
 .quote-section{ text-align: center; }
 
 .quote-grid{ display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -522,10 +503,6 @@
     gap: 24px;
   }
 
-  .columns-grid{
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
 }
 @media (max-width: 560px){
   .hero{
@@ -585,23 +562,6 @@
     width: 100%;
     justify-content: center;
   }
-}
-
-.pillar-image{
-  aspect-ratio: 16 / 11;
-  overflow: hidden;
-}
-
-.pillar-image img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.pillar-card:hover .pillar-image img{
-  transform: scale(1.04);
 }
 
 .journey-scroll{

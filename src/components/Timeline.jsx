@@ -81,7 +81,7 @@ export default function Timeline({ entries, className = '' }) {
       return (
         <div className="timeline-media-stack">
           {images.map((image, index) => (
-            <img className="timeline-image" src={image} alt={`${entry.title} ${index + 1}`} />
+            <img key={`${entry.title}-${index}`} className="timeline-image" src={image} alt={`${entry.title} ${index + 1}`} />
           ))}
         </div>
       );

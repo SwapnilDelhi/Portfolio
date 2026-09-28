@@ -7,7 +7,6 @@ import SmoothScroll from './components/SmoothScroll';
 import Home from './pages/Home';
 import About from './pages/About';
 import Journey from './pages/Journey';
-import Achievements from './pages/Achievements';
 import Research from './pages/Research';
 import MathematicalResearch from './pages/MathematicalResearch';
 import NitiAayog from './pages/NitiAayog';

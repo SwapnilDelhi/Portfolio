@@ -18,6 +18,10 @@
   pointer-events: none;
 }
 
+.government-collaboration-timeline .timeline-track{
+  display: none;
+}
+
 .timeline-entry{
     display:grid;
     grid-template-columns:320px minmax(0,1fr);

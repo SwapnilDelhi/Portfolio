@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import { youthVisionImg } from '../assets/images/youthvision';
 import './InnerPage.css';
 import './YouthVisionIndia.css';

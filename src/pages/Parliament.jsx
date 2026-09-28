@@ -1,5 +1,4 @@
 import PageHeader from '../components/PageHeader';
-import Timeline from '../components/Timeline';
 import './InnerPage.css';
 
 export default function Parliament() {

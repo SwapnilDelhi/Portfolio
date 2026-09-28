@@ -3,7 +3,6 @@ import newspaper1 from '../assets/images/media/dainik-bhaskar-cover.png';
 import newspaper2 from '../assets/images/media/dainik-jagran-cover.png';
 import newspaper3 from '../assets/images/media/amar-ujala-cover.png';
 import newspaper4 from '../assets/images/media/newspaper4.jpeg';
-import letter1 from '../assets/images/media/letter1.png';
 import letter2 from '../assets/images/media/energy-minister-letter.png';
 import './InnerPage.css';
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
@@ -45,11 +45,39 @@ export default function Navbar() {
   const [desktopOpen, setDesktopOpen] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [showQuote, setShowQuote] = useState(false);
+  const progressRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // direct DOM write (no re-render) keeps the progress bar in sync with Lenis's native-scroll-backed window.scrollY
+  useEffect(() => {
+    let ticking = false;
+
+    const updateProgress = () => {
+      ticking = false;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+      if (progressRef.current) progressRef.current.style.transform = `scaleX(${progress})`;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateProgress);
+      }
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -164,6 +192,10 @@ export default function Navbar() {
       </nav>
 
       {open && <div className="nav-scrim" onClick={() => setOpen(false)}></div>}
+
+      <div className="nav-progress-track" aria-hidden="true">
+        <div className="nav-progress-bar" ref={progressRef}></div>
+      </div>
     </header>
   );
 }

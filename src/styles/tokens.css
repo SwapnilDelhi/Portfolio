@@ -11,6 +11,7 @@
   --white: #FFFFFF;
   --line: rgba(10,31,68,0.14);
   --line-gold: rgba(201,162,39,0.45);
+  --grain-opacity: 0.028;
 
   --font-display: 'Playfair Display', 'Georgia', serif;
   --font-body: 'Inter', 'Source Sans Pro', -apple-system, sans-serif;

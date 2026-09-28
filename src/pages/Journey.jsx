@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import { schoolImg, youthVisionImg, varanasiImg, parliamentImg, researchImg, todayImg } from '../assets/images/journey';
 import './InnerPage.css';
 
