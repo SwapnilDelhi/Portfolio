@@ -518,75 +518,71 @@ export default function Journey() {
                 <div className="rule"></div>
                 <div className="journey-copy-body">
                   <p>
-                    Today, Swapnil Pandey continues to actively participate in discussions,
-                    conferences, research initiatives, policy dialogues, and innovation platforms with
-                    leading national and international institutions &mdash; spanning the
-                    <strong> India International Centre (IIC), the Rajasthan International Centre
-                    (RIC), the United Nations, the World Bank, BRICS forums, NITI Aayog</strong>, the
-                    Ministry of Science &amp; Technology, DRDO, ISRO, NASA, Atal Innovation Mission,
-                    NCERT, CBSE, and numerous universities, research institutions, diplomatic forums,
-                    and educational organisations.
+                    Today, Swapnil Pandey continues to engage in research, innovation, policy dialogue,
+                    institutional learning, and youth leadership initiatives with leading national and
+                    international institutions, including NITI Aayog, the Ministry of Education, India
+                    International Centre (IIC), Rajasthan International Centre (RIC), United Nations,
+                    World Bank, BRICS forums, DRDO, ISRO, NASA, Atal Innovation Mission, NCERT, CBSE,
+                    universities, research institutions, and educational organisations.
                   </p>
                   <p>
-                    What began as the conviction of a single young mind has evolved into a growing
-                    movement dedicated to research, leadership, innovation, public policy, and
-                    nation-building.
+                    What began as the conviction of a young mind has grown into a journey built on{' '}
+                    <strong>research, innovation, leadership, and public purpose.</strong>
                   </p>
                   <p>
-                    Today, Swapnil Pandey serves as a <strong>young innovator, mathematical researcher,
-                    public policy advisor and strategist, and Founder and Director of Youth Vision India
-                    (YVI)</strong>—a youth-led national initiative committed to empowering the next
-                    generation through civic participation, scientific thinking, constitutional values,
-                    and community service.
+                    Swapnil Pandey serves as a <strong>young innovator, mathematical researcher, public
+                    policy advisor and strategist, and Founder &amp; Director of Youth Vision India
+                    (YVI)</strong>, a youth-led initiative focused on civic participation, scientific
+                    thinking, constitutional values, leadership, and community service.
                   </p>
                   <p>
-                    His work spans multiple domains, including mathematical research, educational
-                    reform, youth leadership, policy documentation, innovation, institutional
-                    engagement, social development, and constitutional awareness. His mathematical
-                    research has received <strong>official copyright registration from Intellectual
-                    Property India</strong>, reflecting his commitment to original scientific inquiry
-                    from an early age.
+                    His work spans mathematical research, educational reform, youth leadership, policy
+                    documentation, innovation, institutional engagement, and social development. His
+                    original mathematical research has received official copyright registration from
+                    Intellectual Property India, reflecting his commitment to scientific inquiry and
+                    innovation.
                   </p>
                   <p>
-                    Through Youth Vision India, a nationwide network of young leaders, researchers,
-                    professionals, and volunteers is being developed to contribute towards policy
-                    research, governance, education, innovation, environmental sustainability, women's
-                    empowerment, youth development, and community welfare. The organisation actively
-                    prepares research reports, public policy recommendations, and field-based
-                    initiatives designed to create meaningful and measurable impact.
+                    Through Youth Vision India, a growing network of young leaders, researchers,
+                    professionals, and volunteers works across policy research, governance, education,
+                    innovation, environmental sustainability, women's empowerment, youth development,
+                    and community welfare. The organisation develops research reports, policy
+                    recommendations, awareness programmes, and field-based initiatives aimed at creating
+                    meaningful impact.
+                  </p>
+                  <h3>Current Engagement: Parliamentary Learning &amp; Training</h3>
+                  <p>
+                    As part of this continuing journey, <strong>Swapnil Pandey, Founder &amp; Director of
+                    Youth Vision India, is currently undertaking training at the Parliamentary Research
+                    and Training Institute for Democracies (PRIDE), Lok Sabha Secretariat, Parliament of
+                    India.</strong> The training provides an opportunity to engage with parliamentary
+                    learning and deepen his understanding of India's democratic institutions,
+                    parliamentary processes, and the functioning of the legislative system.
                   </p>
                   <p>
-                    Over the years, Swapnil Pandey has engaged with constitutional authorities,
-                    ministries, senior policymakers, civil servants, and public institutions,
-                    presenting ideas and initiatives focused on strengthening governance, youth
-                    participation, innovation, and national development. His work reflects a belief
-                    that meaningful change is achieved through constructive dialogue, evidence-based
-                    policy, and disciplined execution.
+                    This current engagement represents a new dimension of a journey that has developed
+                    across research, innovation, leadership, and institutional engagement.
                   </p>
                   <p>
-                    Beyond research and policy, Youth Vision India continues to undertake community
-                    service initiatives, including support for senior citizens, educational outreach,
-                    social awareness programmes, youth capacity building, women's empowerment
-                    initiatives, cultural engagement, and public participation campaigns. Every project
-                    is guided by a simple principle: leadership must ultimately improve the lives of
-                    people.
+                    <strong>
+                      Research built the foundation.<br />
+                      Leadership gave it direction.<br />
+                      Institutions gave it scale.<br />
+                      Parliamentary learning now adds another dimension to the pursuit of public service.
+                    </strong>
                   </p>
                   <p>
-                    The organisation has also represented the values of active citizenship through
-                    institutional visits, including the Parliament of India, where members explored
-                    India's constitutional heritage, democratic institutions, and civilizational legacy.
-                    These experiences continue to shape YVI's commitment to responsible leadership and
-                    informed public service.
+                    Alongside this, Swapnil Pandey continues his work through Youth Vision India,
+                    engaging in research, policy initiatives, youth development, community programmes,
+                    and institutional dialogue.
                   </p>
+                  <h3>Looking Ahead</h3>
                   <p>
-                    The journey, however, is only the beginning.
-                  </p>
-                  <p>
-                    The long-term vision extends beyond individual recognition. It seeks to build
-                    institutions, empower future leaders, promote scientific temperament, encourage
-                    constitutional literacy, and contribute practical solutions to national challenges.
-                    Every research paper, every policy submission, every community initiative, and
-                    every leadership programme is another step towards that larger mission.
+                    The journey is only beginning. The long-term vision is to build institutions,
+                    empower future leaders, promote scientific temperament, strengthen constitutional
+                    literacy, and contribute practical solutions to national challenges. Every research
+                    paper, policy initiative, community project, leadership programme, and institutional
+                    learning experience is another step towards that larger mission.
                   </p>
                 </div>
                 <button

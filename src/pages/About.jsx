@@ -71,6 +71,14 @@ export default function About() {
             </p>
 
             <p>
+              He is currently undertaking training at the{' '}
+              <strong>Parliamentary Research and Training Institute for Democracies
+              (PRIDE), Lok Sabha Secretariat, Parliament of India</strong>, deepening
+              his understanding of parliamentary processes and India&apos;s democratic
+              institutions.
+            </p>
+
+            <p>
               He has also been recognized by the{' '}
               <strong>Hon&apos;ble Lieutenant Governor of Jammu &amp; Kashmir,
               Shri Manoj Sinha</strong>, who appreciated his contributions to youth
