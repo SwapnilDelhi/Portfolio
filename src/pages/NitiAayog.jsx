@@ -12,6 +12,7 @@ const girlsEducationPaper = new URL('../assets/pdf/Girls_Education_in_India_Rese
 const womenEntrepreneursPaper = new URL('../assets/pdf/Women Entrepreneurs in India Research Paper.docx', import.meta.url).href;
 const youthMentalHealthPaper = new URL('../assets/pdf/Youth Mental Health India Research Paper Edited.docx', import.meta.url).href;
 const womenLeadershipPaper = new URL("../assets/pdf/Strengthening Women's Leadership in Rural India.pdf", import.meta.url).href;
+const educationAndAiPaper = new URL('../assets/pdf/The Question Education Cannot Answer.pdf', import.meta.url).href;
 
 const RESEARCH_PAPERS = [
   {
@@ -50,6 +51,16 @@ const RESEARCH_PAPERS = [
     description: 'Policy research paper proposing the LEAD Framework for rural women\u2019s leadership.',
     href: womenLeadershipPaper,
     previewFile: womenLeadershipPaper,
+    kind: 'pdf',
+    label: 'Download PDF',
+    downloadLabel: 'Download PDF',
+  },
+  {
+    id: 'education-and-ai',
+    title: 'The Question Education Cannot Answer',
+    description: 'Generative AI, the Collapse of Answer-Retrieval, and India\u2019s Triple Inequality of Access, Prompting Literacy and Language. An academic essay for Indian education, written by Vidya Sharma, mentored by Youth Vision India, and prepared for publication by Youth Vision India in October 2026.',
+    href: educationAndAiPaper,
+    previewFile: educationAndAiPaper,
     kind: 'pdf',
     label: 'Download PDF',
     downloadLabel: 'Download PDF',
