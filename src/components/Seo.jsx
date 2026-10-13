@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://swapnilpandey.com';
-const DEFAULT_TITLE = 'Swapnil Pandey | Youth Vision India Founder';
+const DEFAULT_TITLE = 'Swapnil Pandey | Founder, Youth Vision India | CEO, Astraion AI';
 const DEFAULT_DESCRIPTION =
-  'Swapnil Pandey, founder and director of Youth Vision India, works on youth leadership, education reform, public policy, and community development in India.';
+  'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, working across research, technology, public policy, and community development in India.';
 const DEFAULT_KEYWORDS =
-  'Swapnil Pandey, Founder and Director of Youth Vision India, youth leadership, public policy, research, education reform, Varanasi development, India';
+  'Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Astraion AI, Chief Executive Officer Astraion AI, youth leadership, public policy, research, technology, education reform, Varanasi development, India';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/ogimg.webp`;
 
 function setMeta(name, content, attr = 'name') {
@@ -45,7 +45,8 @@ function getImageUrl(image) {
 }
 
 function getSchema(title, description, canonicalUrl) {
-  const organizationId = `${SITE_URL}/#youth-vision-india`;
+  const youthVisionIndiaId = `${SITE_URL}/#youth-vision-india`;
+  const astraionAiId = `${SITE_URL}/#astraion-ai`;
 
   return {
     '@context': 'https://schema.org',
@@ -54,10 +55,11 @@ function getSchema(title, description, canonicalUrl) {
         '@type': 'Person',
         '@id': `${SITE_URL}/#swapnil-pandey`,
         name: 'Swapnil Pandey',
-        jobTitle: 'Youth Leader, Researcher and Policy Advocate',
+        jobTitle:
+          'Founder and Director of Youth Vision India; Chief Executive Officer of Astraion AI',
         description:
           description ||
-          'Swapnil Pandey is a youth leader, researcher, and policy advocate working on education reform, civic engagement, and inclusive development in India.',
+          'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, working across research, technology, public policy, and community development in India.',
         url: canonicalUrl,
         image: DEFAULT_OG_IMAGE,
         sameAs: ['https://www.instagram.com/swapnilpandeyofficial'],
@@ -66,17 +68,19 @@ function getSchema(title, description, canonicalUrl) {
           'Public policy',
           'Education reform',
           'Research',
+          'Artificial intelligence',
+          'Technology',
           'Civic engagement',
           'National development',
         ],
-        affiliation: { '@id': organizationId },
-        worksFor: { '@id': organizationId },
+        affiliation: [{ '@id': youthVisionIndiaId }, { '@id': astraionAiId }],
+        worksFor: { '@id': astraionAiId },
         mainEntityOfPage: canonicalUrl,
         headline: title || 'Swapnil Pandey',
       },
       {
         '@type': 'Organization',
-        '@id': organizationId,
+        '@id': youthVisionIndiaId,
         name: 'Youth Vision India',
         url: 'https://www.youthvisionindia.org/',
         sameAs: [
@@ -87,6 +91,11 @@ function getSchema(title, description, canonicalUrl) {
           'https://wa.link/4aroac',
           'https://youtube.com/@youthvisionindia-official/',
         ],
+      },
+      {
+        '@type': 'Organization',
+        '@id': astraionAiId,
+        name: 'Astraion AI',
       },
     ],
   };
