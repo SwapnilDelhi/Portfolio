@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
 const SITE_URL = 'https://swapnilpandey.com';
-const DEFAULT_TITLE = 'Swapnil Pandey | Founder, Youth Vision India | CEO, Astraion AI';
+const DEFAULT_TITLE = 'Swapnil Pandey | Founder, Youth Vision India | CEO, Pyroclay AI Private Limited';
 const DEFAULT_DESCRIPTION =
-  'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, working across research, technology, public policy, and community development in India.';
+  'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Pyroclay AI Private Limited, working across research, technology, public policy, and community development in India.';
 const DEFAULT_KEYWORDS =
-  'Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Astraion AI, Chief Executive Officer Astraion AI, youth leadership, public policy, research, technology, education reform, Varanasi development, India';
+  'Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Pyroclay AI Private Limited, Chief Executive Officer Pyroclay AI Private Limited, youth leadership, public policy, research, technology, education reform, Varanasi development, India';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/ogimg.webp`;
 
 function setMeta(name, content, attr = 'name') {
@@ -46,7 +46,7 @@ function getImageUrl(image) {
 
 function getSchema(title, description, canonicalUrl) {
   const youthVisionIndiaId = `${SITE_URL}/#youth-vision-india`;
-  const astraionAiId = `${SITE_URL}/#astraion-ai`;
+  const pyroclayAiId = `${SITE_URL}/#pyroclay-ai`;
 
   return {
     '@context': 'https://schema.org',
@@ -56,10 +56,10 @@ function getSchema(title, description, canonicalUrl) {
         '@id': `${SITE_URL}/#swapnil-pandey`,
         name: 'Swapnil Pandey',
         jobTitle:
-          'Founder and Director of Youth Vision India; Chief Executive Officer of Astraion AI',
+          'Founder and Director of Youth Vision India; Chief Executive Officer of Pyroclay AI Private Limited',
         description:
           description ||
-          'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, working across research, technology, public policy, and community development in India.',
+          'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Pyroclay AI Private Limited, working across research, technology, public policy, and community development in India.',
         url: canonicalUrl,
         image: DEFAULT_OG_IMAGE,
         sameAs: ['https://www.instagram.com/swapnilpandeyofficial'],
@@ -73,8 +73,8 @@ function getSchema(title, description, canonicalUrl) {
           'Civic engagement',
           'National development',
         ],
-        affiliation: [{ '@id': youthVisionIndiaId }, { '@id': astraionAiId }],
-        worksFor: { '@id': astraionAiId },
+        affiliation: [{ '@id': youthVisionIndiaId }, { '@id': pyroclayAiId }],
+        worksFor: { '@id': pyroclayAiId },
         mainEntityOfPage: canonicalUrl,
         headline: title || 'Swapnil Pandey',
       },
@@ -94,8 +94,8 @@ function getSchema(title, description, canonicalUrl) {
       },
       {
         '@type': 'Organization',
-        '@id': astraionAiId,
-        name: 'Astraion AI',
+        '@id': pyroclayAiId,
+        name: 'Pyroclay AI Private Limited',
       },
     ],
   };

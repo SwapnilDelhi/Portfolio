@@ -15,7 +15,7 @@ const HIGHLIGHTS = [
   { icon: '⚖', label: 'NEP Board, Ministry of Education' },
   { icon: '◎', label: 'World Economic Forum & UNICEF' },
   { icon: '◆', label: 'Founder and Director, Youth Vision India' },
-  { icon: '◇', label: 'CEO, Astraion AI' },
+  { icon: '◇', label: 'CEO, Pyroclay AI Private Limited' },
   { icon: '✓', label: 'Intellectual Property India Certified' },
 ];
 
@@ -143,7 +143,7 @@ export default function Home() {
           </div>
           <p>
             Swapnil Pandey is a mathematical researcher, youth leader, Founder and Director of
-            Youth Vision India, and Chief Executive Officer of Astraion AI. His work connects
+            Youth Vision India, and Chief Executive Officer of Pyroclay AI Private Limited. His work connects
             research, education reform, public policy, technology, and community development, with
             a focus on empowering young people and advancing meaningful civic initiatives across
             India, including Varanasi.

@@ -8,7 +8,7 @@ export default function About() {
       <PageHeader
         eyebrow="About"
         title="Swapnil Pandey"
-        subtitle="Innovator, mathematical researcher, Founder and Director of Youth Vision India, and Chief Executive Officer of Astraion AI — building institutions and technology for leadership, policy, and nation-building."
+        subtitle="Innovator, mathematical researcher, Founder and Director of Youth Vision India, and Chief Executive Officer of Pyroclay AI Private Limited — building institutions and technology for leadership, policy, and nation-building."
       />
 
       <section className="section">
@@ -31,7 +31,7 @@ export default function About() {
             <p>
               Swapnil Pandey is a young Indian innovator, <strong>mathematical
               researcher</strong>, <strong>Founder and Director of Youth Vision India (YVI)</strong>,
-              and <strong>Chief Executive Officer of Astraion AI</strong>—a youth-led institution
+              and <strong>Chief Executive Officer of Pyroclay AI Private Limited</strong>—a youth-led institution
               and technology venture committed to leadership, public policy, innovation, education,
               scientific research, and nation-building.
             </p>

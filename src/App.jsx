@@ -27,9 +27,9 @@ const siteUrl = 'https://swapnilpandey.com';
 
 const routeMeta = {
   '/': {
-    title: 'Swapnil Pandey | Founder, Youth Vision India | CEO, Astraion AI',
-    description: 'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, working across research, technology, public policy, and community development in India.',
-    keywords: 'Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Astraion AI, Chief Executive Officer Astraion AI, youth leadership, public policy, research, technology, education reform, Varanasi development, India',
+    title: 'Swapnil Pandey | Founder, Youth Vision India | CEO, Pyroclay AI Private Limited',
+    description: 'Swapnil Pandey is Founder and Director of Youth Vision India and Chief Executive Officer of Pyroclay AI Private Limited, working across research, technology, public policy, and community development in India.',
+    keywords: 'Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Pyroclay AI Private Limited, Chief Executive Officer Pyroclay AI Private Limited, youth leadership, public policy, research, technology, education reform, Varanasi development, India',
     url: `${siteUrl}/`,
     image: `${siteUrl}/ogimg.webp`,
   },
@@ -41,9 +41,9 @@ const routeMeta = {
     image: `${siteUrl}/ogimg.webp`,
   },
   '/about': {
-    title: 'About Swapnil Pandey | Founder, Youth Vision India | CEO, Astraion AI',
-    description: 'Learn about Swapnil Pandey, Founder and Director of Youth Vision India and Chief Executive Officer of Astraion AI, spanning research, technology, youth leadership, public policy, and national development.',
-    keywords: 'About Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Astraion AI, Chief Executive Officer Astraion AI, youth leader, public policy advisor, researcher, technology, education reform, India',
+    title: 'About Swapnil Pandey | Founder, Youth Vision India | CEO, Pyroclay AI Private Limited',
+    description: 'Learn about Swapnil Pandey, Founder and Director of Youth Vision India and Chief Executive Officer of Pyroclay AI Private Limited, spanning research, technology, youth leadership, public policy, and national development.',
+    keywords: 'About Swapnil Pandey, Founder and Director of Youth Vision India, CEO of Pyroclay AI Private Limited, Chief Executive Officer Pyroclay AI Private Limited, youth leader, public policy advisor, researcher, technology, education reform, India',
     url: `${siteUrl}/about`,
     image: `${siteUrl}/ogimg.webp`,
   },
